@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="base.obo.com.obobaseandroidproject" >
+    package="com.obo.base" >
 
     <application
         android:allowBackup="true"

@@ -1,4 +1,4 @@
-package base.obo.com.obobaseandroidproject;
+package com.obo.base;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;

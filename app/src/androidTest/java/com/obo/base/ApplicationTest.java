@@ -1,4 +1,4 @@
-package base.obo.com.obobaseandroidproject;
+package com.obo.base;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;
