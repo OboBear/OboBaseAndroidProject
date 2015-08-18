@@ -1,10 +1,13 @@
-package com.obo.base;
+package com.obo.activity;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
+
+import com.obo.base.BaseActivity;
+
 
 public class MainActivity extends BaseActivity {
 
