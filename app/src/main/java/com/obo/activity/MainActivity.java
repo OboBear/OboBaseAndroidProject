@@ -13,11 +13,14 @@ import com.obo.base.BaseActivity;
 
 public class MainActivity extends BaseActivity {
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
 
+    @Override
+    protected int setContentViewId() {
+        return R.layout.activity_main;
+    }
+
+    @Override
+    protected void initContentView() {
         TextView text_view = $(R.id.text_view);
         text_view.setText("测试");
     }
