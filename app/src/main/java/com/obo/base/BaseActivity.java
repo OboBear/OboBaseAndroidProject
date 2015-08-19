@@ -1,42 +1,32 @@
 package com.obo.base;
 
 import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
+import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 
 import java.io.Serializable;
-import java.util.Objects;
 
-public class BaseActivity extends AppCompatActivity {
+public abstract class BaseActivity extends AppCompatActivity {
 
     public  static String TAG = BaseActivity.class.getCanonicalName();
 
     public Activity activity;
 
-    public static void startActivity(Activity activity)
-    {
-        Intent intent = new Intent(activity,BaseActivity.class.getComponentType());
-        activity.startActivity(intent);
-    }
 
-    public static void startActivity(Activity activity,Serializable extraData)
-    {
-        Intent intent = new Intent(activity,BaseActivity.class.getComponentType());
-        Bundle bundle = new Bundle();
-        bundle.putSerializable("extraData",extraData);
-        intent.putExtra("bundle", bundle);
-        activity.startActivity(intent);
-    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         this.activity = this;
     }
+
+
+
+
+
+
 
 
     /**
