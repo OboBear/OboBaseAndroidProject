@@ -5,8 +5,7 @@ android {
     buildToolsVersion "23.0.0 rc3"
 
     defaultConfig {
-       // applicationId "base.obo.com.obobaseandroidproject"
-        applicationId "com.obo.obobaseandroidproject"
+        applicationId "com.obo.base.viewtouch"
         minSdkVersion 14
         targetSdkVersion 22
         versionCode 1
