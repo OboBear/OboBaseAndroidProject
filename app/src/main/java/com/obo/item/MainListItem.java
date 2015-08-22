@@ -8,6 +8,7 @@ import android.widget.TextView;
 
 import com.obo.activity.R;
 import com.obo.item.base.BaseItem;
+import com.obo.model.MainListModel;
 
 import org.w3c.dom.Text;
 
@@ -17,9 +18,12 @@ import org.w3c.dom.Text;
 public class MainListItem extends BaseItem {
     public static String TAG = MainListItem.class.getCanonicalName();
 
-    public MainListItem(Context context)
+
+    MainListModel model;
+
+    public MainListItem(MainListModel model)
     {
-        this.context = context;
+        this.model = model;
     }
 
     @Override
@@ -41,17 +45,14 @@ public class MainListItem extends BaseItem {
             viewHolder = (ViewHolder) convertView.getTag();
         }
 
-        viewHolder.textView.setText("this is array text");
+        viewHolder.textView.setText(model.text);
 
         return convertView;
     }
 
-
     class ViewHolder{
 
         TextView textView;
-
     }
-
 
 }

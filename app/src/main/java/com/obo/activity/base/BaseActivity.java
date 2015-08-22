@@ -10,13 +10,11 @@ public abstract class BaseActivity extends AppCompatActivity {
 
     public Activity activity;
 
-    protected abstract int setContentViewId();
     protected abstract void initContentView();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(setContentViewId());
         this.activity = this;
     }
 

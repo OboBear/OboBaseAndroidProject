@@ -14,7 +14,6 @@ public class TouchView extends View {
 
     private Context context;
 
-
     public TouchView(Context context, AttributeSet attrs) {
         super(context, attrs);
         this.context = context;
@@ -26,4 +25,6 @@ public class TouchView extends View {
 
         canvas.drawCircle(100,100,50,new Paint());
     }
+
+
 }
