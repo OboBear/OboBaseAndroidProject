@@ -1,4 +1,4 @@
-package com.obo.view;
+package com.obo.mydemos.view;
 
 import android.content.Context;
 import android.graphics.Canvas;
@@ -24,8 +24,6 @@ public class TouchView extends View {
     {
         super.onDraw(canvas);
 
-
         canvas.drawCircle(100,100,50,new Paint());
-
     }
 }

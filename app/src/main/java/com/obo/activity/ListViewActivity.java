@@ -2,17 +2,15 @@ package com.obo.activity;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
 
-import com.obo.activity.R;
-import com.obo.base.BaseActivity;
+import com.obo.activity.base.BaseActivity;
 
 import java.io.Serializable;
 
 public class ListViewActivity extends BaseActivity {
+
+    public static String TAG = ListViewActivity.class.getCanonicalName();
 
     public static void startActivity(Activity activity)
     {
@@ -36,6 +34,8 @@ public class ListViewActivity extends BaseActivity {
 
     @Override
     protected void initContentView() {
+
+
 
     }
 

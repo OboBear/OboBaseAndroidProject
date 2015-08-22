@@ -15,18 +15,17 @@ import android.view.View;
 public class TouchView extends View{
 
     public static String TAG = TouchView.class.getCanonicalName();
-
+    //当前小球的位置
     private PointF currrentPosition = new PointF(100,100);
-
-    private PointF movePositionStart = new PointF(0,0);
-
-    private PointF movePositionMoving = new PointF(0,0);
+    //手指触摸起点坐标
+    private PointF moveStartPosition = new PointF(0,0);
+    //当前手指位置坐标
+    private PointF moveEndPosition = new PointF(0,0);
 
     private Context context;
 
     public TouchView(Context context, AttributeSet attrs) {
         super(context, attrs);
-
         this.context = context;
     }
 
@@ -34,7 +33,7 @@ public class TouchView extends View{
     public void onDraw(Canvas canvas)
     {
         super.onDraw(canvas);
-        canvas.drawCircle(currrentPosition.x + (movePositionMoving.x - movePositionStart.x),currrentPosition.y+(movePositionMoving.y - movePositionStart.y),50,new Paint());
+        canvas.drawCircle(currrentPosition.x + (moveEndPosition.x - moveStartPosition.x),currrentPosition.y+(moveEndPosition.y - moveStartPosition.y),50,new Paint());
     }
 
     @Override
@@ -43,30 +42,24 @@ public class TouchView extends View{
         switch (event.getActionMasked())
         {
             case MotionEvent.ACTION_DOWN:
-                movePositionStart.x = event.getX();
-                movePositionStart.y = event.getY();
-                return true;
+                moveStartPosition.x = event.getX();
+                moveStartPosition.y = event.getY();
+                break;
             case MotionEvent.ACTION_MOVE:
-                movePositionMoving.x = event.getX();
-                movePositionMoving.y = event.getY();
+                moveEndPosition.x = event.getX();
+                moveEndPosition.y = event.getY();
+                //刷新
+                this.postInvalidate();
                 break;
 
             case MotionEvent.ACTION_UP:
-                currrentPosition.x += (movePositionMoving.x - movePositionStart.x);
-                currrentPosition.y += (movePositionMoving.y - movePositionStart.y);
-                movePositionMoving.x = 0;
-                movePositionMoving.y = 0;
-                movePositionStart.x = 0;
-                movePositionStart.y = 0;
+                currrentPosition.x += (moveEndPosition.x - moveStartPosition.x);
+                currrentPosition.y += (moveEndPosition.y - moveStartPosition.y);
+                moveStartPosition.x = moveEndPosition.x;
+                moveStartPosition.y = moveEndPosition.y;
                 break;
-            case MotionEvent.ACTION_CANCEL:
-                break;
-
             default:
         }
-
-        this.postInvalidate();
-
         return true;
     }
 }
