@@ -33,6 +33,7 @@
             android:label="@string/title_activity_single_touch" >
             <intent-filter>
                 <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
                 <action android:name="com.obo.activity.intent.action.SingleTouchActivity"/>
             </intent-filter>
         </activity>
