@@ -8,7 +8,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name=".MainActivity"
+            android:name=".ListViewActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -17,8 +17,24 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ListViewActivity"
+            android:name=".MainActivity"
             android:label="@string/title_activity_list_view" >
+        </activity>
+        <activity
+            android:name="com.obo.mydemos.view.moutitouch.MoutiTouchActivity"
+            android:label="@string/title_activity_mouti_touch" >
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <action android:name="com.obo.activity.intent.action.MainActivity"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.obo.mydemos.view.singletouch.SingleTouchActivity"
+            android:label="@string/title_activity_single_touch" >
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <action android:name="com.obo.activity.intent.action.SingleTouchActivity"/>
+            </intent-filter>
         </activity>
     </application>
 

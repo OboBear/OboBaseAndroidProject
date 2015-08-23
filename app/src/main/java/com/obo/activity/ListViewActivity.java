@@ -3,6 +3,8 @@ package com.obo.activity;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.ListView;
 
@@ -11,12 +13,15 @@ import com.obo.adapter.base.OBBaseAdapter;
 import com.obo.item.MainListItem;
 import com.obo.item.base.BaseItem;
 import com.obo.model.MainListModel;
+import com.obo.mydemos.view.moutitouch.MoutiTouchActivity;
+import com.obo.mydemos.view.singletouch.SingleTouchActivity;
+import com.obo.mydemos.view.singletouch.SingleTouchView;
 
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ListViewActivity extends BaseActivity {
+public class ListViewActivity extends BaseActivity implements AdapterView.OnItemClickListener{
 
     public static String TAG = ListViewActivity.class.getCanonicalName();
 
@@ -67,7 +72,6 @@ public class ListViewActivity extends BaseActivity {
             model.text = activityStringName[i];
             dataSource.add(new MainListItem(model));
         }
-
     }
 
 
@@ -77,7 +81,30 @@ public class ListViewActivity extends BaseActivity {
 
         BaseAdapter baseAdapter = new OBBaseAdapter(activity,dataSource);
         listView.setAdapter(baseAdapter);
+        listView.setOnItemClickListener(this);
     }
 
 
+    @Override
+    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+        switch (position)
+        {
+            case 0:
+            {
+                Intent intent = new Intent(SingleTouchActivity.ACTION);
+                startActivity(intent);
+            }
+                break;
+            case 1:
+            {
+                Intent intent = new Intent(MoutiTouchActivity.ACTION);
+                startActivity(intent);
+            }
+            break;
+
+
+        }
+
+    }
 }
