@@ -4,14 +4,13 @@ import android.app.Activity;
 import android.app.Application;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 
 public abstract class BaseActivity extends AppCompatActivity {
 
     public  static String TAG = BaseActivity.class.getCanonicalName();
 
     public Activity activity;
-
-    protected abstract void initContentView();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,4 +36,6 @@ public abstract class BaseActivity extends AppCompatActivity {
     {
         return getApplication();
     }
+
+    protected abstract void onClick(View sender);
 }

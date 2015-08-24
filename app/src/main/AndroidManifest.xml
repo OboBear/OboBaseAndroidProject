@@ -24,19 +24,35 @@
             android:name="com.obo.mydemos.view.moutitouch.MoutiTouchActivity"
             android:label="@string/title_activity_mouti_touch" >
             <intent-filter>
-                <category android:name="android.intent.category.DEFAULT"/>
-                <action android:name="com.obo.activity.intent.action.MainActivity"/>
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <action android:name="com.obo.activity.intent.action.MainActivity" />
             </intent-filter>
         </activity>
         <activity
             android:name="com.obo.mydemos.view.singletouch.SingleTouchActivity"
             android:label="@string/title_activity_single_touch" >
             <intent-filter>
-                <category android:name="android.intent.category.DEFAULT"/>
-                <category android:name="android.intent.category.BROWSABLE"/>
-                <action android:name="com.obo.activity.intent.action.SingleTouchActivity"/>
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <action android:name="com.obo.activity.intent.action.SingleTouchActivity" />
             </intent-filter>
         </activity>
+
+
+        <activity
+            android:name="com.obo.mydemos.service.ServiceActivity"
+            android:label="@string/title_activity_service" >
+        </activity>
+
+
+        <service
+            android:name="com.obo.mydemos.service.OBService"
+            android:enabled="true"
+            android:exported="true" >
+        </service>
+
     </application>
 
 </manifest>

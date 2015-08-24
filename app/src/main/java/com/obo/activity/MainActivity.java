@@ -16,7 +16,6 @@ public class MainActivity extends BaseActivity {
         setContentView(R.layout.activity_main);
     }
 
-    @Override
     protected void initContentView() {
         TextView text_view = $(R.id.text_view);
         text_view.setText("测试");

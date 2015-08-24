@@ -54,6 +54,11 @@ public class ListViewActivity extends BaseActivity implements AdapterView.OnItem
         initContentView();
     }
 
+    @Override
+    protected void onClick(View sender) {
+
+    }
+
 
     private void initDatas()
     {
@@ -61,6 +66,7 @@ public class ListViewActivity extends BaseActivity implements AdapterView.OnItem
                 "ViewSingleTouch",
                 "ViewMoutiTouch",
                 "ViewMatrix",
+                "Service",
                 "SurfaceView",
                 "NDK"
         };
@@ -74,8 +80,6 @@ public class ListViewActivity extends BaseActivity implements AdapterView.OnItem
         }
     }
 
-
-    @Override
     protected void initContentView() {
         listView = $(R.id.listView);
 
@@ -102,6 +106,7 @@ public class ListViewActivity extends BaseActivity implements AdapterView.OnItem
                 startActivity(intent);
             }
             break;
+
 
 
         }
