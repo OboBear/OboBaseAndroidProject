@@ -1,6 +1,7 @@
 package com.obo.activity.base;
 
 import android.app.Activity;
+import android.app.Application;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
@@ -28,4 +29,12 @@ public abstract class BaseActivity extends AppCompatActivity {
         return (T) findViewById(ViewId);
     }
 
+    /**
+     *
+     * @return current Application
+     */
+    protected Application getApp()
+    {
+        return getApplication();
+    }
 }
