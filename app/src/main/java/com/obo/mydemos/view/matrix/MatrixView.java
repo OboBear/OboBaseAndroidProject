@@ -37,8 +37,6 @@ public class MatrixView extends View {
     {
         super.onDraw(canvas);
 
-        Paint paint = new Paint();
-
         canvas.drawBitmap(bitmap, matrix, new Paint());
     }
 
@@ -47,31 +45,17 @@ public class MatrixView extends View {
     {
         super.onTouchEvent(event);
 
-        switch (event.getActionMasked())
+        if (event.getActionMasked() == MotionEvent.ACTION_MOVE)
         {
-            case MotionEvent.ACTION_DOWN:
-
-                break;
-            case MotionEvent.ACTION_MOVE:
-                matrix.postTranslate(event.getX() - startPoint.x, event.getY() - startPoint.y );
-
-                //刷新
-                this.postInvalidate();
-                break;
-
-            case MotionEvent.ACTION_UP:
-
-                break;
-
-            default:
+            matrix.postTranslate(event.getX() - startPoint.x, event.getY() - startPoint.y );
+            //刷新
+            this.postInvalidate();
         }
 
         startPoint.x = event.getX();
         startPoint.y = event.getY();
 
-        Log.i(TAG,""+startPoint.x );
         return true;
 
     }
-
 }
