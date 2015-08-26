@@ -40,6 +40,18 @@
             </intent-filter>
         </activity>
 
+        <activity
+            android:name="com.obo.mydemos.view.matrix.MatrixActivity"
+            android:label="@string/title_activity_matrix" >
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <action android:name="com.obo.activity.intent.action.MatrixActivity"/>
+
+
+            </intent-filter>
+        </activity>
+
+
 
         <activity
             android:name="com.obo.mydemos.service.ServiceActivity"
@@ -47,11 +59,13 @@
         </activity>
 
 
+
         <service
             android:name="com.obo.mydemos.service.OBService"
             android:enabled="true"
             android:exported="true" >
         </service>
+
 
     </application>
 

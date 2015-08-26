@@ -13,6 +13,7 @@ import com.obo.adapter.base.OBBaseAdapter;
 import com.obo.item.MainListItem;
 import com.obo.item.base.BaseItem;
 import com.obo.model.MainListModel;
+import com.obo.mydemos.view.matrix.MatrixActivity;
 import com.obo.mydemos.view.moutitouch.MoutiTouchActivity;
 import com.obo.mydemos.view.singletouch.SingleTouchActivity;
 import com.obo.mydemos.view.singletouch.SingleTouchView;
@@ -24,6 +25,24 @@ import java.util.List;
 public class ListViewActivity extends BaseActivity implements AdapterView.OnItemClickListener{
 
     public static String TAG = ListViewActivity.class.getCanonicalName();
+
+    String[]activityStringName = {
+            "ViewSingleTouch",
+            "ViewMoutiTouch",
+            "ViewMatrix",
+            "Service",
+            "SurfaceView",
+            "NDK"
+    };
+
+    String []IntentActions = {
+            SingleTouchActivity.ACTION,
+            MoutiTouchActivity.ACTION,
+            MatrixActivity.ACTION
+    };
+
+
+
 
     public static void startActivity(Activity activity)
     {
@@ -62,14 +81,6 @@ public class ListViewActivity extends BaseActivity implements AdapterView.OnItem
 
     private void initDatas()
     {
-        String[]activityStringName = {
-                "ViewSingleTouch",
-                "ViewMoutiTouch",
-                "ViewMatrix",
-                "Service",
-                "SurfaceView",
-                "NDK"
-        };
 
         for (int i=0;i<activityStringName.length;i++)
         {
@@ -92,44 +103,9 @@ public class ListViewActivity extends BaseActivity implements AdapterView.OnItem
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
-        switch (position)
-        {
-            case 0:
-            {
-                Intent intent = new Intent(SingleTouchActivity.ACTION);
-                startActivity(intent);
-            }
-                break;
-            case 1:
-            {
-                Intent intent = new Intent(MoutiTouchActivity.ACTION);
-                startActivity(intent);
-            }
-            break;
-
-            case 3:
-            {
-
-
-
-            }
-            break;
-
-            case 4:
-            {
-
-            }
-            break;
-
-            case 5:
-            {
-
-            }
-            break;
-
-
-
+        if (IntentActions.length > position) {
+            Intent intent = new Intent(IntentActions[position]);
+            startActivity(intent);
         }
-
     }
 }
