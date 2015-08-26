@@ -71,6 +71,8 @@ public class ListViewActivity extends BaseActivity implements AdapterView.OnItem
         setContentView(R.layout.activity_list_view);
         initDatas();
         initContentView();
+
+        showMemInfo();
     }
 
     @Override

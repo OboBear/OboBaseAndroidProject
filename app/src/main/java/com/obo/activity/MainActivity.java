@@ -14,6 +14,9 @@ public class MainActivity extends BaseActivity {
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Runtime.getRuntime().maxMemory();
+        Runtime.getRuntime().totalMemory();
+        Runtime.getRuntime().freeMemory();
     }
 
     protected void initContentView() {

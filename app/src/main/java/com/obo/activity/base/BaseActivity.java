@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.app.Application;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 
 public abstract class BaseActivity extends AppCompatActivity {
@@ -28,6 +29,31 @@ public abstract class BaseActivity extends AppCompatActivity {
         return (T) findViewById(ViewId);
     }
 
+
+    /**
+     *
+     * get runtime info
+     *
+     *
+     */
+    protected void showMemInfo()
+    {
+        long max = Runtime.getRuntime().maxMemory();
+
+        long total = Runtime.getRuntime().totalMemory();
+
+        long free = Runtime.getRuntime().freeMemory();
+
+        long used = total - free;
+
+        System.out.println("最大内存 = " + max);
+        System.out.println("已分配内存 = " + total);
+        System.out.println("已分配内存中剩余空间 = " + free);
+        System.out.println("已用内存 = " + used);
+        System.out.println("时间 = " + System.currentTimeMillis());
+
+    }
+
     /**
      *
      * @return current Application
@@ -38,4 +64,5 @@ public abstract class BaseActivity extends AppCompatActivity {
     }
 
     protected abstract void onClick(View sender);
+
 }
