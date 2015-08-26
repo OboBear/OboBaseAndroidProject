@@ -107,6 +107,26 @@ public class ListViewActivity extends BaseActivity implements AdapterView.OnItem
             }
             break;
 
+            case 3:
+            {
+
+
+
+            }
+            break;
+
+            case 4:
+            {
+
+            }
+            break;
+
+            case 5:
+            {
+
+            }
+            break;
+
 
 
         }
