@@ -82,7 +82,7 @@ public abstract class BaseActivity extends AppCompatActivity {
     }
 
     /**
-     * get android divice id
+     * get android device id
      * @return
      */
     protected String getAndroidID()

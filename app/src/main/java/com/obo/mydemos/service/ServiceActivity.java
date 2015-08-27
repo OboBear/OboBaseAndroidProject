@@ -15,6 +15,7 @@ import com.obo.activity.base.BaseActivity;
 
 public class ServiceActivity extends BaseActivity implements ServiceConnection {
 
+    public final static String ACTION = "com.obo.activity.intent.action.ServiceActivity";
     private Intent intent;
 
 
