@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
+import android.provider.Settings;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
@@ -78,6 +79,15 @@ public abstract class BaseActivity extends AppCompatActivity {
         Intent intent = new Intent(Intent.ACTION_VIEW);
         intent.setDataAndType(Uri.fromFile(new File(fileName)), "application/vnd.android.package-archive");
         startActivity(intent);
+    }
+
+    /**
+     * get android divice id
+     * @return
+     */
+    protected String getAndroidID()
+    {
+        return Settings.Secure.getString(this.getContentResolver(), Settings.Secure.ANDROID_ID);
     }
 
     protected abstract void onClick(View sender);
