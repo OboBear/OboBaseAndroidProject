@@ -2,10 +2,15 @@ package com.obo.activity.base;
 
 import android.app.Activity;
 import android.app.Application;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.os.Environment;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
+
+import java.io.File;
 
 public abstract class BaseActivity extends AppCompatActivity {
 
@@ -51,7 +56,6 @@ public abstract class BaseActivity extends AppCompatActivity {
         System.out.println("已分配内存中剩余空间 = " + free);
         System.out.println("已用内存 = " + used);
         System.out.println("时间 = " + System.currentTimeMillis());
-
     }
 
     /**
@@ -61,6 +65,19 @@ public abstract class BaseActivity extends AppCompatActivity {
     protected Application getApp()
     {
         return getApplication();
+    }
+
+
+    /**
+     * install native apk
+     * @param path the path ok apk
+     */
+    protected void installAPK(String path)
+    {
+        String fileName = Environment.getExternalStorageDirectory() + path;
+        Intent intent = new Intent(Intent.ACTION_VIEW);
+        intent.setDataAndType(Uri.fromFile(new File(fileName)), "application/vnd.android.package-archive");
+        startActivity(intent);
     }
 
     protected abstract void onClick(View sender);
