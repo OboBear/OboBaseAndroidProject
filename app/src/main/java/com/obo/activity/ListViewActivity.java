@@ -13,6 +13,7 @@ import com.obo.adapter.base.OBBaseAdapter;
 import com.obo.item.MainListItem;
 import com.obo.item.base.BaseItem;
 import com.obo.model.MainListModel;
+import com.obo.mydemos.animate.AnimateActivity;
 import com.obo.mydemos.service.ServiceActivity;
 import com.obo.mydemos.view.matrix.MatrixActivity;
 import com.obo.mydemos.view.moutitouch.MoutiTouchActivity;
@@ -32,6 +33,7 @@ public class ListViewActivity extends BaseActivity implements AdapterView.OnItem
             "ViewMoutiTouch",
             "ViewMatrix",
             "Service",
+            "Animation",
             "SurfaceView",
             "NDK"
     };
@@ -40,7 +42,8 @@ public class ListViewActivity extends BaseActivity implements AdapterView.OnItem
             SingleTouchActivity.ACTION,
             MoutiTouchActivity.ACTION,
             MatrixActivity.ACTION,
-            ServiceActivity.ACTION
+            ServiceActivity.ACTION,
+            AnimateActivity.ACTION
     };
 
 
