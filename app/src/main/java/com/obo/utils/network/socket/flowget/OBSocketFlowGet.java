@@ -19,8 +19,7 @@ import android.util.Log;
  *
  */
 public class OBSocketFlowGet {
-	
-	private final static String TAG = "OBSocketFlowGet";
+	private final static String TAG = OBSocketFlowGet.class.getCanonicalName();
 	
 	Handler handler;
 	OBSocketFlowGetAgent agent;
@@ -50,7 +49,6 @@ public class OBSocketFlowGet {
 		closeFlag = true;
 		
 		closeSocket();
-		Log.i(TAG,TAG+"��  ������� �ͷŶ˿ڣ�"+port);
 	}
 	
 	private void startSocket() {
@@ -106,7 +104,7 @@ public class OBSocketFlowGet {
 			}
 		}
 		closeSocket();
-		Log.i(TAG,TAG+"��  ��������ͷŶ˿ڣ�"+port);
+		Log.i(TAG,TAG+"关闭socket"+port);
 	}
 	
 	private void closeSocket()
@@ -147,12 +145,11 @@ public class OBSocketFlowGet {
 	
 	private void initSocket() throws IOException ,Exception
 	{
-		Log.i("", "�󶨵��˿ڼ���:"+port);
+		Log.i("", "端口:"+port);
 		ss = new ServerSocket(port);
-		Log.i("", "�󶨵��˿ڼ���ɹ���");
 		System.out.println("Server is starting...");
 		s = ss.accept();
-		System.out.println("�ͻ���1ip��"+s.getInetAddress());
+		System.out.println("获取发送方地址"+s.getInetAddress());
 		br = new BufferedReader(new InputStreamReader(
 				s.getInputStream()));
 		pw = new PrintWriter(s.getOutputStream(), true);

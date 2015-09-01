@@ -2,8 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.obo.activity" >
 
-    <!--设定网络权限-->
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <!-- 设定网络权限 -->
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -71,8 +71,18 @@
             android:name="com.obo.mydemos.animate.AnimateActivity"
             android:label="@string/title_activity_animate" >
             <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <action android:name="com.obo.activity.intent.action.AnimateActivity" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.obo.mydemos.socket.SocketActivity"
+            android:label="@string/title_activity_socket" >
+            <intent-filter>
                 <category android:name="android.intent.category.DEFAULT"/>
-                <action android:name="com.obo.activity.intent.action.AnimateActivity"/>
+                <action android:name="com.obo.activity.intent.action.SocketActivity"/>
+
             </intent-filter>
         </activity>
     </application>

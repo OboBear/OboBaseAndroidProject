@@ -1,7 +1,8 @@
 package com.obo.utils.network.socket.flowsend;
 
+import android.util.Log;
+
 import java.io.BufferedReader;
-import java.io.ByteArrayOutputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -9,13 +10,12 @@ import java.io.PrintWriter;
 import java.net.Socket;
 import java.net.UnknownHostException;
 
-import android.graphics.Bitmap;
-import android.graphics.Matrix;
-import android.util.Log;
-
 public class OBSendFlow 
 {
 	private final static String TAG = "OBSendFlow";
+
+	boolean	aliveFlag = true;
+
 	String url;
 	int port;
 	
@@ -61,8 +61,10 @@ public class OBSendFlow
 	
 	private void initSocket() 
 	{
+		//clear&release resource
 		closeSocket();
-		
+
+		//start init
 		try {
 			s = new Socket(url, port);
 			s.setReuseAddress(true);
@@ -79,10 +81,8 @@ public class OBSendFlow
 			e.printStackTrace();
 		} catch (Exception e)
 		{
-			
 			e.printStackTrace();
 			Log.i(TAG, "");
-			
 		}
 	}
 	
@@ -90,9 +90,8 @@ public class OBSendFlow
 	
 	public void close()
 	{
-		
+		aliveFlag = false;
 		closeSocket();
-		
 	}
 	private void closeSocket() 
 	{
@@ -147,11 +146,10 @@ public class OBSendFlow
 			}
 			Log.i("", "connect SUCCESS");
 
-			//
 			int start = 0;
 			int maxLength = 1024;
 			
-			while(start<imgData.length)
+			while(start<imgData.length && aliveFlag)
 			{
 				int sendLength =  imgData.length - start < maxLength?imgData.length - start : maxLength;
 				out.write(imgData,start,sendLength);

@@ -15,6 +15,7 @@ import com.obo.item.base.BaseItem;
 import com.obo.model.MainListModel;
 import com.obo.mydemos.animate.AnimateActivity;
 import com.obo.mydemos.service.ServiceActivity;
+import com.obo.mydemos.socket.SocketActivity;
 import com.obo.mydemos.view.matrix.MatrixActivity;
 import com.obo.mydemos.view.moutitouch.MoutiTouchActivity;
 import com.obo.mydemos.view.singletouch.SingleTouchActivity;
@@ -34,6 +35,7 @@ public class ListViewActivity extends BaseActivity implements AdapterView.OnItem
             "ViewMatrix",
             "Service",
             "Animation",
+            "Socket",
             "SurfaceView",
             "NDK"
     };
@@ -43,7 +45,8 @@ public class ListViewActivity extends BaseActivity implements AdapterView.OnItem
             MoutiTouchActivity.ACTION,
             MatrixActivity.ACTION,
             ServiceActivity.ACTION,
-            AnimateActivity.ACTION
+            AnimateActivity.ACTION,
+            SocketActivity.ACTION
     };
 
 
