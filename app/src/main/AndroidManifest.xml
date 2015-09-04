@@ -80,9 +80,17 @@
             android:name="com.obo.mydemos.socket.SocketActivity"
             android:label="@string/title_activity_socket" >
             <intent-filter>
-                <category android:name="android.intent.category.DEFAULT"/>
-                <action android:name="com.obo.activity.intent.action.SocketActivity"/>
+                <category android:name="android.intent.category.DEFAULT" />
 
+                <action android:name="com.obo.activity.intent.action.SocketActivity" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.obo.mydemos.ndk.NdkActivity"
+            android:label="@string/title_activity_ndk" >
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <action android:name="com.obo.activity.intent.action.NdkActivity"/>
             </intent-filter>
         </activity>
     </application>

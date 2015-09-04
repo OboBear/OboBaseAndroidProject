@@ -20,6 +20,8 @@ public class NdkActivity extends BaseActivity {
 
     public native int getNDKInt();
 
+    public native String getNDKString();
+
     TextView textView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,7 +38,7 @@ public class NdkActivity extends BaseActivity {
     private void initContentView()
     {
         textView = $(R.id.textView);
-        textView.setText(""+getNDKInt());
+        textView.setText(""+getNDKInt()+"  "+getNDKString());
     }
 
 }
