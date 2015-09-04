@@ -1,0 +1,71 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	background-color: #eeeeee;
+}
+.container {
+	width: 960px;
+	height: 450px;
+	margin: 60px auto;
+	position: relative;
+}
+.pic {
+	width: 150px;
+	transform: rotate(30deg);
+}
+.container img {
+	padding: 10px 10px 15px;
+	background: white;
+	border: 1px solid #ddd;
+	box-shadow: 2px 2px 3px rgba(50, 50, 50, 0.4);
+	position: absolute;
+	z-index: 1;
+}
+.pic1 {
+	left: 300px;
+	top: 200px;
+	transform: rotate(30deg);
+	-ms-transform: rotate(30deg);
+	/* IE 9 */
+	
+	-moz-transform: rotate(30deg);
+	/* Firefox */
+	
+	-webkit-transform: rotate(30deg);
+	/* Safari and Chrome */
+	
+	-o-transform: rotate(30deg);
+	/* Opera */
+}
+
+
+.pic2{
+	transform: rotate(5deg);
+	-moz-transform: rotate(5deg);
+	-webkit-transform: rotate(5deg);
+	-o-transform: rotate(5deg);
+}
+
+.container img:hover{
+	box-shadow: 15px 15px 20px rgba(50,50,50,0.4);
+	transform: rotate(0deg) scale(1.20);
+	-webkit-transform:  rotate(0deg) scale(1.20);
+	transition: all 0.5s ease-in;
+	-webkit-transition: all 0.5s ease-in;
+	
+	z-index: 2;
+	
+}
+
+#image{
+	left: 100px;
+	top: 100px;
+}
+
+
+body{
+	
+	/*background-color: red;*/
+}

@@ -12,6 +12,5 @@ JNIEXPORT jint JNICALL Java_com_obo_mydemos_ndk_NdkActivity_getNDKInt
 JNIEXPORT jstring JNICALL Java_com_obo_mydemos_ndk_NdkActivity_getNDKString
         (JNIEnv * env, jobject obj)
 {
-//    return (*env)->NewStringUTF(env,getJStringBy());
     return getJString(env,"ni hao ya ");
 }

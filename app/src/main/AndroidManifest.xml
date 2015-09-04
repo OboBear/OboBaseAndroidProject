@@ -89,9 +89,20 @@
             android:name="com.obo.mydemos.ndk.NdkActivity"
             android:label="@string/title_activity_ndk" >
             <intent-filter>
-                <category android:name="android.intent.category.DEFAULT"/>
-                <action android:name="com.obo.activity.intent.action.NdkActivity"/>
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <action android:name="com.obo.activity.intent.action.NdkActivity" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name="com.obo.mydemos.webview.WebViewActivity"
+            android:label="@string/title_activity_web_view" >
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <action android:name="com.obo.activity.intent.action.WebViewActivity" />
+            </intent-filter>
+
         </activity>
     </application>
 

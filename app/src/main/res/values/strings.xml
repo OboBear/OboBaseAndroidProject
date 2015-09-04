@@ -12,4 +12,5 @@
     <string name="title_activity_animate">AnimateActivity</string>
     <string name="title_activity_socket">SocketActivity</string>
     <string name="title_activity_ndk">NdkActivity</string>
+    <string name="title_activity_web_view">WebViewActivity</string>
 </resources>

@@ -1,0 +1,62 @@
+
+html {
+	height: 100%;
+	width: 100%;
+	margin: 0;
+}
+body {
+	height: 100%;
+	width: 100%;
+	margin: 0;
+}
+
+.head {
+	height: 64px;
+	width: auto;
+	left: 0px;
+	right: 0px;
+	background-color: #FFFF00;
+	margin: 0;
+	position: fixed;
+}
+
+.image_div{
+	
+	width: 100%;
+	
+}
+
+.image{
+	width: 100%;
+
+}
+
+#home_title{
+	font: "微软雅黑";
+	font-size: 30px;
+	width: 100%;
+	text-align: center;
+	margin-top: 0;
+	color: black;
+	
+}
+.unchoose
+{
+	width: 18%;
+}
+
+[src="img/6.jpg"]{
+	border-radius: 1%;
+	box-shadow: 10px 10px 5px rgba(0,0,0,0.2);
+	top: 30px;
+}
+
+[src="img/6.jpg"] :hover{
+	width: 20px;
+}
+
+#log
+{
+	word-break: break-word;
+
+}

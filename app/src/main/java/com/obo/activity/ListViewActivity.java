@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.webkit.WebView;
 import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.ListView;
@@ -21,6 +22,7 @@ import com.obo.mydemos.view.matrix.MatrixActivity;
 import com.obo.mydemos.view.moutitouch.MoutiTouchActivity;
 import com.obo.mydemos.view.singletouch.SingleTouchActivity;
 import com.obo.mydemos.view.singletouch.SingleTouchView;
+import com.obo.mydemos.webview.WebViewActivity;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -38,6 +40,7 @@ public class ListViewActivity extends BaseActivity implements AdapterView.OnItem
             "Animation",
             "Socket",
             "NDK",
+            "WebViewActivity",
             "SurfaceView",
 
     };
@@ -49,7 +52,8 @@ public class ListViewActivity extends BaseActivity implements AdapterView.OnItem
             ServiceActivity.ACTION,
             AnimateActivity.ACTION,
             SocketActivity.ACTION,
-            NdkActivity.ACTION
+            NdkActivity.ACTION,
+            WebViewActivity.ACTION
     };
 
 
