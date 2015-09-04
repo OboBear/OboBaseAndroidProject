@@ -1,32 +1,52 @@
 package com.obo.mydemos.socket;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
+import android.os.Handler;
 import android.view.View;
+import android.widget.EditText;
+import android.widget.TextView;
 
 import com.obo.activity.R;
 import com.obo.activity.base.BaseActivity;
+import com.obo.utils.network.socket.flowget.OBSocketFlowGet;
+import com.obo.utils.network.socket.flowget.OBSocketFlowGetAgent;
 import com.obo.utils.network.socket.flowsend.OBSendFlow;
 
-public class SocketActivity extends BaseActivity {
+
+public class SocketActivity extends BaseActivity implements OBSocketFlowGetAgent{
     public final static String ACTION = "com.obo.activity.intent.action.SocketActivity";
+
+    EditText    editText;
+    TextView    textView;
+
+    OBSendFlow obSendFlow;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_socket);
+
+        editText = $(R.id.editSocketInput);
+        textView = $(R.id.textSocketResv);
+        obSendFlow = new OBSendFlow("192.168.0.100",9898);
+
+
     }
 
+    Handler handler = new Handler();
     @Override
     public void onClick(View sender) {
         switch (sender.getId())
         {
             case R.id.socketSendBtn:
 
-                OBSendFlow obSendFlow = new OBSendFlow("192.168.0.101",9898);
-                String sendString = "Hello Socket";
+                String sendString = editText.getText().toString();
                 obSendFlow.sendFlow(sendString.getBytes());
+
+                break;
+
+            case R.id.socketResvBtn:
+                OBSocketFlowGet obSocketFlowGet = new OBSocketFlowGet(this,handler,9898);
 
                 break;
 
@@ -34,5 +54,13 @@ public class SocketActivity extends BaseActivity {
 
                 break;
         }
+    }
+
+    @Override
+    public void getFlow(byte[] flow) {
+        String stringGet = new String(flow);
+
+        textView.setText(stringGet);
+
     }
 }

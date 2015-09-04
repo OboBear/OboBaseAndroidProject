@@ -157,7 +157,7 @@ public class OBSendFlow
 				start+= sendLength;
 			}
 			
-			Log.i(TAG, "");
+			Log.i(TAG, "send success");
 			
 		} catch (IOException ie) {
 			ie.printStackTrace();

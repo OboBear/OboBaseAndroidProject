@@ -19,6 +19,7 @@ import android.util.Log;
  *
  */
 public class OBSocketFlowGet {
+
 	private final static String TAG = OBSocketFlowGet.class.getCanonicalName();
 	
 	Handler handler;

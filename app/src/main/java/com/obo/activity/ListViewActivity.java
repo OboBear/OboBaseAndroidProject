@@ -14,6 +14,7 @@ import com.obo.item.MainListItem;
 import com.obo.item.base.BaseItem;
 import com.obo.model.MainListModel;
 import com.obo.mydemos.animate.AnimateActivity;
+import com.obo.mydemos.ndk.NdkActivity;
 import com.obo.mydemos.service.ServiceActivity;
 import com.obo.mydemos.socket.SocketActivity;
 import com.obo.mydemos.view.matrix.MatrixActivity;
@@ -36,8 +37,9 @@ public class ListViewActivity extends BaseActivity implements AdapterView.OnItem
             "Service",
             "Animation",
             "Socket",
+            "NDK",
             "SurfaceView",
-            "NDK"
+
     };
 
     String []IntentActions = {
@@ -46,7 +48,8 @@ public class ListViewActivity extends BaseActivity implements AdapterView.OnItem
             MatrixActivity.ACTION,
             ServiceActivity.ACTION,
             AnimateActivity.ACTION,
-            SocketActivity.ACTION
+            SocketActivity.ACTION,
+            NdkActivity.ACTION
     };
 
 
