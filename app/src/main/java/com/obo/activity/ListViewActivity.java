@@ -15,6 +15,7 @@ import com.obo.item.MainListItem;
 import com.obo.item.base.BaseItem;
 import com.obo.model.MainListModel;
 import com.obo.mydemos.animate.AnimateActivity;
+import com.obo.mydemos.navigation.NavigationActivity;
 import com.obo.mydemos.ndk.NdkActivity;
 import com.obo.mydemos.service.ServiceActivity;
 import com.obo.mydemos.socket.SocketActivity;
@@ -41,6 +42,7 @@ public class ListViewActivity extends BaseActivity implements AdapterView.OnItem
             "Socket",
             "NDK",
             "WebViewActivity",
+            "导航",
             "SurfaceView",
 
     };
@@ -53,7 +55,8 @@ public class ListViewActivity extends BaseActivity implements AdapterView.OnItem
             AnimateActivity.ACTION,
             SocketActivity.ACTION,
             NdkActivity.ACTION,
-            WebViewActivity.ACTION
+            WebViewActivity.ACTION,
+            NavigationActivity.ACTION
     };
 
 
