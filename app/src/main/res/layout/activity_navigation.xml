@@ -3,7 +3,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="horizontal"
-    tools:context="com.obo.mydemos.navigation.NavigationActivity">
+    tools:context="com.obo.mydemos.navigation.NavigationActivity"
+    android:background="#000000">
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -76,14 +77,10 @@
 
     </LinearLayout>
 
-
-
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:background="#000000">
-
-
 
         <TextView
             android:layout_width="match_parent"
@@ -95,6 +92,5 @@
             android:textSize="50px" />
 
     </RelativeLayout>
-
 
 </LinearLayout>

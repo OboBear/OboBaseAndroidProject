@@ -106,11 +106,24 @@
         <activity
             android:name="com.obo.mydemos.navigation.NavigationActivity"
             android:label="@string/title_activity_navigation"
-            android:screenOrientation="landscape">
+            android:screenOrientation="landscape" >
             <intent-filter>
-                <category android:name="android.intent.category.DEFAULT"/>
-                <action android:name="com.obo.activity.intent.action.NavigationActivity"/>
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <action android:name="com.obo.activity.intent.action.NavigationActivity" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name="com.obo.mydemos.porterduff.PorterDuffActivity"
+            android:label="@string/title_activity_porter_duff" >
+
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <action android:name="com.obo.activity.intent.action.PorterDuffActivity" />
+            </intent-filter>
+
+
         </activity>
     </application>
 
