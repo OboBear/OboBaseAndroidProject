@@ -15,6 +15,7 @@ import com.obo.item.MainListItem;
 import com.obo.item.base.BaseItem;
 import com.obo.model.MainListModel;
 import com.obo.mydemos.animate.AnimateActivity;
+import com.obo.mydemos.bitmap.BitmapActivity;
 import com.obo.mydemos.navigation.NavigationActivity;
 import com.obo.mydemos.ndk.NdkActivity;
 import com.obo.mydemos.porterduff.PorterDuffActivity;
@@ -45,6 +46,7 @@ public class ListViewActivity extends BaseActivity implements AdapterView.OnItem
             "WebViewActivity",
             "导航",
             "PorterDuff",
+            "BitmapActivity",
             "SurfaceView",
 
     };
@@ -59,7 +61,8 @@ public class ListViewActivity extends BaseActivity implements AdapterView.OnItem
             NdkActivity.ACTION,
             WebViewActivity.ACTION,
             NavigationActivity.ACTION,
-            PorterDuffActivity.ACTION
+            PorterDuffActivity.ACTION,
+            BitmapActivity.ACTION
     };
 
     public static void startActivity(Activity activity)

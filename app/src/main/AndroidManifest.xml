@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.obo.activity" >
+    package="com.obo.activity">
 
     <!-- 设定网络权限 -->
     <uses-permission android:name="android.permission.INTERNET" />
@@ -9,10 +9,10 @@
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme" >
+        android:theme="@style/AppTheme">
         <activity
             android:name=".ListViewActivity"
-            android:label="@string/app_name" >
+            android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -21,11 +21,10 @@
         </activity>
         <activity
             android:name=".MainActivity"
-            android:label="@string/title_activity_list_view" >
-        </activity>
+            android:label="@string/title_activity_list_view"></activity>
         <activity
             android:name="com.obo.mydemos.view.moutitouch.MoutiTouchActivity"
-            android:label="@string/title_activity_mouti_touch" >
+            android:label="@string/title_activity_mouti_touch">
             <intent-filter>
                 <category android:name="android.intent.category.DEFAULT" />
 
@@ -34,7 +33,7 @@
         </activity>
         <activity
             android:name="com.obo.mydemos.view.singletouch.SingleTouchActivity"
-            android:label="@string/title_activity_single_touch" >
+            android:label="@string/title_activity_single_touch">
             <intent-filter>
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
@@ -44,7 +43,7 @@
         </activity>
         <activity
             android:name="com.obo.mydemos.view.matrix.MatrixActivity"
-            android:label="@string/title_activity_matrix" >
+            android:label="@string/title_activity_matrix">
             <intent-filter>
                 <category android:name="android.intent.category.DEFAULT" />
 
@@ -53,7 +52,7 @@
         </activity>
         <activity
             android:name="com.obo.mydemos.service.ServiceActivity"
-            android:label="@string/title_activity_service" >
+            android:label="@string/title_activity_service">
             <intent-filter>
                 <category android:name="android.intent.category.DEFAULT" />
 
@@ -64,12 +63,11 @@
         <service
             android:name="com.obo.mydemos.service.OBService"
             android:enabled="true"
-            android:exported="true" >
-        </service>
+            android:exported="true"></service>
 
         <activity
             android:name="com.obo.mydemos.animate.AnimateActivity"
-            android:label="@string/title_activity_animate" >
+            android:label="@string/title_activity_animate">
             <intent-filter>
                 <category android:name="android.intent.category.DEFAULT" />
 
@@ -78,7 +76,7 @@
         </activity>
         <activity
             android:name="com.obo.mydemos.socket.SocketActivity"
-            android:label="@string/title_activity_socket" >
+            android:label="@string/title_activity_socket">
             <intent-filter>
                 <category android:name="android.intent.category.DEFAULT" />
 
@@ -87,7 +85,7 @@
         </activity>
         <activity
             android:name="com.obo.mydemos.ndk.NdkActivity"
-            android:label="@string/title_activity_ndk" >
+            android:label="@string/title_activity_ndk">
             <intent-filter>
                 <category android:name="android.intent.category.DEFAULT" />
 
@@ -96,7 +94,7 @@
         </activity>
         <activity
             android:name="com.obo.mydemos.webview.WebViewActivity"
-            android:label="@string/title_activity_web_view" >
+            android:label="@string/title_activity_web_view">
             <intent-filter>
                 <category android:name="android.intent.category.DEFAULT" />
 
@@ -106,7 +104,7 @@
         <activity
             android:name="com.obo.mydemos.navigation.NavigationActivity"
             android:label="@string/title_activity_navigation"
-            android:screenOrientation="landscape" >
+            android:screenOrientation="landscape">
             <intent-filter>
                 <category android:name="android.intent.category.DEFAULT" />
 
@@ -115,15 +113,20 @@
         </activity>
         <activity
             android:name="com.obo.mydemos.porterduff.PorterDuffActivity"
-            android:label="@string/title_activity_porter_duff" >
-
+            android:label="@string/title_activity_porter_duff">
             <intent-filter>
                 <category android:name="android.intent.category.DEFAULT" />
 
                 <action android:name="com.obo.activity.intent.action.PorterDuffActivity" />
             </intent-filter>
-
-
+        </activity>
+        <activity
+            android:name="com.obo.mydemos.bitmap.BitmapActivity"
+            android:label="@string/title_activity_bitmap">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+                <action android:name="com.obo.activity.intent.action.BitmapActivity" />
+            </intent-filter>
         </activity>
     </application>
 
