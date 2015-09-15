@@ -8,6 +8,7 @@ import android.widget.TextView;
 
 import com.obo.activity.R;
 import com.obo.activity.base.BaseActivity;
+import com.obo.utils.network.MobileIpV4;
 import com.obo.utils.network.socket.flowget.OBSocketFlowGet;
 import com.obo.utils.network.socket.flowget.OBSocketFlowGetAgent;
 import com.obo.utils.network.socket.flowsend.OBSendFlow;
@@ -28,7 +29,11 @@ public class SocketActivity extends BaseActivity implements OBSocketFlowGetAgent
 
         editText = $(R.id.editSocketInput);
         textView = $(R.id.textSocketResv);
-        obSendFlow = new OBSendFlow("192.168.0.100",9898);
+        obSendFlow = new OBSendFlow("10.153.230.246",9898);
+
+        String IP = MobileIpV4.getLocalIpAddress();
+
+        textView.setText(IP);
 
 
     }
@@ -58,9 +63,9 @@ public class SocketActivity extends BaseActivity implements OBSocketFlowGetAgent
 
     @Override
     public void getFlow(byte[] flow) {
+
         String stringGet = new String(flow);
 
         textView.setText(stringGet);
-
     }
 }
