@@ -29,7 +29,7 @@ public class SocketActivity extends BaseActivity implements OBSocketFlowGetAgent
 
         editText = $(R.id.editSocketInput);
         textView = $(R.id.textSocketResv);
-        obSendFlow = new OBSendFlow("10.153.230.246",9898);
+        obSendFlow = new OBSendFlow("192.168.43.1",9898);
 
         String IP = MobileIpV4.getLocalIpAddress();
 
@@ -67,5 +67,7 @@ public class SocketActivity extends BaseActivity implements OBSocketFlowGetAgent
         String stringGet = new String(flow);
 
         textView.setText(stringGet);
+
+
     }
 }

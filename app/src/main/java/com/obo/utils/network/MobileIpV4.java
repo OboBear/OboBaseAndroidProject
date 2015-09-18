@@ -29,7 +29,7 @@ public class MobileIpV4 {
             }
         }catch (SocketException e) {
             // TODO: handle exception
-            Log.i("", "WifiPreference IpAddress---error-" + e.toString());
+            Log.e("", "WifiPreference IpAddress---error-" + e.toString());
         }
 
         return null;
