@@ -6,8 +6,6 @@ import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.view.View;
 
-import com.chiyun.hud.views.ViewInfo;
-
 /**
  * Created by obo on 15/9/8.
  */
