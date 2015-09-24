@@ -22,7 +22,6 @@ public class MobileIpV4 {
                         .getInetAddresses(); enumIpAddr.hasMoreElements();) {
                     InetAddress inetAddress = enumIpAddr.nextElement();
                     if (!inetAddress.isLoopbackAddress() && InetAddressUtils.isIPv4Address(inetAddress.getHostAddress())) {
-
                         return inetAddress.getHostAddress().toString();
                     }
                 }
