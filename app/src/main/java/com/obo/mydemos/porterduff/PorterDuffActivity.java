@@ -6,15 +6,22 @@ import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.graphics.PorterDuff;
 import android.graphics.PorterDuffXfermode;
+import android.media.Image;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageView;
 
 import com.obo.activity.R;
+import com.obo.activity.base.BaseActivity;
+import com.obo.utils.image.ImageUtil;
 
-public class PorterDuffActivity extends AppCompatActivity {
+public class PorterDuffActivity extends BaseActivity {
     public final static String ACTION = "com.obo.activity.intent.action.PorterDuffActivity";
+
+    ImageView image_duff ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,19 +31,24 @@ public class PorterDuffActivity extends AppCompatActivity {
 
     }
 
+    @Override
+    protected void onClick(View sender) {
+
+    }
+
     private void initContentView()
     {
-        Bitmap left_back = BitmapFactory.decodeResource(getResources(),R.drawable.left_back);
+        image_duff = $(R.id.image_duff);
 
-        Bitmap left_back_2 = BitmapFactory.decodeResource(getResources(), R.drawable.left_back_2);
+        Bitmap bitmap = Bitmap.createBitmap(200,200, Bitmap.Config.ARGB_8888);
 
+        Canvas canvas = new Canvas(bitmap);
+        Paint paint = new Paint();
+        paint.setAntiAlias(true);
+        canvas.drawCircle(150,150,50,paint);
 
-        Bitmap left_back_copy = left_back.copy(Bitmap.Config.ARGB_8888,true);
-        Canvas canvas1 = new Canvas(left_back_copy);
-        Paint porterDuffPaint = new Paint();
-        porterDuffPaint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.SRC_OUT));
-        canvas1.drawBitmap(left_back_2, 5, 5, porterDuffPaint);
-        canvas1.drawRect(0,0,4,4,new Paint());
+        image_duff.setImageBitmap(ImageUtil.makeCirclePorterDuffBitmap(bitmap,10,60));
+
     }
 
 }

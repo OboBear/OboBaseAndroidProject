@@ -16,8 +16,13 @@ import android.graphics.Shader.TileMode;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 
-public class BitmapUtil
+public class ImageUtil
 {
+    /**
+     * 创建带有倒影的图片
+     * @param srcBitmap
+     * @return
+     */
     public static Bitmap createReflectedBitmap(Bitmap srcBitmap)
     {
         if (null == srcBitmap)
@@ -209,7 +214,7 @@ public class BitmapUtil
     }
 
     /**
-     *
+     * 创建圆形遮罩图片
      * @param dst
      * @param startAngle
      * @param sweepAngle
@@ -221,6 +226,7 @@ public class BitmapUtil
         Canvas canvas = new Canvas(coverBitmap);
         RectF rect = new RectF(-dst.getWidth()/2,-dst.getHeight()/2,dst.getWidth()*3/2,dst.getHeight()*3/2);
         Paint paint = new Paint();
+        paint.setAntiAlias(true);
         paint.setColor(Color.RED);
         canvas.drawArc(rect,startAngle,sweepAngle,true,paint);
         dst = createPorterDuffBitmap(dst,coverBitmap);
