@@ -16,4 +16,5 @@
     <string name="title_activity_navigation">NavigationActivity</string>
     <string name="title_activity_porter_duff">PorterDuffActivity</string>
     <string name="title_activity_bitmap">BitmapActivity</string>
+    <string name="title_activity_ok_http">OkHttpActivity</string>
 </resources>
