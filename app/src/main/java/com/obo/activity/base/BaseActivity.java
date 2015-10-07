@@ -68,7 +68,6 @@ public abstract class BaseActivity extends AppCompatActivity {
         return getApplication();
     }
 
-
     /**
      * install native apk
      * @param path the path ok apk

@@ -9,6 +9,12 @@ import android.view.View;
 
 import com.obo.activity.R;
 import com.obo.activity.base.BaseActivity;
+import com.obo.utils.network.socket.flowget.OBSocketFlowGet;
+import com.squareup.okhttp.OkHttpClient;
+import com.squareup.okhttp.Request;
+import com.squareup.okhttp.Response;
+
+import java.io.IOException;
 
 public class OkHttpActivity extends BaseActivity {
     public static String ACTION = "com.obo.activity.intent.action.OkHttpActivity";
@@ -28,7 +34,23 @@ public class OkHttpActivity extends BaseActivity {
                         .setAction("Action", null).show();
             }
         });
+        
     }
+
+    OkHttpClient client = new OkHttpClient();
+
+    String run(String url) throws IOException {
+        Request request = new Request.Builder().url(url).build();
+
+        Response response = client.newCall(request).execute();
+        if (response.isSuccessful()) {
+            return response.body().string();
+
+        } else {
+            throw new IOException("Unexpected code " + response);
+        }
+    }
+
 
     @Override
     protected void onClick(View sender) {

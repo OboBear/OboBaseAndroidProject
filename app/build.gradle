@@ -27,6 +27,12 @@ android {
     }
 }
 
+//repositories {
+//    jcenter()
+//    maven { url "https://github.com/OboBear/AndroidEventBus/tree/master/Simple_Event_Test/src/rg/simple/eventbus/test" }
+//}
+
+
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
 
@@ -36,3 +42,5 @@ dependencies {
     compile 'com.squareup.okhttp:okhttp:2.5.0'
     compile 'com.android.support:design:22.2.1'
 }
+
+
