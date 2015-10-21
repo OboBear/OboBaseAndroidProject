@@ -2,6 +2,10 @@ package com.obo.activity;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.View;
 import android.webkit.WebView;
@@ -21,6 +25,7 @@ import com.obo.mydemos.ndk.NdkActivity;
 import com.obo.mydemos.okhttp.OkHttpActivity;
 import com.obo.mydemos.porterduff.PorterDuffActivity;
 import com.obo.mydemos.service.ServiceActivity;
+import com.obo.mydemos.singleTop.SingleTopActivity1;
 import com.obo.mydemos.socket.SocketActivity;
 import com.obo.mydemos.view.matrix.MatrixActivity;
 import com.obo.mydemos.view.moutitouch.MoutiTouchActivity;
@@ -32,11 +37,11 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ListViewActivity extends BaseActivity implements AdapterView.OnItemClickListener{
+public class ListViewActivity extends BaseActivity implements AdapterView.OnItemClickListener {
 
     public static String TAG = ListViewActivity.class.getCanonicalName();
 
-    String[]activityStringName = {
+    String[] activityStringName = {
             "ViewSingleTouch",
             "ViewMoutiTouch",
             "ViewMatrix",
@@ -49,11 +54,12 @@ public class ListViewActivity extends BaseActivity implements AdapterView.OnItem
             "PorterDuff",
             "BitmapActivity",
             "OkHttpActivity",
+            "SingleTopActivity",
             "SurfaceView",
 
     };
 
-    String []IntentActions = {
+    String[] IntentActions = {
             SingleTouchActivity.ACTION,
             MoutiTouchActivity.ACTION,
             MatrixActivity.ACTION,
@@ -66,20 +72,19 @@ public class ListViewActivity extends BaseActivity implements AdapterView.OnItem
             PorterDuffActivity.ACTION,
             BitmapActivity.ACTION,
             OkHttpActivity.ACTION,
+            SingleTopActivity1.ACTION
 
     };
 
-    public static void startActivity(Activity activity)
-    {
-        Intent intent = new Intent(activity,ListViewActivity.class);
+    public static void startActivity(Activity activity) {
+        Intent intent = new Intent(activity, ListViewActivity.class);
         activity.startActivity(intent);
     }
 
-    public static void startActivity(Activity activity,Serializable extraData)
-    {
-        Intent intent = new Intent(activity,ListViewActivity.class);
+    public static void startActivity(Activity activity, Serializable extraData) {
+        Intent intent = new Intent(activity, ListViewActivity.class);
         Bundle bundle = new Bundle();
-        bundle.putSerializable("extraData",extraData);
+        bundle.putSerializable("extraData", extraData);
         intent.putExtra("bundle", bundle);
         activity.startActivity(intent);
     }
@@ -90,8 +95,7 @@ public class ListViewActivity extends BaseActivity implements AdapterView.OnItem
     ListView listView;
 
     @Override
-    public void onCreate(Bundle savedInstanceState)
-    {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_view);
         initDatas();
@@ -101,16 +105,14 @@ public class ListViewActivity extends BaseActivity implements AdapterView.OnItem
     }
 
     @Override
-    protected void onClick(View sender) {
+    public void onClick(View sender) {
 
     }
 
 
-    private void initDatas()
-    {
+    private void initDatas() {
 
-        for (int i=0;i<activityStringName.length;i++)
-        {
+        for (int i = 0; i < activityStringName.length; i++) {
             MainListModel model = new MainListModel();
 
             model.text = activityStringName[i];
@@ -119,9 +121,40 @@ public class ListViewActivity extends BaseActivity implements AdapterView.OnItem
     }
 
     protected void initContentView() {
-        listView = $(R.id.listView);
 
-        BaseAdapter baseAdapter = new OBBaseAdapter(activity,dataSource);
+        try {
+            String sourceString = "com.obo.activity.R.id.listView";
+            StringBuffer stringBuffer = new StringBuffer();
+            String[] splits = sourceString.split("[.]");
+
+            for (int i = 0; i < splits.length - 2; i++) {
+                if (i != 0)
+                    stringBuffer.append(".");
+                stringBuffer.append(splits[i]);
+            }
+            stringBuffer.append("$");
+            stringBuffer.append(splits[splits.length - 2]);
+
+            Class<?> cls = Class.forName(stringBuffer.toString());
+
+            int idValue = cls.getField(splits[splits.length - 1]).getInt(splits[splits.length - 1]);
+
+            System.out.println("" + idValue);
+            listView = $(idValue);
+            Bitmap image = BitmapFactory.decodeResource(this.getResources(), idValue);
+            Drawable imageDrawable = new BitmapDrawable(image);
+
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        } catch (NoSuchFieldException e) {
+            e.printStackTrace();
+        }
+
+//        listView = $(R.id.listView);
+
+        BaseAdapter baseAdapter = new OBBaseAdapter(activity, dataSource);
         listView.setAdapter(baseAdapter);
         listView.setOnItemClickListener(this);
     }

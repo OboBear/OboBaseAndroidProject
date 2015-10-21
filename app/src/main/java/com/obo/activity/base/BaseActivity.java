@@ -89,6 +89,6 @@ public abstract class BaseActivity extends AppCompatActivity {
         return Settings.Secure.getString(this.getContentResolver(), Settings.Secure.ANDROID_ID);
     }
 
-    protected abstract void onClick(View sender);
+    public abstract void onClick(View sender);
 
 }

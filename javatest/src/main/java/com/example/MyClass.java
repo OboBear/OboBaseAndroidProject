@@ -5,12 +5,13 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.lang.reflect.Field;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class MyClass {
 
-    public static void main(String[]args) throws IOException {
+    public static void main(String[]args) throws IOException, ClassNotFoundException, NoSuchFieldException, IllegalAccessException {
 //        Pattern pattern = Pattern.compile("^Java.*");
 //        Matcher matcher = pattern.matcher("Java不是人");
 //        boolean b= matcher.matches();
@@ -142,11 +143,11 @@ public class MyClass {
 //        Matcher matcher = pattern.matcher("hello werd");
 //        System.out.println(""+matcher.find());
 
-         Pattern pattern = Pattern.compile("[1-9]\\d{0,3}+|[1-6]\\d(?<!6[6-9])\\d(?<!65[6-9])\\d(?<!655[4-9])\\d(?<!6553[6-9])");
-         Matcher matcher = pattern.matcher("75535");
-        String regex = "[1-9]\\d{0,3}+|[1-6]\\d(?<!6[6-9])\\d(?<!65[6-9])\\d(?<!655[4-9])\\d(?<!6553[6-9])";
-        System.out.println(""+matcher.matches());
-        System.out.println("75535" + " " + "75535".matches(regex));
+//         Pattern pattern = Pattern.compile("[1-9]\\d{0,3}+|[1-6]\\d(?<!6[6-9])\\d(?<!65[6-9])\\d(?<!655[4-9])\\d(?<!6553[6-9])");
+//         Matcher matcher = pattern.matcher("75535");
+//        String regex = "[1-9]\\d{0,3}+|[1-6]\\d(?<!6[6-9])\\d(?<!65[6-9])\\d(?<!655[4-9])\\d(?<!6553[6-9])";
+//        System.out.println(""+matcher.matches());
+//        System.out.println("75535" + " " + "75535".matches(regex));
 
         // 1~4095
 //        String regex = "[1-9]\\d{0,2}+|[1-4]\\d(?<!4[1-9])\\d\\d(?<!409[6-9])";
@@ -156,5 +157,90 @@ public class MyClass {
 //        for (String str : strArray) {
 //            System.out.println(str + " " + str.matches(regex));
 //        }
+
+
+//        readWriteFile();
+
+//        String sourceString = "com.example.A.B.C";
+//        StringBuffer stringBuffer = new StringBuffer();
+//        String []splits = sourceString.split("[.]");
+//
+//        for (int i=0;i<splits.length - 2;i++)
+//        {
+//            if (i!=0)
+//                stringBuffer.append(".");
+//            stringBuffer.append(splits[i]);
+//        }
+//        stringBuffer.append("$");
+//        stringBuffer.append(splits[splits.length-2]);
+//
+//        Class<?>cls = Class.forName(stringBuffer.toString());
+//        int idValue =  cls.getField(splits[splits.length - 1]).getInt(splits[splits.length - 1]);
+//        System.out.println("" +idValue);
+
+
+//        try {
+//            //packagename+sourceID,you should replace this String value to yours
+//            String sourceString = "com.obo.R.drawable.splash";
+//            StringBuffer stringBuffer = new StringBuffer();
+//            String[] splits = sourceString.split("[.]");
+//
+//            for (int i = 0; i < splits.length - 2; i++) {
+//                if (i != 0)
+//                    stringBuffer.append(".");
+//                stringBuffer.append(splits[i]);
+//            }
+//            stringBuffer.append("$");
+//            stringBuffer.append(splits[splits.length - 2]);
+//
+//            Class<?> cls = Class.forName(stringBuffer.toString());
+//
+//            int idValue = cls.getField(splits[splits.length - 1]).getInt(splits[splits.length - 1]);
+//
+//            Bitmap image = BitmapFactory.decodeResource(context, idValue);
+//            //this is what you want!
+//            Drawable imageDrawable = new BitmapDrawable(image);
+//
+//        } catch (ClassNotFoundException e) {
+//            e.printStackTrace();
+//        } catch (IllegalAccessException e) {
+//            e.printStackTrace();
+//        } catch (NoSuchFieldException e) {
+//            e.printStackTrace();
+//        }
+
+
+
+
+
+
+//        Class classForName = Class.forName("com.example.A");
+//        Field feild = A.class.getField("B");
+//       Class b = feild.getClass();
+//        Field c = b.getField("C");
+//        System.out.println("" + c.getInt("C"));
+    }
+
+
+
+
+
+
+    static void readWriteFile() throws IOException {
+        FileReader fr=new FileReader("/Users/apple/Desktop/Workspace/android/demos/OboBaseAndroidProject/javatest/src/main/java/com/example/road");
+        BufferedReader br=new BufferedReader(fr);
+        String line="";
+        while ((line=br.readLine())!=null) {
+            line = line.replace("\\\"","||||||");
+            line = line.replace("\"","");
+            line = line.replace("\\n","");
+            line = line.replace("\\r","");
+            line = line.replace("\\t","");
+            line = line.replace("+","");
+            line = line.replace("||||||","\"");
+            System.out.println(line);
+        }
+        br.close();
+        fr.close();
     }
 }

@@ -17,5 +17,4 @@ public class OBApplication extends Application {
     {
         return this.shareData;
     }
-
 }

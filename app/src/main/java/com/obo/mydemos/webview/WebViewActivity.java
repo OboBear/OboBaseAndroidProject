@@ -29,7 +29,7 @@ public class WebViewActivity extends BaseActivity {
     }
 
     @Override
-    protected void onClick(View sender) {
+    public void onClick(View sender) {
 
     }
 }

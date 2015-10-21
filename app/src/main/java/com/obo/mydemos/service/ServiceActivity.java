@@ -34,7 +34,7 @@ public class ServiceActivity extends BaseActivity implements ServiceConnection {
 
 
     @Override
-    protected void onClick(View sender) {
+    public void onClick(View sender) {
         switch (sender.getId())
         {
             case R.id.button2:

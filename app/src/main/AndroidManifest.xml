@@ -6,11 +6,11 @@
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
+        android:name="com.obo.application.OBApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme"
-        android:name="com.obo.application.OBApplication">
+        android:theme="@style/AppTheme" >
         <activity
             android:name=".ListViewActivity"
             android:label="@string/app_name" >
@@ -32,6 +32,7 @@
                 <action android:name="com.obo.activity.intent.action.MainActivity" />
             </intent-filter>
         </activity>
+        <!-- SingleTouchActivity -->
         <activity
             android:name="com.obo.mydemos.view.singletouch.SingleTouchActivity"
             android:label="@string/title_activity_single_touch" >
@@ -42,6 +43,7 @@
                 <action android:name="com.obo.activity.intent.action.SingleTouchActivity" />
             </intent-filter>
         </activity>
+        <!-- MatrixActivity -->
         <activity
             android:name="com.obo.mydemos.view.matrix.MatrixActivity"
             android:label="@string/title_activity_matrix" >
@@ -51,6 +53,7 @@
                 <action android:name="com.obo.activity.intent.action.MatrixActivity" />
             </intent-filter>
         </activity>
+        <!-- ServiceActivity -->
         <activity
             android:name="com.obo.mydemos.service.ServiceActivity"
             android:label="@string/title_activity_service" >
@@ -66,6 +69,7 @@
             android:enabled="true"
             android:exported="true" />
 
+        <!-- AnimateActivity -->
         <activity
             android:name="com.obo.mydemos.animate.AnimateActivity"
             android:label="@string/title_activity_animate" >
@@ -75,6 +79,7 @@
                 <action android:name="com.obo.activity.intent.action.AnimateActivity" />
             </intent-filter>
         </activity>
+        <!-- SocketActivity -->
         <activity
             android:name="com.obo.mydemos.socket.SocketActivity"
             android:label="@string/title_activity_socket" >
@@ -84,6 +89,7 @@
                 <action android:name="com.obo.activity.intent.action.SocketActivity" />
             </intent-filter>
         </activity>
+        <!-- NdkActivity -->
         <activity
             android:name="com.obo.mydemos.ndk.NdkActivity"
             android:label="@string/title_activity_ndk" >
@@ -93,6 +99,7 @@
                 <action android:name="com.obo.activity.intent.action.NdkActivity" />
             </intent-filter>
         </activity>
+        <!-- WebViewActivity -->
         <activity
             android:name="com.obo.mydemos.webview.WebViewActivity"
             android:label="@string/title_activity_web_view" >
@@ -102,6 +109,7 @@
                 <action android:name="com.obo.activity.intent.action.WebViewActivity" />
             </intent-filter>
         </activity>
+        <!-- NavigationActivity -->
         <activity
             android:name="com.obo.mydemos.navigation.NavigationActivity"
             android:label="@string/title_activity_navigation"
@@ -112,6 +120,7 @@
                 <action android:name="com.obo.activity.intent.action.NavigationActivity" />
             </intent-filter>
         </activity>
+        <!-- PorterDuffActivity -->
         <activity
             android:name="com.obo.mydemos.porterduff.PorterDuffActivity"
             android:label="@string/title_activity_porter_duff" >
@@ -121,6 +130,7 @@
                 <action android:name="com.obo.activity.intent.action.PorterDuffActivity" />
             </intent-filter>
         </activity>
+        <!-- BitmapActivity -->
         <activity
             android:name="com.obo.mydemos.bitmap.BitmapActivity"
             android:label="@string/title_activity_bitmap" >
@@ -130,13 +140,39 @@
                 <action android:name="com.obo.activity.intent.action.BitmapActivity" />
             </intent-filter>
         </activity>
+        <!-- OkHttpActivity -->
         <activity
             android:name="com.obo.mydemos.okhttp.OkHttpActivity"
             android:label="@string/title_activity_ok_http"
             android:theme="@style/AppTheme.NoActionBar" >
             <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <action android:name="com.obo.activity.intent.action.OkHttpActivity" />
+            </intent-filter>
+        </activity>
+        <!-- SingleTopActivity1 -->
+        <activity
+            android:name="com.obo.mydemos.singleTop.SingleTopActivity1"
+            android:label="@string/title_activity_ok_http"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:parentActivityName=".ListViewActivity">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <action android:name="com.obo.activity.intent.action.SingleTopActivity" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.obo.mydemos.singleTop.JumpToMainActivity"
+            android:label="@string/title_activity_jump_to_main"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:parentActivityName=".ListViewActivity">
+            <intent-filter>
                 <category android:name="android.intent.category.DEFAULT"/>
-                <action android:name="com.obo.activity.intent.action.OkHttpActivity"/>
+                <action android:name="com.obo.activity.intent.action.JumpToMainActivity"/>
+
+
             </intent-filter>
         </activity>
     </application>
