@@ -32,4 +32,5 @@ public class WebViewActivity extends BaseActivity {
     public void onClick(View sender) {
 
     }
+
 }

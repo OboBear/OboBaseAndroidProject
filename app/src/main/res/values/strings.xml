@@ -18,4 +18,5 @@
     <string name="title_activity_bitmap">BitmapActivity</string>
     <string name="title_activity_ok_http">OkHttpActivity</string>
     <string name="title_activity_jump_to_main">JumpToMainActivity</string>
+    <string name="title_activity_braod_cast">BraodCastActivity</string>
 </resources>

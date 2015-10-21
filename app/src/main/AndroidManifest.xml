@@ -155,8 +155,8 @@
         <activity
             android:name="com.obo.mydemos.singleTop.SingleTopActivity1"
             android:label="@string/title_activity_ok_http"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:parentActivityName=".ListViewActivity">
+            android:parentActivityName=".ListViewActivity"
+            android:theme="@style/AppTheme.NoActionBar" >
             <intent-filter>
                 <category android:name="android.intent.category.DEFAULT" />
 
@@ -166,14 +166,17 @@
         <activity
             android:name="com.obo.mydemos.singleTop.JumpToMainActivity"
             android:label="@string/title_activity_jump_to_main"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:parentActivityName=".ListViewActivity">
+            android:parentActivityName=".ListViewActivity"
+            android:theme="@style/AppTheme.NoActionBar" >
             <intent-filter>
-                <category android:name="android.intent.category.DEFAULT"/>
-                <action android:name="com.obo.activity.intent.action.JumpToMainActivity"/>
-
-
+                <category android:name="android.intent.category.DEFAULT" />
+                <action android:name="com.obo.activity.intent.action.JumpToMainActivity" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name="com.obo.mydemos.broadcast.BroadCastActivity"
+            android:label="@string/title_activity_braod_cast"
+            android:theme="@style/AppTheme.NoActionBar" >
         </activity>
     </application>
 
