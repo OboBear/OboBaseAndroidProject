@@ -219,6 +219,15 @@ public class MyClass {
 //       Class b = feild.getClass();
 //        Field c = b.getField("C");
 //        System.out.println("" + c.getInt("C"));
+
+
+        String oldString = "Vorgang nicht möglich\\n\\nBitte Karte entnehmen";
+        System.out.println(oldString);
+        oldString = oldString.replace("\\\\n"," ");
+        System.out.println(oldString);
+        String newS = new String();
+        newS = oldString.replaceAll("\\\\n"," ");
+        System.out.println(newS);
     }
 
 

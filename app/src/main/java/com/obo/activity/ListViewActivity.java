@@ -20,6 +20,7 @@ import com.obo.item.base.BaseItem;
 import com.obo.model.MainListModel;
 import com.obo.mydemos.animate.AnimateActivity;
 import com.obo.mydemos.bitmap.BitmapActivity;
+import com.obo.mydemos.broadcast.BroadCastActivity;
 import com.obo.mydemos.navigation.NavigationActivity;
 import com.obo.mydemos.ndk.NdkActivity;
 import com.obo.mydemos.okhttp.OkHttpActivity;
@@ -31,6 +32,7 @@ import com.obo.mydemos.view.matrix.MatrixActivity;
 import com.obo.mydemos.view.moutitouch.MoutiTouchActivity;
 import com.obo.mydemos.view.singletouch.SingleTouchActivity;
 import com.obo.mydemos.view.singletouch.SingleTouchView;
+import com.obo.mydemos.viewpager.ViewPagerActivity;
 import com.obo.mydemos.webview.WebViewActivity;
 
 import java.io.Serializable;
@@ -55,7 +57,10 @@ public class ListViewActivity extends BaseActivity implements AdapterView.OnItem
             "BitmapActivity",
             "OkHttpActivity",
             "SingleTopActivity",
-            "SurfaceView",
+            "BroadCastActivity",
+            "ViewPagerActivity",
+//            "SurfaceView",
+
 
     };
 
@@ -72,7 +77,9 @@ public class ListViewActivity extends BaseActivity implements AdapterView.OnItem
             PorterDuffActivity.ACTION,
             BitmapActivity.ACTION,
             OkHttpActivity.ACTION,
-            SingleTopActivity1.ACTION
+            SingleTopActivity1.ACTION,
+            BroadCastActivity.ACTION,
+            ViewPagerActivity.ACTION
 
     };
 
