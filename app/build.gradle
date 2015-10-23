@@ -45,8 +45,7 @@ dependencies {
 //    compile 'com.obo:arr:1.0'
 
     compile 'com.obo:maventest:1.0'
-
-//    compile(name:'arr-1.0', ext:'aar')
+    compile(name:'arr-1.0', ext:'aar')
 }
 
 
@@ -64,7 +63,7 @@ repositories {
         url "https://raw.githubusercontent.com/OboBear/MavenTest/master"
     }
 
-//    flatDir { dirs'libs' }
+    flatDir { dirs'libs' }
 //    flatDir { dirs'/Users/apple/Desktop/Workspace/Maven/github/OboMaven/OboMaven/com/obo/arr/1.0' }
 
 }
