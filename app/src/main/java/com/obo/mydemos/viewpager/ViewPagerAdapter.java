@@ -13,12 +13,14 @@ import java.util.List;
 public class ViewPagerAdapter extends PagerAdapter {
 
     List<View>viewList;
+    List<String>titleName;
     Context context;
 
-    public ViewPagerAdapter(Context context,List<View>viewList)
+    public ViewPagerAdapter(Context context,List<View>viewList,List<String>titleName)
     {
         this.context = context;
         this.viewList = viewList;
+        this.titleName = titleName;
     }
 
     @Override
@@ -40,13 +42,24 @@ public class ViewPagerAdapter extends PagerAdapter {
         return viewList.get(position);
     }
 
-
     @Override
     public void destroyItem(ViewGroup container, int position, Object object)   {
         container.removeView(viewList.get(position));//删除页卡
     }
 
+    @Override
+    public CharSequence getPageTitle(int position) {
+        return titleName.get(position);
+    }
 
+
+    @Override
+    public float getPageWidth(int position)
+    {
+        if (position==1)
+        return 0.2f;
+        else return super.getPageWidth(position);
+    }
 
 
 }
