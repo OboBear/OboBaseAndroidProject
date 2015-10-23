@@ -6,6 +6,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.obo.activity.R;
+import com.obo.arrtest.ArrTest;
 
 public class AnimateActivity extends AppCompatActivity {
     public final static String ACTION = "com.obo.activity.intent.action.AnimateActivity";
@@ -14,6 +15,6 @@ public class AnimateActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_animate);
-
+        ArrTest t;
     }
 }

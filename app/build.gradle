@@ -35,13 +35,46 @@ android {
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
-
     compile 'com.android.support:appcompat-v7:23.0.1'
     compile 'com.google.code.gson:gson:2.4'
     compile 'com.facebook.fresco:fresco:0.7.0'
     compile 'com.squareup.okhttp:okhttp:2.5.0'
     compile 'com.android.support:design:23.0.1'
     compile 'com.jakewharton:butterknife:7.0.1'
+
+//    compile 'com.obo:arr:1.0'
+
+    compile 'com.obo:maventest:1.0'
+
+//    compile(name:'arr-1.0', ext:'aar')
+}
+
+
+
+repositories {
+    jcenter()
+
+//    maven {
+//
+//        url "https://raw.githubusercontent.com/OboBear/OboMaven/master/OboMaven/"
+//    }
+
+
+    maven {
+        url "https://raw.githubusercontent.com/OboBear/MavenTest/master"
+    }
+
+//    flatDir { dirs'libs' }
+//    flatDir { dirs'/Users/apple/Desktop/Workspace/Maven/github/OboMaven/OboMaven/com/obo/arr/1.0' }
+
+}
+
+
+repositories {
+    jcenter()
+    maven {
+        url "https://raw.githubusercontent.com/OboBear/MavenTest/master"
+    }
 }
 
 

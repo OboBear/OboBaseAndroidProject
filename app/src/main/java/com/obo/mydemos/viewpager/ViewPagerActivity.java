@@ -31,8 +31,8 @@ public class ViewPagerActivity extends AppCompatActivity {
     ViewPager viewPager;
 
 
-    @Bind(R.id.tabStrip)
-    PagerTabStrip tabStrip;
+//    @Bind(R.id.tabStrip)
+//    PagerTabStrip tabStrip;
 
     PagerAdapter pagerAdapter;
 
@@ -62,23 +62,21 @@ public class ViewPagerActivity extends AppCompatActivity {
         viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
-                LogUtil.i(this,"position:"+position);
+                LogUtil.i(this,"onPageScrolled position:"+position);
             }
 
             @Override
             public void onPageSelected(int position) {
-
+                LogUtil.i(this,"onPageScrolled position:"+position);
             }
 
             @Override
             public void onPageScrollStateChanged(int state) {
-
+                LogUtil.i(this,"onPageScrolled position:");
             }
         });
 
 
-
-        pagerAdapter.notifyDataSetChanged();
 
 //        tabStrip.setDrawFullUnderline(false);
 
