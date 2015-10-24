@@ -48,8 +48,6 @@ dependencies {
     compile(name:'arr-1.0', ext:'aar')
 }
 
-
-
 repositories {
     jcenter()
 

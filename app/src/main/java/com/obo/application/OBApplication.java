@@ -2,6 +2,8 @@ package com.obo.application;
 
 import android.app.Application;
 
+import com.facebook.drawee.backends.pipeline.Fresco;
+
 import java.util.Objects;
 
 /**
@@ -17,4 +19,10 @@ public class OBApplication extends Application {
     {
         return this.shareData;
     }
+    public void onCreate()
+    {
+        super.onCreate();
+        Fresco.initialize(this);
+    }
+
 }

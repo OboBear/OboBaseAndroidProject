@@ -8,8 +8,12 @@ import android.view.View;
 import com.obo.activity.R;
 import com.obo.activity.base.BaseActivity;
 
+import java.util.ArrayList;
+
 public class SingleTopActivity1 extends BaseActivity {
     public static String ACTION = "com.obo.activity.intent.action.SingleTopActivity";
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,7 +26,15 @@ public class SingleTopActivity1 extends BaseActivity {
         switch (sender.getId())
         {
             case R.id.textView:
-                startActivity(new Intent(JumpToMainActivity.ACTION));
+
+                ArrayList<ArrayList<CustomClass>>data = new ArrayList<ArrayList<CustomClass>>();
+                ArrayList<CustomClass>d1 = new ArrayList<CustomClass>();
+                CustomClass temp = new CustomClass("this is my object");
+                d1.add(temp);
+                data.add(d1);
+                Intent intent = new Intent(JumpToMainActivity.ACTION);
+                intent.putExtra("data",data);
+                startActivity(intent);
                 break;
         }
     }

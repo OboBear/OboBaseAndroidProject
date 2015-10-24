@@ -21,6 +21,7 @@ import com.obo.model.MainListModel;
 import com.obo.mydemos.animate.AnimateActivity;
 import com.obo.mydemos.bitmap.BitmapActivity;
 import com.obo.mydemos.broadcast.BroadCastActivity;
+import com.obo.mydemos.fresco.FrescoActivity;
 import com.obo.mydemos.navigation.NavigationActivity;
 import com.obo.mydemos.ndk.NdkActivity;
 import com.obo.mydemos.okhttp.OkHttpActivity;
@@ -59,6 +60,7 @@ public class ListViewActivity extends BaseActivity implements AdapterView.OnItem
             "SingleTopActivity",
             "BroadCastActivity",
             "ViewPagerActivity",
+            "FrescoActivity",
 //            "SurfaceView",
 
 
@@ -79,7 +81,8 @@ public class ListViewActivity extends BaseActivity implements AdapterView.OnItem
             OkHttpActivity.ACTION,
             SingleTopActivity1.ACTION,
             BroadCastActivity.ACTION,
-            ViewPagerActivity.ACTION
+            ViewPagerActivity.ACTION,
+            FrescoActivity.ACTION,
 
     };
 

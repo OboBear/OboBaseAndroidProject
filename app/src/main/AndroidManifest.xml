@@ -215,13 +215,20 @@
             android:name="com.obo.mydemos.viewpager.ViewPagerActivity"
             android:label="@string/title_activity_view_pager"
             android:theme="@style/AppTheme.NoActionBar" >
-
             <intent-filter>
                 <action android:name="com.obo.activity.intent.action.ViewPagerActivity" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
-
+        </activity>
+        <activity
+            android:name="com.obo.mydemos.fresco.FrescoActivity"
+            android:label="@string/title_activity_fresco"
+            android:theme="@style/AppTheme.NoActionBar" >
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <action android:name="com.obo.activity.intent.action.FrescoActivity"/>
+            </intent-filter>
         </activity>
     </application>
 
