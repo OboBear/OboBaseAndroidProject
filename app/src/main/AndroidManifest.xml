@@ -226,8 +226,19 @@
             android:label="@string/title_activity_fresco"
             android:theme="@style/AppTheme.NoActionBar" >
             <intent-filter>
-                <category android:name="android.intent.category.DEFAULT"/>
-                <action android:name="com.obo.activity.intent.action.FrescoActivity"/>
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <action android:name="com.obo.activity.intent.action.FrescoActivity" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.obo.mydemos.touch.TouchActivity"
+            android:label="@string/title_activity_touch"
+            android:theme="@style/AppTheme.NoActionBar" >
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <action android:name="com.obo.activity.intent.action.TouchActivity" />
             </intent-filter>
         </activity>
     </application>
