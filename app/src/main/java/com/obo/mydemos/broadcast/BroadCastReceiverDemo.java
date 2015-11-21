@@ -23,15 +23,10 @@ public class BroadCastReceiverDemo extends BroadcastReceiver {
         intent1.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_EXCLUDE_FROM_RECENTS);
         context.startActivity(intent1);
 
-
         KeyguardManager keyguardManager = (KeyguardManager)context.getSystemService(Context.KEYGUARD_SERVICE);
 
         KeyguardManager.KeyguardLock keyguardLock = keyguardManager.newKeyguardLock("BroadCastActivity");
 
         keyguardLock.disableKeyguard();
-
-
-
-
     }
 }

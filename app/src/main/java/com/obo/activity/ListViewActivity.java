@@ -2,13 +2,8 @@ package com.obo.activity;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.graphics.drawable.BitmapDrawable;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.View;
-import android.webkit.WebView;
 import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.ListView;
@@ -29,11 +24,9 @@ import com.obo.mydemos.porterduff.PorterDuffActivity;
 import com.obo.mydemos.service.ServiceActivity;
 import com.obo.mydemos.singleTop.SingleTopActivity1;
 import com.obo.mydemos.socket.SocketActivity;
-import com.obo.mydemos.touch.TouchActivity;
 import com.obo.mydemos.view.matrix.MatrixActivity;
 import com.obo.mydemos.view.moutitouch.MoutiTouchActivity;
 import com.obo.mydemos.view.singletouch.SingleTouchActivity;
-import com.obo.mydemos.view.singletouch.SingleTouchView;
 import com.obo.mydemos.viewpager.ViewPagerActivity;
 import com.obo.mydemos.webview.WebViewActivity;
 
@@ -62,10 +55,7 @@ public class ListViewActivity extends BaseActivity implements AdapterView.OnItem
             "BroadCastActivity",
             "ViewPagerActivity",
             "FrescoActivity",
-            "TouchActivity",
 //            "SurfaceView",
-
-
     };
 
     String[] IntentActions = {
@@ -85,7 +75,6 @@ public class ListViewActivity extends BaseActivity implements AdapterView.OnItem
             BroadCastActivity.ACTION,
             ViewPagerActivity.ACTION,
             FrescoActivity.ACTION,
-            TouchActivity.ACTION,
 
     };
 
@@ -154,8 +143,6 @@ public class ListViewActivity extends BaseActivity implements AdapterView.OnItem
 
             System.out.println("" + idValue);
             listView = $(idValue);
-            Bitmap image = BitmapFactory.decodeResource(this.getResources(), idValue);
-            Drawable imageDrawable = new BitmapDrawable(image);
 
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
@@ -164,8 +151,6 @@ public class ListViewActivity extends BaseActivity implements AdapterView.OnItem
         } catch (NoSuchFieldException e) {
             e.printStackTrace();
         }
-
-//        listView = $(R.id.listView);
 
         BaseAdapter baseAdapter = new OBBaseAdapter(activity, dataSource);
         listView.setAdapter(baseAdapter);

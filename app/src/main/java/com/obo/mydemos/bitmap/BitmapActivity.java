@@ -28,7 +28,6 @@ public class BitmapActivity extends BaseActivity {
 //        921600
         Log.i(TAG, "bitmap.getByteCount():" + bitmap.getByteCount());
 //        bitmap.getByteCount();
-
     }
 
     @Override

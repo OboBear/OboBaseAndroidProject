@@ -1,14 +1,11 @@
 package com.obo.mydemos.fresco;
 
-import android.content.DialogInterface;
 import android.net.Uri;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.View;
 
 import com.facebook.drawee.view.SimpleDraweeView;
@@ -42,8 +39,6 @@ public class FrescoActivity extends AppCompatActivity {
 
         initContentView();
     }
-
-
 
     private void initContentView()
     {
