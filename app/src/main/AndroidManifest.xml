@@ -231,6 +231,15 @@
                 <action android:name="com.obo.activity.intent.action.FrescoActivity" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="com.obo.mydemos.sql.SQLActivity"
+            android:label="@string/title_activity_sql"
+            android:theme="@style/AppTheme.NoActionBar" >
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <action android:name="com.obo.mydemos.sql.intent.action.SQLActivity"/>
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

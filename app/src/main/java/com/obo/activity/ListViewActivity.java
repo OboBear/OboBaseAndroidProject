@@ -24,6 +24,7 @@ import com.obo.mydemos.porterduff.PorterDuffActivity;
 import com.obo.mydemos.service.ServiceActivity;
 import com.obo.mydemos.singleTop.SingleTopActivity1;
 import com.obo.mydemos.socket.SocketActivity;
+import com.obo.mydemos.sql.SQLActivity;
 import com.obo.mydemos.view.matrix.MatrixActivity;
 import com.obo.mydemos.view.moutitouch.MoutiTouchActivity;
 import com.obo.mydemos.view.singletouch.SingleTouchActivity;
@@ -55,6 +56,7 @@ public class ListViewActivity extends BaseActivity implements AdapterView.OnItem
             "BroadCastActivity",
             "ViewPagerActivity",
             "FrescoActivity",
+            "SQLActivity",
 //            "SurfaceView",
     };
 
@@ -75,6 +77,7 @@ public class ListViewActivity extends BaseActivity implements AdapterView.OnItem
             BroadCastActivity.ACTION,
             ViewPagerActivity.ACTION,
             FrescoActivity.ACTION,
+            SQLActivity.ACTION,
 
     };
 
