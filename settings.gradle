@@ -1,1 +1,2 @@
 include ':app', ':javatest', ':app2', ':arrtest', ':maventest'
+include ':speechDemo'
