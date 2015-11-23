@@ -22,5 +22,4 @@ public class SpeechApp extends Application {
 		// Setting.setShowLog(false);
 		super.onCreate();
 	}
-	
 }
