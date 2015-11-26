@@ -20,17 +20,25 @@ public class Rotate3dAnimation extends Animation {
     private final float mDepthZ;
     // 是否需要扭曲
     private final boolean mReverse;
-    // 摄像头
+    // 3D变换处理camera（不是摄像头）
     private Camera mCamera;
 
+    /**
+     * @param fromDegrees 起始角度
+     * @param toDegrees 终止角度
+     * @param centerX 翻转中心x坐标
+     * @param centerY 翻转中心y坐标
+     * @param depthZ  深度
+     * @param reverse 是否允许反向
+     */
     public Rotate3dAnimation(float fromDegrees, float toDegrees, float centerX,
                              float centerY, float depthZ, boolean reverse) {
-        mFromDegrees = fromDegrees;
-        mToDegrees = toDegrees;
-        mCenterX = centerX;
-        mCenterY = centerY;
-        mDepthZ = depthZ;
-        mReverse = reverse;
+        mFromDegrees    = fromDegrees;
+        mToDegrees      = toDegrees;
+        mCenterX        = centerX;
+        mCenterY        = centerY;
+        mDepthZ         = depthZ;
+        mReverse        = reverse;
     }
 
     @Override
@@ -44,7 +52,7 @@ public class Rotate3dAnimation extends Animation {
     @Override
     protected void applyTransformation(float interpolatedTime, Transformation t) {
         final float fromDegrees = mFromDegrees;
-// 生成中间角度
+        // 生成中间角度
         float degrees = fromDegrees
                 + ((mToDegrees - fromDegrees) * interpolatedTime);
         final float centerX = mCenterX;
@@ -58,7 +66,7 @@ public class Rotate3dAnimation extends Animation {
             camera.translate(0.0f, 0.0f, mDepthZ * (1.0f - interpolatedTime));
         }
         camera.rotateY(degrees);
-// 取得变换后的矩阵
+        // 取得变换后的矩阵
         camera.getMatrix(matrix);
         camera.restore();
         matrix.preTranslate(-centerX, -centerY);
