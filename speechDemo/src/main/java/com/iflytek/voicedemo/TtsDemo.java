@@ -292,8 +292,7 @@ public class TtsDemo extends Activity implements OnClickListener {
 
 	/**
 	 * 参数设置
-	 * @param param
-	 * @return 
+	 * @return
 	 */
 	private void setParam(){
 		// 清空参数

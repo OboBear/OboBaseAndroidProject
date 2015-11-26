@@ -21,6 +21,7 @@ import com.obo.mydemos.navigation.NavigationActivity;
 import com.obo.mydemos.ndk.NdkActivity;
 import com.obo.mydemos.okhttp.OkHttpActivity;
 import com.obo.mydemos.porterduff.PorterDuffActivity;
+import com.obo.mydemos.reverse.ReverseActivity;
 import com.obo.mydemos.service.ServiceActivity;
 import com.obo.mydemos.singleTop.SingleTopActivity1;
 import com.obo.mydemos.socket.SocketActivity;
@@ -57,6 +58,7 @@ public class ListViewActivity extends BaseActivity implements AdapterView.OnItem
             "ViewPagerActivity",
             "FrescoActivity",
             "SQLActivity",
+            "ReverseActivity",
 //            "SurfaceView",
     };
 
@@ -78,6 +80,7 @@ public class ListViewActivity extends BaseActivity implements AdapterView.OnItem
             ViewPagerActivity.ACTION,
             FrescoActivity.ACTION,
             SQLActivity.ACTION,
+            ReverseActivity.ACTION,
 
     };
 
