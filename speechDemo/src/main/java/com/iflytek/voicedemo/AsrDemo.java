@@ -281,7 +281,7 @@ public class AsrDemo extends Activity implements OnClickListener {
 
         @Override
         public void onVolumeChanged(int volume, byte[] data) {
-            showTip("当前正在说话，音量大小：" + volume);
+//            showTip("当前正在说话，音量大小：" + volume);
             Log.d(TAG, "返回音频数据：" + data.length);
         }
 
