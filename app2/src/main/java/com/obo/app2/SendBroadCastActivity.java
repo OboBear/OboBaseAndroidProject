@@ -19,6 +19,7 @@ import com.iflytek.cloud.SpeechUnderstander;
 import com.iflytek.cloud.TextUnderstander;
 import com.iflytek.cloud.TextUnderstanderListener;
 import com.iflytek.cloud.UnderstanderResult;
+import com.obo.voicelibrary.VoiceUtils;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -27,6 +28,9 @@ public class SendBroadCastActivity extends AppCompatActivity implements View.OnC
 
     public final static String TAG = SendBroadCastActivity.class.getCanonicalName();
     public static final String PREFER_NAME = "com.iflytek.setting";
+
+    private VoiceUtils voiceUtils;
+
 
     @Bind(R.id.edit_input)
     EditText editInput;
@@ -45,12 +49,19 @@ public class SendBroadCastActivity extends AppCompatActivity implements View.OnC
         ButterKnife.bind(this);
 
         initActions();
+//        new VoiceUtils().init(this,getString(R.string.app_id));
     }
 
     private void initActions() {
         mSpeechUnderstander = SpeechUnderstander.createUnderstander(this, mSpeechUdrInitListener);
         mTextUnderstander = TextUnderstander.createTextUnderstander(this, mTextUdrInitListener);
         mSharedPreferences = getSharedPreferences(PREFER_NAME, Activity.MODE_PRIVATE);
+
+
+        voiceUtils = new VoiceUtils();
+
+        voiceUtils.init(this);
+
     }
 
     @Override
@@ -58,20 +69,21 @@ public class SendBroadCastActivity extends AppCompatActivity implements View.OnC
         switch (v.getId()) {
             case R.id.button_process:
                 String stringInput = editInput.getText().toString();
-                setParam();
-                if (mTextUnderstander.isUnderstanding()) {
-                    mTextUnderstander.cancel();
 
-                } else {
-                    int ret = mTextUnderstander.understandText(stringInput, mTextUnderstanderListener);
-                    if (ret != 0) {
-                        Log.i(TAG, "语义理解失败,错误码:" + ret);
-                    }
-                }
+//                voiceUtils.recognize(stringInput);
+//                setParam();
+//                if (mTextUnderstander.isUnderstanding()) {
+//                    mTextUnderstander.cancel();
+//
+//                } else {
+//                    int ret = mTextUnderstander.understandText(stringInput, mTextUnderstanderListener);
+//                    if (ret != 0) {
+//                        Log.i(TAG, "语义理解失败,错误码:" + ret);
+//                    }
+//                }
                 break;
         }
     }
-
 
     /**
      * 初始化监听器（文本到语义）。
@@ -100,7 +112,6 @@ public class SendBroadCastActivity extends AppCompatActivity implements View.OnC
             }
         }
     };
-
 
 
     /**

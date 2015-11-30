@@ -346,7 +346,6 @@ public class AsrDemo extends Activity implements OnClickListener {
     /**
      * 参数设置
      *
-     * @param param
      * @return
      */
     public boolean setParam() {

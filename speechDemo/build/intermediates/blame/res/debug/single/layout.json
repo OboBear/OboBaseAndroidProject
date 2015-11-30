@@ -4,12 +4,12 @@
         "source": "/Users/apple/Desktop/Workspace/android/demos/OboBaseAndroidProject/speechDemo/src/main/res/layout/list_items.xml"
     },
     {
-        "merged": "/Users/apple/Desktop/Workspace/android/demos/OboBaseAndroidProject/speechDemo/build/intermediates/res/merged/debug/layout/understander.xml",
-        "source": "/Users/apple/Desktop/Workspace/android/demos/OboBaseAndroidProject/speechDemo/src/main/res/layout/understander.xml"
-    },
-    {
         "merged": "/Users/apple/Desktop/Workspace/android/demos/OboBaseAndroidProject/speechDemo/build/intermediates/res/merged/debug/layout/isrdemo.xml",
         "source": "/Users/apple/Desktop/Workspace/android/demos/OboBaseAndroidProject/speechDemo/src/main/res/layout/isrdemo.xml"
+    },
+    {
+        "merged": "/Users/apple/Desktop/Workspace/android/demos/OboBaseAndroidProject/speechDemo/build/intermediates/res/merged/debug/layout/understander.xml",
+        "source": "/Users/apple/Desktop/Workspace/android/demos/OboBaseAndroidProject/speechDemo/src/main/res/layout/understander.xml"
     },
     {
         "merged": "/Users/apple/Desktop/Workspace/android/demos/OboBaseAndroidProject/speechDemo/build/intermediates/res/merged/debug/layout/isedemo.xml",
