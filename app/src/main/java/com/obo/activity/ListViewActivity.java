@@ -10,6 +10,7 @@ import android.widget.ListView;
 
 import com.obo.activity.base.BaseActivity;
 import com.obo.adapter.base.OBBaseAdapter;
+import com.obo.eventbusapplication.EventBusActivity;
 import com.obo.item.MainListItem;
 import com.obo.item.base.BaseItem;
 import com.obo.model.MainListModel;
@@ -60,6 +61,9 @@ public class ListViewActivity extends BaseActivity implements AdapterView.OnItem
             "SQLActivity",
             "ReverseActivity",
 //            "SurfaceView",
+            "EventBus",
+            "ReverseView",
+
     };
 
     String[] IntentActions = {
@@ -81,7 +85,8 @@ public class ListViewActivity extends BaseActivity implements AdapterView.OnItem
             FrescoActivity.ACTION,
             SQLActivity.ACTION,
             ReverseActivity.ACTION,
-
+            EventBusActivity.ACTION,
+            ReverseActivity.ACTION,
     };
 
     public static void startActivity(Activity activity) {

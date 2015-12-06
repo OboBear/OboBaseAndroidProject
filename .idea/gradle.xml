@@ -13,12 +13,11 @@
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/app2" />
             <option value="$PROJECT_DIR$/arrtest" />
-            <option value="$PROJECT_DIR$/eventbusapplication" />
             <option value="$PROJECT_DIR$/javatest" />
             <option value="$PROJECT_DIR$/maventest" />
-            <option value="$PROJECT_DIR$/reverseview" />
+            <option value="$PROJECT_DIR$/plugEventBus" />
+            <option value="$PROJECT_DIR$/plugReverseView" />
             <option value="$PROJECT_DIR$/speechDemo" />
-            <option value="$PROJECT_DIR$/voiceapplication" />
             <option value="$PROJECT_DIR$/voicelibrary" />
           </set>
         </option>

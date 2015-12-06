@@ -253,6 +253,9 @@
             </intent-filter>
 
         </activity>
+
+        <!--<activity android:name="com."-->
+
     </application>
 
 </manifest>
