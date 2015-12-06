@@ -2,7 +2,6 @@ package com.obo.reverseview.layout;
 
 import android.content.Context;
 import android.graphics.Canvas;
-import android.text.Layout;
 import android.util.AttributeSet;
 import android.widget.RelativeLayout;
 
@@ -25,5 +24,4 @@ public class ReverseLayout extends RelativeLayout {
 
         super.dispatchDraw(canvas);
     }
-
 }
