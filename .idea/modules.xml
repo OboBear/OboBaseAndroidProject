@@ -6,6 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/app2/app2.iml" filepath="$PROJECT_DIR$/app2/app2.iml" />
       <module fileurl="file://$PROJECT_DIR$/arrtest/arrtest.iml" filepath="$PROJECT_DIR$/arrtest/arrtest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/eventbusapplication/eventbusapplication.iml" filepath="$PROJECT_DIR$/eventbusapplication/eventbusapplication.iml" />
       <module fileurl="file://$PROJECT_DIR$/javatest/javatest.iml" filepath="$PROJECT_DIR$/javatest/javatest.iml" />
       <module fileurl="file://$PROJECT_DIR$/maventest/maventest.iml" filepath="$PROJECT_DIR$/maventest/maventest.iml" />
       <module fileurl="file://$PROJECT_DIR$/reverseview/reverseview.iml" filepath="$PROJECT_DIR$/reverseview/reverseview.iml" />
