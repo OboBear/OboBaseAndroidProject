@@ -1,4 +1,4 @@
-package com.obo.reverseview;
+package com.obo.reverseview.activity;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -6,9 +6,12 @@ import android.view.View;
 import android.view.ViewTreeObserver;
 import android.view.animation.Animation;
 
+import com.obo.reverseview.R;
 import com.obo.reverseview.animate.Rotate3dAnimation;
 
 public class AnimateReverseActivity extends AppCompatActivity implements View.OnClickListener {
+
+    boolean isReverse = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,9 +39,15 @@ public class AnimateReverseActivity extends AppCompatActivity implements View.On
         switch (v.getId()) {
             case R.id.reverse_button:
                 View layout = findViewById(R.id.reverse_layout);
-                Animation animation = new Rotate3dAnimation(0, 180, layout.getWidth() / 2, layout.getHeight() / 2);
-                animation.setFillAfter(true);
-                layout.startAnimation(animation);
+                if (!isReverse) {
+                    Animation animation = new Rotate3dAnimation(0, 180, layout.getWidth() / 2, layout.getHeight() / 2);
+                    animation.setFillAfter(true);
+                    layout.startAnimation(animation);
+                }
+                else {
+                    layout.clearAnimation();
+                }
+                isReverse = !isReverse;
                 break;
         }
     }

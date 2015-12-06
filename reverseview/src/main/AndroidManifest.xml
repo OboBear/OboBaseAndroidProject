@@ -9,7 +9,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".MainActivity"
+            android:name=".activity.MainActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -19,11 +19,11 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".LayoutReverseActivity"
+            android:name=".activity.LayoutReverseActivity"
             android:label="@string/title_activity_layout_reverse"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".AnimateReverseActivity"
+            android:name=".activity.AnimateReverseActivity"
             android:label="@string/title_activity_main"
             android:theme="@style/AppTheme.NoActionBar"/>
     </application>

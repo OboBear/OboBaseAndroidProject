@@ -5,23 +5,35 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context="com.obo.reverseview.LayoutReverseActivity">
+    tools:context=".activity.LayoutReverseActivity">
 
-    <RelativeLayout
+    <com.obo.reverseview.layout.ReverseLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:id="@+id/reverse_layout">
 
-        <com.obo.reverseview.layout.RelativeLayoutReverse
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="ReverseLayout 等待翻转的布局"
-            android:id="@+id/textView"
+            android:text="这是重写实现的翻转界面"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="77dp" />
 
 
-    </RelativeLayout>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="翻转"
+            android:id="@+id/reverse_button"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:onClick="onClick"
+            android:layout_marginBottom="194dp" />
+
+    </com.obo.reverseview.layout.ReverseLayout>
+
+
 
 </android.support.design.widget.CoordinatorLayout>
