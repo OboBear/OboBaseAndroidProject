@@ -8,6 +8,7 @@
       <module fileurl="file://$PROJECT_DIR$/arrtest/arrtest.iml" filepath="$PROJECT_DIR$/arrtest/arrtest.iml" />
       <module fileurl="file://$PROJECT_DIR$/javatest/javatest.iml" filepath="$PROJECT_DIR$/javatest/javatest.iml" />
       <module fileurl="file://$PROJECT_DIR$/maventest/maventest.iml" filepath="$PROJECT_DIR$/maventest/maventest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/reverseview/reverseview.iml" filepath="$PROJECT_DIR$/reverseview/reverseview.iml" />
       <module fileurl="file://$PROJECT_DIR$/speechDemo/speechDemo.iml" filepath="$PROJECT_DIR$/speechDemo/speechDemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/voiceapplication/voiceapplication.iml" filepath="$PROJECT_DIR$/voiceapplication/voiceapplication.iml" />
       <module fileurl="file://$PROJECT_DIR$/voicelibrary/voicelibrary.iml" filepath="$PROJECT_DIR$/voicelibrary/voicelibrary.iml" />
