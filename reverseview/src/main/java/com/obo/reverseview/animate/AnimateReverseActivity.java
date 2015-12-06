@@ -1,13 +1,15 @@
-package com.obo.reverseview.activity;
+package com.obo.reverseview.animate;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.view.ViewTreeObserver;
 import android.view.animation.Animation;
 
 import com.obo.reverseview.R;
-import com.obo.reverseview.animate.Rotate3dAnimation;
+
+/**
+ * Created by obo on 15/12/6.
+ */
 
 public class AnimateReverseActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -18,18 +20,18 @@ public class AnimateReverseActivity extends AppCompatActivity implements View.On
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-//        final View layoutView = findViewById(R.id.reverse_layout);
-//
-//        ViewTreeObserver vto = layoutView.getViewTreeObserver();
-//        vto.addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
-//            @Override
-//            public void onGlobalLayout() {
-//
-//                Animation animation = new Rotate3dAnimation(0, 180, layoutView.getMeasuredWidth() / 2, layoutView.getMeasuredHeight() / 2);
-//                animation.setFillAfter(true);
-//                layoutView.startAnimation(animation);
-//            }
-//        });
+        //        final View layoutView = findViewById(R.id.reverse_layout);
+        //
+        //        ViewTreeObserver vto = layoutView.getViewTreeObserver();
+        //        vto.addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
+        //            @Override
+        //            public void onGlobalLayout() {
+        //
+        //                Animation animation = new Rotate3dAnimation(0, 180, layoutView.getMeasuredWidth() / 2, layoutView.getMeasuredHeight() / 2);
+        //                animation.setFillAfter(true);
+        //                layoutView.startAnimation(animation);
+        //            }
+        //        });
     }
 
 

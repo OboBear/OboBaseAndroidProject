@@ -1,4 +1,4 @@
-package com.obo.reverseview.activity;
+package com.obo.reverseview;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -6,6 +6,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 import com.obo.reverseview.R;
+import com.obo.reverseview.animate.AnimateReverseActivity;
+import com.obo.reverseview.animate.Rotate3dAnimation;
+import com.obo.reverseview.layout.LayoutReverseActivity;
+import com.obo.reverseview.surfaceView.SurfaceReverseActivity;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
@@ -28,6 +32,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 startActivity(intent);
             }
                 break;
+
+            case R.id.button3: {
+                Intent intent = new Intent(this, SurfaceReverseActivity.class);
+                startActivity(intent);
+            }
         }
     }
 }

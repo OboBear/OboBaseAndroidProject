@@ -1,15 +1,18 @@
-package com.obo.reverseview.activity;
+package com.obo.reverseview.layout;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
 
 import com.obo.reverseview.R;
-import com.obo.reverseview.layout.ReverseLayout;
 
 public class LayoutReverseActivity extends AppCompatActivity implements View.OnClickListener{
 
     ReverseLayout reverseLayout;
+
+    WebView webView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

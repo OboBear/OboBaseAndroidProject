@@ -6,8 +6,13 @@ package com.obo.reverseview.animate;
 
 import android.graphics.Camera;
 import android.graphics.Matrix;
+import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.Transformation;
+
+import com.obo.reverseview.R;
 
 public class Rotate3dAnimation extends Animation {
 
@@ -63,4 +68,5 @@ public class Rotate3dAnimation extends Animation {
         matrix.preTranslate(-centerX, -centerY);
         matrix.postTranslate(centerX, centerY);
     }
+
 }

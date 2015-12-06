@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context=".activity.LayoutReverseActivity">
+    tools:context=".layout.LayoutReverseActivity">
 
     <com.obo.reverseview.layout.ReverseLayout
         android:layout_width="match_parent"
@@ -30,9 +30,6 @@
             android:layout_centerHorizontal="true"
             android:onClick="onClick"
             android:layout_marginBottom="194dp" />
-
-
-
 
     </com.obo.reverseview.layout.ReverseLayout>
 
