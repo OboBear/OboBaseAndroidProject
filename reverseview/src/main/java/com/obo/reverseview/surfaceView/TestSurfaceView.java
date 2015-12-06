@@ -25,12 +25,16 @@ public class TestSurfaceView extends SurfaceView implements SurfaceHolder.Callba
     public void surfaceCreated(SurfaceHolder holder) {
 
         Canvas canvas = surfaceHolder.lockCanvas();
-        canvas.scale(-1,1,getWidth()/2,getHeight()/2);
+
+        //绘制之前先对画布进行翻转
+        canvas.scale(-1,1, getWidth()/2,getHeight()/2);
+
+        //开始自己的内容的绘制
         Paint paint = new Paint();
         canvas.drawColor(Color.WHITE);
         paint.setColor(Color.BLACK);
         paint.setTextSize(50);
-        canvas.drawText("这是对SurfaceView的翻转",50,50,paint);
+        canvas.drawText("这是对SurfaceView的翻转",50,250,paint);
         surfaceHolder.unlockCanvasAndPost(canvas);
     }
 

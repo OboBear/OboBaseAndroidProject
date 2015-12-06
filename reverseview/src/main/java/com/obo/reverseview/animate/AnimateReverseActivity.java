@@ -27,7 +27,7 @@ public class AnimateReverseActivity extends AppCompatActivity implements View.On
         //            @Override
         //            public void onGlobalLayout() {
         //
-        //                Animation animation = new Rotate3dAnimation(0, 180, layoutView.getMeasuredWidth() / 2, layoutView.getMeasuredHeight() / 2);
+        //                Animation animation = new Rotate3dAnimation(layoutView.getMeasuredWidth() / 2, layoutView.getMeasuredHeight() / 2);
         //                animation.setFillAfter(true);
         //                layoutView.startAnimation(animation);
         //            }
@@ -42,7 +42,7 @@ public class AnimateReverseActivity extends AppCompatActivity implements View.On
             case R.id.reverse_button:
                 View layout = findViewById(R.id.reverse_layout);
                 if (!isReverse) {
-                    Animation animation = new Rotate3dAnimation(0, 180, layout.getWidth() / 2, layout.getHeight() / 2);
+                    Animation animation = new Rotate3dAnimation(layout.getWidth() / 2, layout.getHeight() / 2);
                     animation.setFillAfter(true);
                     layout.startAnimation(animation);
                 }
