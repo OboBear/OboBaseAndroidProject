@@ -17,6 +17,7 @@
             <option value="$PROJECT_DIR$/maventest" />
             <option value="$PROJECT_DIR$/plugEventBus" />
             <option value="$PROJECT_DIR$/plugReverseView" />
+            <option value="$PROJECT_DIR$/plugretrofit" />
             <option value="$PROJECT_DIR$/speechDemo" />
             <option value="$PROJECT_DIR$/voicelibrary" />
           </set>
