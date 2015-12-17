@@ -14,7 +14,7 @@
       <module fileurl="file://$PROJECT_DIR$/plugStatusListener/plugstatuslistener.iml" filepath="$PROJECT_DIR$/plugStatusListener/plugstatuslistener.iml" />
       <module fileurl="file://$PROJECT_DIR$/plugwebviewswith/plugwebviewswith.iml" filepath="$PROJECT_DIR$/plugwebviewswith/plugwebviewswith.iml" />
       <module fileurl="file://$PROJECT_DIR$/speechDemo/speechDemo.iml" filepath="$PROJECT_DIR$/speechDemo/speechDemo.iml" />
-      <module fileurl="file://$PROJECT_DIR$/utiljavaassist/utiljavaassist.iml" filepath="$PROJECT_DIR$/utiljavaassist/utiljavaassist.iml" />
+      <module fileurl="file://$PROJECT_DIR$/utilproject/utilproject.iml" filepath="$PROJECT_DIR$/utilproject/utilproject.iml" />
       <module fileurl="file://$PROJECT_DIR$/voicelibrary/voicelibrary.iml" filepath="$PROJECT_DIR$/voicelibrary/voicelibrary.iml" />
     </modules>
   </component>
