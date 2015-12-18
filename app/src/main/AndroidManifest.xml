@@ -30,7 +30,10 @@
         </activity>
         <activity
             android:name=".MainActivity"
-            android:label="@string/title_activity_list_view" />
+            android:label="@string/title_activity_list_view" >
+
+
+        </activity>
         <activity
             android:name="com.obo.mydemos.view.moutitouch.MoutiTouchActivity"
             android:label="@string/title_activity_mouti_touch">

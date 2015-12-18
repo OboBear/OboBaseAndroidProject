@@ -24,6 +24,7 @@ public class FrescoActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_fresco);
         ButterKnife.bind(this);
 

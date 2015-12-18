@@ -11,6 +11,7 @@
       <module fileurl="file://$PROJECT_DIR$/plugEventBus/plugEventBus.iml" filepath="$PROJECT_DIR$/plugEventBus/plugEventBus.iml" />
       <module fileurl="file://$PROJECT_DIR$/plugReverseView/plugReverseView.iml" filepath="$PROJECT_DIR$/plugReverseView/plugReverseView.iml" />
       <module fileurl="file://$PROJECT_DIR$/plugretrofit/plugretrofit.iml" filepath="$PROJECT_DIR$/plugretrofit/plugretrofit.iml" />
+      <module fileurl="file://$PROJECT_DIR$/plugseekbar/plugseekbar.iml" filepath="$PROJECT_DIR$/plugseekbar/plugseekbar.iml" />
       <module fileurl="file://$PROJECT_DIR$/plugStatusListener/plugstatuslistener.iml" filepath="$PROJECT_DIR$/plugStatusListener/plugstatuslistener.iml" />
       <module fileurl="file://$PROJECT_DIR$/plugwebviewswith/plugwebviewswith.iml" filepath="$PROJECT_DIR$/plugwebviewswith/plugwebviewswith.iml" />
       <module fileurl="file://$PROJECT_DIR$/speechDemo/speechDemo.iml" filepath="$PROJECT_DIR$/speechDemo/speechDemo.iml" />
