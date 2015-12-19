@@ -1,2 +1,2 @@
-include ':app', ':javatest', ':app2', ':arrtest', ':maventest', ':voicelibrary', ':plugReverseView', ':plugEventBus', ':plugretrofit', ':plugwebviewswith', ':plugstatuslistener', ':utilproject', ':plugseekbar'
+include ':app', ':javatest', ':app2', ':arrtest', ':maventest', ':voicelibrary', ':plugReverseView', ':plugEventBus', ':plugretrofit', ':plugwebviewswith', ':plugstatuslistener', ':utilproject', ':plugseekbar', ':pluganimation', ':jsloader'
 include ':speechDemo'

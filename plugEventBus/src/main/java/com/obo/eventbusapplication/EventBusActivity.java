@@ -33,7 +33,7 @@ public class EventBusActivity extends AppCompatActivity implements View.OnClickL
     }
 
     @Override
-    public void onClick(View v) {
+        public void onClick(View v) {
 //        switch (v.getId()) {
 //
 //            case R.id.button2: {

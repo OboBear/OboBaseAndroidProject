@@ -7,9 +7,11 @@
       <module fileurl="file://$PROJECT_DIR$/app2/app2.iml" filepath="$PROJECT_DIR$/app2/app2.iml" />
       <module fileurl="file://$PROJECT_DIR$/arrtest/arrtest.iml" filepath="$PROJECT_DIR$/arrtest/arrtest.iml" />
       <module fileurl="file://$PROJECT_DIR$/javatest/javatest.iml" filepath="$PROJECT_DIR$/javatest/javatest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jsloader/jsloader.iml" filepath="$PROJECT_DIR$/jsloader/jsloader.iml" />
       <module fileurl="file://$PROJECT_DIR$/maventest/maventest.iml" filepath="$PROJECT_DIR$/maventest/maventest.iml" />
       <module fileurl="file://$PROJECT_DIR$/plugEventBus/plugEventBus.iml" filepath="$PROJECT_DIR$/plugEventBus/plugEventBus.iml" />
       <module fileurl="file://$PROJECT_DIR$/plugReverseView/plugReverseView.iml" filepath="$PROJECT_DIR$/plugReverseView/plugReverseView.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pluganimation/pluganimation.iml" filepath="$PROJECT_DIR$/pluganimation/pluganimation.iml" />
       <module fileurl="file://$PROJECT_DIR$/plugretrofit/plugretrofit.iml" filepath="$PROJECT_DIR$/plugretrofit/plugretrofit.iml" />
       <module fileurl="file://$PROJECT_DIR$/plugseekbar/plugseekbar.iml" filepath="$PROJECT_DIR$/plugseekbar/plugseekbar.iml" />
       <module fileurl="file://$PROJECT_DIR$/plugStatusListener/plugstatuslistener.iml" filepath="$PROJECT_DIR$/plugStatusListener/plugstatuslistener.iml" />
