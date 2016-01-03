@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <set xmlns:android="http://schemas.android.com/apk/res/android"
-    android:repeatCount="-1">
+    android:startOffset="0"
+    android:duration="6000"
+    android:repeatCount="infinite">
 
     <translate
         android:duration="2000"
         android:startOffset="0"
         android:fromYDelta="0"
         android:toYDelta="600"
-        android:repeatCount="infinite"
         />
 
     <translate
@@ -15,14 +16,12 @@
         android:startOffset="2000"
         android:fromYDelta="600"
         android:toYDelta="0%"
-        android:repeatCount="infinite"
         />
     <translate
         android:duration="2000"
         android:startOffset="4000"
         android:fromXDelta="60"
         android:toXDelta="300"
-        android:repeatCount="infinite"
         />
 
 </set>

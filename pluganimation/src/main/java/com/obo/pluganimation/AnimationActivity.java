@@ -18,8 +18,6 @@ public class AnimationActivity extends AppCompatActivity {
         textView = (TextView) findViewById(R.id.textView);
 
         AnimationSet animation = (AnimationSet) AnimationUtils.loadAnimation(this,R.anim.animate);
-        animation.setRepeatCount(Animation.INFINITE);
-
         textView.startAnimation(animation);
     }
 }
