@@ -1,4 +1,4 @@
-package com.obo.plugmultible;
+package com.obo.plugmultible.application;
 
 import android.app.Application;
 

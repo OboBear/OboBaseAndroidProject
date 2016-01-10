@@ -1,4 +1,4 @@
-package com.obo.plugmultible;
+package com.obo.plugmultible.utils;
 
 /**
  * Created by obo on 16/1/10.

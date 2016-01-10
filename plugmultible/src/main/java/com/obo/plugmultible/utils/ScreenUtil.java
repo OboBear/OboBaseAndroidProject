@@ -1,4 +1,4 @@
-package com.obo.plugmultible;
+package com.obo.plugmultible.utils;
 
 import android.app.Activity;
 import android.graphics.Point;
