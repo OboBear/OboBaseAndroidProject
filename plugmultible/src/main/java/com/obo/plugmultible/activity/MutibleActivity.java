@@ -43,11 +43,12 @@ public class MutibleActivity extends AppCompatActivity implements View.OnClickLi
                 DragScaleRelativeLayout button = new DragScaleRelativeLayout(this);
                 button.setId(buttonId++);
                 button.setBackgroundColor(UtilColor.COLOR_VIEW_TOUCH_UP);
+                button.init();
+
                 RelativeLayout.LayoutParams layoutParams = new RelativeLayout.LayoutParams(200, 200);
                 layoutParams.setMargins(ScreenUtil.ScreenWith / 2 - 100, ScreenUtil.ScreenHeight / 2 - 100, 10000, 10000);
                 button.setLayoutParams(layoutParams);
                 button.setClickable(true);
-                button.init();
 
                 root_layout.addView(button);
 
@@ -75,11 +76,15 @@ public class MutibleActivity extends AppCompatActivity implements View.OnClickLi
 
     @Override
     public void doubleClick(View v) {
-        Log.i(TAG,"doubleClick");
+
         ViewModel viewModel = ((DragScaleImpl.DragScaleViewDelegate) v).getViewModel();
 
+        Log.i(TAG,"doubleClick:"+viewModel.getLeft().getAbsoluteValue());
+
         Intent intent = new Intent(this,SetViewParamsActivity.class);
-        intent.putExtra("data",viewModel);
+        Bundle bundle = new Bundle();
+        bundle.putSerializable("viewModel",viewModel);
+        intent.putExtra("data",bundle);
 
         startActivity(intent);
     }

@@ -4,8 +4,10 @@ import android.content.Context;
 import android.graphics.Canvas;
 import android.util.AttributeSet;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.RelativeLayout;
 
+import com.obo.plugmultible.model.ValueModel;
 import com.obo.plugmultible.model.ViewModel;
 import com.obo.plugmultible.utils.UtilDefines;
 
@@ -34,18 +36,6 @@ public class DragScaleRelativeLayout extends RelativeLayout implements DragScale
         super(context);
     }
 
-    ////////////
-    //TODO 必须调用的方法
-    /**
-     *
-     */
-    public ViewModel init() {
-        viewModel = new ViewModel();
-        viewModel.setViewType(viewType);
-        viewModel.setViewId(getId());
-
-        return viewModel;
-    }
 
     @Override
     protected void onDraw(Canvas canvas) {
@@ -53,9 +43,23 @@ public class DragScaleRelativeLayout extends RelativeLayout implements DragScale
         if (dragScale != null) {
             dragScale.draw(this, canvas);
         }
-
     }
 
+    @Override
+    public void setLayoutParams(ViewGroup.LayoutParams params) {
+        super.setLayoutParams(params);
+
+        RelativeLayout.LayoutParams relativeLayoutParams = (LayoutParams) params;
+
+        viewModel.getLeft().setAbsoluteValue(relativeLayoutParams.leftMargin);
+        viewModel.getTop().setAbsoluteValue(relativeLayoutParams.topMargin);
+        viewModel.getWidth().setAbsoluteValue(relativeLayoutParams.width);
+        viewModel.getHeight().setAbsoluteValue(relativeLayoutParams.height);
+    }
+
+
+    /////////////////
+    //DragScaleViewDelegate
 
     @Override
     public int getViewType() {
@@ -76,6 +80,22 @@ public class DragScaleRelativeLayout extends RelativeLayout implements DragScale
 
     @Override
     public ViewModel getViewModel() {
-        return null;
+        return viewModel;
     }
+
+
+    ////////////
+    //TODO 必须调用的方法
+    /**
+     *
+     */
+    public ViewModel init() {
+        viewModel = new ViewModel();
+        viewModel.setViewType(viewType);
+        viewModel.setViewId(getId());
+
+        return viewModel;
+    }
+
+
 }

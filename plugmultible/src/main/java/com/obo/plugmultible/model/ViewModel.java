@@ -17,10 +17,10 @@ public class ViewModel implements Serializable{
 
     private int parentId;
 
-    private ValueModel left;
-    private ValueModel top;
-    private ValueModel width;
-    private ValueModel height;
+    private ValueModel left = new ValueModel();
+    private ValueModel top = new ValueModel() ;
+    private ValueModel width = new ValueModel();
+    private ValueModel height = new ValueModel();
 
     public int getViewId() {
         return viewId;
