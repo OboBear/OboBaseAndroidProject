@@ -8,12 +8,18 @@ import android.widget.RelativeLayout;
 public class MutibleActivity extends AppCompatActivity implements View.OnClickListener{
     public final String TAG = MutibleActivity.class.getSimpleName();
     RelativeLayout layout;
+    RelativeLayout root_layout;
+    View coverView;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.content_mutible);
         layout = (RelativeLayout) findViewById(R.id.layout);
+        root_layout = (RelativeLayout) findViewById(R.id.root_layout);
+        coverView = findViewById(R.id.coverView);
+        coverView.setVisibility(View.INVISIBLE);
     }
 
     int buttonId = 1;
@@ -25,6 +31,7 @@ public class MutibleActivity extends AppCompatActivity implements View.OnClickLi
 
                 DragScaleRelativeLayout button = new DragScaleRelativeLayout(this);
                 button.setId(buttonId++);
+                button.setDragScale(new DragScaleImpl(DragScaleRelativeLayout.viewType));
                 layout.addView(button);
                 button.setBackgroundColor(UtilColor.COLOR_VIEW_TOUCH_DOWN);
                 button.setLayoutParams(new RelativeLayout.LayoutParams(100, 100));

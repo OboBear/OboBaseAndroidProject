@@ -21,31 +21,27 @@ public class DragScaleRelativeLayout extends RelativeLayout{
 
     public DragScaleRelativeLayout(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
-        dragScale = new DragScaleImpl(viewType);
-        setOnTouchListener(dragScale);
-        setOnLongClickListener(dragScale);
     }
 
     public DragScaleRelativeLayout(Context context, AttributeSet attrs) {
         super(context, attrs);
-        dragScale = new DragScaleImpl(viewType);
-        setOnTouchListener(dragScale);
-        setOnLongClickListener(dragScale);
     }
 
     public DragScaleRelativeLayout(Context context) {
         super(context);
-        dragScale = new DragScaleImpl(viewType);
-        setOnTouchListener(dragScale);
-        setOnLongClickListener(dragScale);
     }
 
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
-        dragScale.draw(this, canvas);
+        if (dragScale != null) {
+            dragScale.draw(this, canvas);
+        }
     }
 
     public void setDragScale(DragScaleImpl dragScale) {
+        this.dragScale = dragScale;
+        setOnTouchListener(dragScale);
+        setOnLongClickListener(dragScale);
     }
 }
