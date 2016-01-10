@@ -1,0 +1,146 @@
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="chrome=1">
+		<title>Sumarkdown by suemi994</title>
+
+		<link rel="stylesheet" href="stylesheets/styles.css">
+		<link rel="stylesheet" href="stylesheets/pygment_trac.css">
+		<link rel="stylesheet" href="lib/highlight/styles/default.css">
+		<link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css">
+		<script src="lib/jquery/dist/jquery.min.js"></script>
+		<script src="lib/highlight/highlight.pack.js"></script>
+		<script src="lib/marked/marked.js"></script>
+		<script src="javascripts/scale.fix.js"></script>
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+		<script src="js/suMarkdown.js"></script>
+		<!--[if lt IE 9]>
+ <!--   <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script> -->
+		<script>
+
+			$(function() {
+				var option = {
+					target: '.suMarkdown',
+					preview: true,
+					clean: true,
+					height: "100px"
+				};
+				SuMarkdown(option);
+			});
+		</script>
+
+	</head>
+
+	<body>
+
+		<div class="wrapper">
+			<div id="editor1" class="suMarkdown">
+
+				<div style="height: 100%; width: 100%;">
+					<style>
+						.suEditor {
+							width: 50%;
+							float: left;
+							display: block;
+						}
+						
+						.suEditor textarea {
+							width: 100%;
+							height: 100%;
+							background: #f5f5f5;
+							tab-size: 4;
+							border: solid 1px;
+							border-top: none;
+							border-color: #cccccc;
+							padding: 10px;
+							resize: none;
+						}
+						
+						.suEditor textarea:focus {
+							background: #fff;
+							border-color: #cccccc;
+							outline: none;
+						}
+						
+						.suPreview {
+							width: 50%;
+							left: 50%;
+							float: left;
+							background: #f5f5f5;
+							height: 100%;
+							display: block;
+							overflow: auto;
+							padding: 0 20px;
+							border-right: solid 1px;
+							border-bottom: solid 1px;
+							border-color: #cccccc;
+						}
+						
+					</style>
+
+					<div class="suProgress progress" style="display: none;">
+						<div class="progress-bar su-progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">
+							0%
+						</div>
+					</div>
+
+					<!--<div class="su-toolbar">
+							<div class="tool-block su-tool-bold" title="加粗(Ctrl+B)" data-placement="top" data-toggle="tooltip">
+								<span class="glyphicon glyphicon-bold"></span>
+							</div>
+							<div class="tool-block su-tool-italic" title="斜体(Ctrl+I)" data-placement="top" data-toggle="tooltip">
+								<span class="glyphicon glyphicon-italic"></span>
+							</div>
+							<div class="tool-block su-tool-head" title="标题(Ctrl+H)" data-placement="top" data-toggle="tooltip">
+								<span class="glyphicon glyphicon-header"></span>
+							</div>
+							<div class="tool-block su-tool-link" title="链接(Ctrl+L)" data-placement="top" data-toggle="tooltip">
+								<span class="glyphicon glyphicon-link"></span>
+							</div>
+							<div class="tool-block su-tool-img" title="图片(Ctrl+G)" data-placement="top" data-toggle="tooltip">
+								<span class="glyphicon glyphicon-picture"></span>
+							</div>
+							<div class="tool-block su-tool-list" title="无序列表(Ctrl+U)" data-placement="top" data-toggle="tooltip">
+								<span class="glyphicon glyphicon-list"></span>
+							</div>
+							<div class="tool-block su-tool-orderlist" title="有序列表(Ctrl+O)" data-placement="top" data-toggle="tooltip">
+								<span class="glyphicon glyphicon-th-list"></span>
+							</div>
+							<div class="tool-block su-tool-code" title="单行代码(Ctrl+K)" data-placement="top" data-toggle="tooltip">
+								<span class="glyphicon glyphicon-asterisk"></span>
+							</div>
+							<div class="tool-block su-tool-quote" title="引用(Ctrl+Q)" data-placement="top" data-toggle="tooltip">
+								<span class="glyphicon glyphicon-comment"></span>
+							</div>
+
+							<div class="tool-block su-tool-plus" title="文件上传" data-placement="top" data-toggle="tooltip" style="display: block;">
+
+								<span class="glyphicon glyphicon-upload"></span>
+							</div>
+							<input type="file" style="display: none" class="su-tool-upload" multiple="">
+
+							<a class="tool-block su-tool-help" href="http://lab.lepture.com/editor/markdown" title="帮助" data-placement="top" data-toggle="tooltip">
+								<span class="glyphicon glyphicon-info-sign"></span>
+							</a>
+
+							<div class="tool-block pull-right su-tool-fullscreen" title="全屏" data-placement="top" data-toggle="tooltip">
+								<span class="glyphicon glyphicon-fullscreen"></span>
+							</div>
+
+							<div class="tool-block pull-right su-tool-preview" title="预览" data-placement="top" data-toggle="tooltip" style="display: none;">
+								<span class="glyphicon glyphicon-eye-open"></span>
+							</div>
+						</div>-->
+						
+					<div class="suPreview" style="width: 40%; float: left; overflow: auto; padding: 0px 5px; height: 100%;"></div>
+					<div class="suEditor" style="width: 60%; float: left; display: block; height: 100%;">
+						<textarea data-state="0" style="tab-size: 4; padding: 5px; resize: none; overflow: auto; height: 100%;"></textarea>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</body>
+
+</html>

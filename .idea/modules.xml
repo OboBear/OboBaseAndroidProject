@@ -13,7 +13,10 @@
       <module fileurl="file://$PROJECT_DIR$/plugEventBus/plugEventBus.iml" filepath="$PROJECT_DIR$/plugEventBus/plugEventBus.iml" />
       <module fileurl="file://$PROJECT_DIR$/plugReverseView/plugReverseView.iml" filepath="$PROJECT_DIR$/plugReverseView/plugReverseView.iml" />
       <module fileurl="file://$PROJECT_DIR$/pluganimation/pluganimation.iml" filepath="$PROJECT_DIR$/pluganimation/pluganimation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/plugmarkdown/plugmarkdown.iml" filepath="$PROJECT_DIR$/plugmarkdown/plugmarkdown.iml" />
+      <module fileurl="file://$PROJECT_DIR$/plugmultible/plugmultible.iml" filepath="$PROJECT_DIR$/plugmultible/plugmultible.iml" />
       <module fileurl="file://$PROJECT_DIR$/plugretrofit/plugretrofit.iml" filepath="$PROJECT_DIR$/plugretrofit/plugretrofit.iml" />
+      <module fileurl="file://$PROJECT_DIR$/plugrotateview/plugrotateview.iml" filepath="$PROJECT_DIR$/plugrotateview/plugrotateview.iml" />
       <module fileurl="file://$PROJECT_DIR$/plugrxjava/plugrxjava.iml" filepath="$PROJECT_DIR$/plugrxjava/plugrxjava.iml" />
       <module fileurl="file://$PROJECT_DIR$/plugseekbar/plugseekbar.iml" filepath="$PROJECT_DIR$/plugseekbar/plugseekbar.iml" />
       <module fileurl="file://$PROJECT_DIR$/plugStatusListener/plugstatuslistener.iml" filepath="$PROJECT_DIR$/plugStatusListener/plugstatuslistener.iml" />

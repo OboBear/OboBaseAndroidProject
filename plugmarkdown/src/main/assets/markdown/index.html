@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		<link rel="stylesheet" href="lib/highlight/styles/default.css">
+		<script src="lib/jquery/dist/jquery.min.js"></script>
+		<script src="lib/highlight/highlight.pack.js"></script>
+		<script>
+			hljs.initHighlightingOnLoad();
+		</script>
+		<script src="lib/marked/marked.js"></script>
+		<script src="js/suMarkdown.js"></script>
+		<link rel="stylesheet" href="theme/style.css" />
+
+	</head>
+
+	<body>
+		<div id="editor" class="suMarkdown">
+			<div id="edit">
+				<div class="suEditor" id="suEditor">
+					<textarea class="suText"></textarea>
+				</div>
+			</div>
+			
+			<div id="preView">
+				<div class="suPreview" id="suPreview">
+				</div>
+			</div>
+
+		</div>
+
+		<script>
+			$(function() {
+				var option = {
+					target: '.suMarkdown',
+					preview: true,
+					clean: true,
+					height:"100px"
+				};
+				SuMarkdown(option);
+			});
+		</script>
+
+		<style>
+			div#editor {
+				background-color: #ffff99;
+				height: 400px;
+				width: 400px;
+				/*float: left;*/
+			}
+			
+			div#edit {
+				background-color: #FFFFFF;
+				height: 200px;
+				width: 200px;
+				float: left;
+			}
+			div#preView {
+				background-color: #99bbbb;
+				width: 200px;
+				height: 200px;
+				float: left;
+			}
+			
+			div.suEditor {
+				width: 50%;
+				height: 10 px;
+			}
+			div.suPreview {
+				width: 50%;
+			}
+			
+		</style>
+
+	</body>
+
+</html>
