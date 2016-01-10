@@ -7,6 +7,8 @@ import android.graphics.Color;
  */
 public class UtilColor {
 
-    public final static int COLOR_TOUCH_DOWN_VIEW = Color.argb(20,100,0,0);
-    public final static int COLOR_TOUCH_UP_VIEW = Color.argb(10,0,0,100);
+    public final static int COLOR_VIEW_TOUCH_DOWN = Color.argb(10,100,0,0);
+    public final static int COLOR_VIEW_TOUCH_CANMODIFY = Color.argb(30,150,0,0);
+    public final static int COLOR_VIEW_TOUCH_UP = Color.argb(10,0,0,100);
+
 }

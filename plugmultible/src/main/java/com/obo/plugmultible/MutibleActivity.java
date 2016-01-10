@@ -26,11 +26,12 @@ public class MutibleActivity extends AppCompatActivity implements View.OnClickLi
                 DragScaleRelativeLayout button = new DragScaleRelativeLayout(this);
                 button.setId(buttonId++);
                 layout.addView(button);
-                button.setBackgroundColor(UtilColor.COLOR_TOUCH_DOWN_VIEW);
+                button.setBackgroundColor(UtilColor.COLOR_VIEW_TOUCH_DOWN);
                 button.setLayoutParams(new RelativeLayout.LayoutParams(100, 100));
                 button.setX(50);
                 button.setY(50);
                 button.setClickable(true);
+
                 break;
         }
     }

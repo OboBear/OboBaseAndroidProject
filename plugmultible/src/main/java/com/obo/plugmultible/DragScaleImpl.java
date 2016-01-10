@@ -11,9 +11,11 @@ import android.widget.RelativeLayout;
 /**
  * Created by obo on 16/1/10.
  */
-public class DragScaleImpl implements View.OnTouchListener{
+public class DragScaleImpl implements View.OnTouchListener , View.OnLongClickListener{
 
     public final static String TAG = DragScaleRelativeLayout.class.getCanonicalName();
+    // 界面类型
+    int viewType;
 
     protected int lastX;
     protected int lastY;
@@ -35,7 +37,15 @@ public class DragScaleImpl implements View.OnTouchListener{
     private static final int MIN_WIDTH = 50;
     private static final int MIN_HEIGHT = 50;
     private int offset = 10;
+
     protected Paint paint = new Paint();
+
+    //能否拖动
+    boolean canMove = false;
+
+    public DragScaleImpl (int viewType) {
+        this.viewType = viewType;
+    }
 
     public void draw(View view, Canvas canvas) {
 
@@ -50,6 +60,7 @@ public class DragScaleImpl implements View.OnTouchListener{
     @Override
     public boolean onTouch(View v, MotionEvent event) {
         Log.i(TAG,"onTouch");
+
         int action = event.getAction();
         if (action == MotionEvent.ACTION_DOWN) {
             oriLeft = v.getLeft();
@@ -60,7 +71,7 @@ public class DragScaleImpl implements View.OnTouchListener{
             lastX = (int) event.getRawX();
             dragDirection = getDirection(v, (int) event.getX(),
                     (int) event.getY());
-            v.setBackgroundColor(UtilColor.COLOR_TOUCH_DOWN_VIEW);
+            v.setBackgroundColor(UtilColor.COLOR_VIEW_TOUCH_DOWN);
         }
 
         // 处理拖动事件
@@ -75,6 +86,7 @@ public class DragScaleImpl implements View.OnTouchListener{
             case MotionEvent.ACTION_MOVE:
                 int dx = (int) event.getRawX() - lastX;
                 int dy = (int) event.getRawY() - lastY;
+                if (canMove)
                 switch (dragDirection) {
                     case LEFT: // 左边缘
                         left(v, dx);
@@ -126,8 +138,8 @@ public class DragScaleImpl implements View.OnTouchListener{
                 layoutParams.height = v.getBottom() - v.getTop();
                 layoutParams.setMargins(left,top,10000,10000);
                 v.setLayoutParams(layoutParams);
-                v.setBackgroundColor(UtilColor.COLOR_TOUCH_UP_VIEW);
-
+                v.setBackgroundColor(UtilColor.COLOR_VIEW_TOUCH_UP);
+                canMove = false;
                 break;
         }
     }
@@ -211,14 +223,11 @@ public class DragScaleImpl implements View.OnTouchListener{
         return CENTER;
     }
 
-//
-//    public int getCutWidth() {
-//        return getWidth() - 2 * offset;
-//    }
-//
-//
-//    public int getCutHeight() {
-//        return getHeight() - 2 * offset;
-//    }
+    @Override
+    public boolean onLongClick(View v) {
+        v.setBackgroundColor(UtilColor.COLOR_VIEW_TOUCH_CANMODIFY);
+        canMove = true;
 
+        return false;
+    }
 }
