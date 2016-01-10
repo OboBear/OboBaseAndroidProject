@@ -1,5 +1,6 @@
 package com.obo.plugmultible.activity;
 
+import android.content.Intent;
 import android.graphics.Point;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -7,6 +8,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.RelativeLayout;
 
+import com.obo.plugmultible.model.ViewModel;
 import com.obo.plugmultible.view.DragScaleImpl;
 import com.obo.plugmultible.view.DragScaleRelativeLayout;
 import com.obo.plugmultible.R;
@@ -15,7 +17,6 @@ import com.obo.plugmultible.utils.UtilColor;
 
 public class MutibleActivity extends AppCompatActivity implements View.OnClickListener , DragScaleImpl.DragScaleDelegate {
     public final String TAG = MutibleActivity.class.getSimpleName();
-//    RelativeLayout layout;
     RelativeLayout root_layout;
     View coverView;
 
@@ -24,7 +25,6 @@ public class MutibleActivity extends AppCompatActivity implements View.OnClickLi
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.content_mutible);
-//        layout = (RelativeLayout) findViewById(R.id.layout);
         root_layout = (RelativeLayout) findViewById(R.id.root_layout);
         coverView = findViewById(R.id.coverView);
         coverView.setBackgroundColor(UtilColor.COLOR_VIEW_COVER);
@@ -76,7 +76,11 @@ public class MutibleActivity extends AppCompatActivity implements View.OnClickLi
     @Override
     public void doubleClick(View v) {
         Log.i(TAG,"doubleClick");
+        ViewModel viewModel = ((DragScaleImpl.DragScaleViewDelegate) v).getViewModel();
 
+        Intent intent = new Intent(this,SetViewParamsActivity.class);
+        intent.putExtra("data",viewModel);
 
+        startActivity(intent);
     }
 }

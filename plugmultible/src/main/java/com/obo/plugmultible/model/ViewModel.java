@@ -1,9 +1,11 @@
 package com.obo.plugmultible.model;
 
+import java.io.Serializable;
+
 /**
  * Created by obo on 16/1/10.
  */
-public class ViewModel {
+public class ViewModel implements Serializable{
 
     private String name;
     private String contentString;
@@ -11,19 +13,21 @@ public class ViewModel {
 
     private int backGroundColor;
     private int viewType;
-    private int id;
+    private int viewId;
+
+    private int parentId;
 
     private ValueModel left;
     private ValueModel top;
     private ValueModel width;
     private ValueModel height;
 
-    public int getId() {
-        return id;
+    public int getViewId() {
+        return viewId;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setViewId(int viewId) {
+        this.viewId = viewId;
     }
 
     public String getName() {
@@ -96,5 +100,13 @@ public class ViewModel {
 
     public void setHeight(ValueModel height) {
         this.height = height;
+    }
+
+    public int getParentId() {
+        return parentId;
+    }
+
+    public void setParentId(int parentId) {
+        this.parentId = parentId;
     }
 }

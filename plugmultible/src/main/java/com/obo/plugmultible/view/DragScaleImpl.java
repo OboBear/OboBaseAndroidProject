@@ -50,6 +50,7 @@ public class DragScaleImpl implements View.OnTouchListener, View.OnLongClickList
 
     ViewModel viewModel;
 
+
     public DragScaleImpl(DragScaleViewDelegate dragScaleViewDelegate ) {
         this.viewType = dragScaleViewDelegate.getViewType();
         dragScaleViewDelegate.setDragScale(this);

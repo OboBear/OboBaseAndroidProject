@@ -42,7 +42,7 @@ public class DragScaleRelativeLayout extends RelativeLayout implements DragScale
     public ViewModel init() {
         viewModel = new ViewModel();
         viewModel.setViewType(viewType);
-        viewModel.setId(getId());
+        viewModel.setViewId(getId());
 
         return viewModel;
     }
