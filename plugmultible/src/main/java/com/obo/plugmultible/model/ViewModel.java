@@ -5,19 +5,24 @@ package com.obo.plugmultible.model;
  */
 public class ViewModel {
 
-    private String id;
     private String name;
     private String contentString;
     private String backImageUrl;
 
     private int backGroundColor;
     private int viewType;
+    private int id;
 
-    public String getId() {
+    private ValueModel left;
+    private ValueModel top;
+    private ValueModel width;
+    private ValueModel height;
+
+    public int getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -59,5 +64,37 @@ public class ViewModel {
 
     public void setViewType(int viewType) {
         this.viewType = viewType;
+    }
+
+    public ValueModel getLeft() {
+        return left;
+    }
+
+    public void setLeft(ValueModel left) {
+        this.left = left;
+    }
+
+    public ValueModel getTop() {
+        return top;
+    }
+
+    public void setTop(ValueModel top) {
+        this.top = top;
+    }
+
+    public ValueModel getWidth() {
+        return width;
+    }
+
+    public void setWidth(ValueModel width) {
+        this.width = width;
+    }
+
+    public ValueModel getHeight() {
+        return height;
+    }
+
+    public void setHeight(ValueModel height) {
+        this.height = height;
     }
 }

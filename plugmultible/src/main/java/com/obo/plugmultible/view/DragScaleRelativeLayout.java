@@ -24,23 +24,27 @@ public class DragScaleRelativeLayout extends RelativeLayout implements DragScale
 
     public DragScaleRelativeLayout(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
-        init();
     }
 
     public DragScaleRelativeLayout(Context context, AttributeSet attrs) {
         super(context, attrs);
-        init();
     }
 
     public DragScaleRelativeLayout(Context context) {
         super(context);
-        init();
     }
 
-    private void init() {
+    ////////////
+    //TODO 必须调用的方法
+    /**
+     *
+     */
+    public ViewModel init() {
         viewModel = new ViewModel();
         viewModel.setViewType(viewType);
+        viewModel.setId(getId());
 
+        return viewModel;
     }
 
     @Override

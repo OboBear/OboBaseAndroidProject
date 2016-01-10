@@ -27,7 +27,10 @@ public class MutibleActivity extends AppCompatActivity implements View.OnClickLi
 //        layout = (RelativeLayout) findViewById(R.id.layout);
         root_layout = (RelativeLayout) findViewById(R.id.root_layout);
         coverView = findViewById(R.id.coverView);
+        coverView.setBackgroundColor(UtilColor.COLOR_VIEW_COVER);
         coverView.setVisibility(View.INVISIBLE);
+
+        ScreenUtil.initScreenSize(this);
     }
 
     int buttonId = 1;
@@ -37,14 +40,15 @@ public class MutibleActivity extends AppCompatActivity implements View.OnClickLi
         switch (v.getId()) {
             case R.id.add_button:
 
-                Point screenSize = ScreenUtil.getScreenSize(this);
                 DragScaleRelativeLayout button = new DragScaleRelativeLayout(this);
                 button.setId(buttonId++);
                 button.setBackgroundColor(UtilColor.COLOR_VIEW_TOUCH_UP);
                 RelativeLayout.LayoutParams layoutParams = new RelativeLayout.LayoutParams(200, 200);
-                layoutParams.setMargins(screenSize.x / 2 - 100, screenSize.y / 2 - 100, 10000, 10000);
+                layoutParams.setMargins(ScreenUtil.ScreenWith / 2 - 100, ScreenUtil.ScreenHeight / 2 - 100, 10000, 10000);
                 button.setLayoutParams(layoutParams);
                 button.setClickable(true);
+                button.init();
+
                 root_layout.addView(button);
 
                 DragScaleImpl dragScale = new DragScaleImpl(button);

@@ -9,14 +9,17 @@ import android.util.DisplayMetrics;
  */
 public class ScreenUtil {
 
-    public static Point getScreenSize(Activity activity) {
+    public static int ScreenWith = 0;
+    public static int ScreenHeight = 0;
+
+    public static Point initScreenSize(Activity activity) {
 
         DisplayMetrics dm = new DisplayMetrics();
         activity.getWindowManager().getDefaultDisplay().getMetrics(dm);
-        int width = dm.widthPixels;//宽度
-        int height = dm.heightPixels;//高度
+        ScreenWith = dm.widthPixels;//宽度
+        ScreenHeight = dm.heightPixels;//高度
 
-        return new Point(width, height);
+        return new Point(ScreenWith, ScreenHeight);
     }
 
 }
