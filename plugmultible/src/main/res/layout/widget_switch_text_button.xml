@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="160dp"
+        android:layout_height="40dp"
+        android:background="#eeeeee"
+        android:padding="1dp">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="80dp"
+            android:background="#FFFFFF"
+            android:maxLength="4"
+            android:paddingLeft="5dp"
+            android:numeric="integer"
+            android:id="@+id/edit_absolute_value"
+            android:text="0" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="85dp"
+            android:text="px" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="80dp"
+            android:background="#FFFFFF"
+            android:maxLength="6"
+            android:numeric="decimal"
+            android:paddingLeft="5dp"
+            android:id="@+id/edit_percent_value"
+            android:text="0" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:text="%" />
+
+        <Button
+            android:id="@+id/button_switch"
+            android:layout_width="79dp"
+            android:layout_height="match_parent"
+            android:background="#ffb862"
+            android:text="数值"
+            android:textColor="#ffffff"
+            android:layout_marginLeft="80dp"/>
+
+    </RelativeLayout>
+</LinearLayout>

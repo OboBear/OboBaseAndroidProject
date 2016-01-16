@@ -1,25 +1,26 @@
 package com.obo.plugmultible.activity;
 
 import android.content.Intent;
-import android.graphics.Point;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.RelativeLayout;
 
 import com.obo.plugmultible.model.ViewModel;
-import com.obo.plugmultible.view.DragScaleImpl;
+import com.obo.plugmultible.view.DragScaleController;
 import com.obo.plugmultible.view.DragScaleRelativeLayout;
 import com.obo.plugmultible.R;
 import com.obo.plugmultible.utils.ScreenUtil;
 import com.obo.plugmultible.utils.UtilColor;
 
-public class MutibleActivity extends AppCompatActivity implements View.OnClickListener , DragScaleImpl.DragScaleDelegate {
+import java.util.ArrayList;
+
+public class MutibleActivity extends BaseActivity implements View.OnClickListener , DragScaleController.DragScaleDelegate {
     public final String TAG = MutibleActivity.class.getSimpleName();
     RelativeLayout root_layout;
     View coverView;
 
+    ArrayList<DragScaleController.DragScaleViewDelegate>viewArray = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,26 +41,29 @@ public class MutibleActivity extends AppCompatActivity implements View.OnClickLi
         switch (v.getId()) {
             case R.id.add_button:
 
+                // 创建view
                 DragScaleRelativeLayout button = new DragScaleRelativeLayout(this);
                 button.setId(buttonId++);
                 button.setBackgroundColor(UtilColor.COLOR_VIEW_TOUCH_UP);
-                button.init();
 
+                // 创建布局
                 RelativeLayout.LayoutParams layoutParams = new RelativeLayout.LayoutParams(200, 200);
                 layoutParams.setMargins(ScreenUtil.ScreenWith / 2 - 100, ScreenUtil.ScreenHeight / 2 - 100, 10000, 10000);
                 button.setLayoutParams(layoutParams);
                 button.setClickable(true);
 
+                viewArray.add(button);
                 root_layout.addView(button);
 
-                DragScaleImpl dragScale = new DragScaleImpl(button);
+                // 创建布局改变控制器
+                DragScaleController dragScale = new DragScaleController(button);
                 dragScale.dragScaleDelegate = this;
 
                 break;
         }
     }
     ////////////
-    //DragScaleImpl
+    //DragScaleController
     @Override
     public void longPress(View v) {
         Log.i(TAG, "longPress");
@@ -75,17 +79,36 @@ public class MutibleActivity extends AppCompatActivity implements View.OnClickLi
     }
 
     @Override
-    public void doubleClick(View v) {
+    public void doubleClick(View v,DragScaleController dragScaleController) {
 
-        ViewModel viewModel = ((DragScaleImpl.DragScaleViewDelegate) v).getViewModel();
+        ViewModel viewModel = dragScaleController.viewModel;
 
         Log.i(TAG,"doubleClick:"+viewModel.getLeft().getAbsoluteValue());
 
         Intent intent = new Intent(this,SetViewParamsActivity.class);
         Bundle bundle = new Bundle();
-        bundle.putSerializable("viewModel",viewModel);
-        intent.putExtra("data",bundle);
+        bundle.putSerializable("viewModel", viewModel);
+        intent.putExtra("data", bundle);
 
-        startActivity(intent);
+        startActivityForResult(intent,0);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        Bundle bundle = data.getBundleExtra("data");
+        ViewModel viewModel = (ViewModel) bundle.get("viewModel");
+
+        for (int i=0;i<viewArray.size();i++) {
+            if (viewArray.get(i).getId() == viewModel.getViewId()) {
+
+                viewArray.get(i).getDragScaleImpl().setViewModel(viewModel);
+                viewArray.get(i).setBackgroundColor(viewModel.getBackGroundColor());
+                break;
+            }
+        }
+
+        Log.i(TAG,"onActivityResult"+viewModel.getLeft().getAbsoluteValue());
     }
 }

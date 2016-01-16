@@ -1,5 +1,9 @@
 package com.obo.plugmultible.model;
 
+import android.support.v4.graphics.ColorUtils;
+
+import com.obo.plugmultible.utils.UtilColor;
+
 import java.io.Serializable;
 
 /**
@@ -11,16 +15,16 @@ public class ViewModel implements Serializable{
     private String contentString;
     private String backImageUrl;
 
-    private int backGroundColor;
+    private int backGroundColor = UtilColor.COLOR_VIEW_TOUCH_UP;
     private int viewType;
     private int viewId;
 
     private int parentId;
 
-    private ValueModel left = new ValueModel();
-    private ValueModel top = new ValueModel() ;
-    private ValueModel width = new ValueModel();
-    private ValueModel height = new ValueModel();
+    private ValueModel left = new ValueModel(0,false);
+    private ValueModel top = new ValueModel(0,false) ;
+    private ValueModel width = new ValueModel(0,false);
+    private ValueModel height = new ValueModel(0,false);
 
     public int getViewId() {
         return viewId;

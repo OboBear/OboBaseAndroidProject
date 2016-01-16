@@ -1,5 +1,7 @@
 package com.obo.plugmultible.model;
 
+import com.obo.plugmultible.utils.ScreenUtil;
+
 import java.io.Serializable;
 
 /**
@@ -13,6 +15,17 @@ public class ValueModel implements Serializable {
     private double percentValue;
     // 实际的值
     private double absoluteValue;
+
+    public ValueModel(double value,boolean isPercent) {
+        this.isPercent = isPercent;
+
+        if (isPercent) {
+            this.percentValue = value;
+        }
+        else  {
+            this.absoluteValue = value;
+        }
+    }
 
     public boolean isPercent() {
         return isPercent;
