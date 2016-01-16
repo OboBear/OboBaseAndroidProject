@@ -7,7 +7,7 @@ import android.util.DisplayMetrics;
 /**
  * Created by obo on 16/1/10.
  */
-public class ScreenUtil {
+public class UtilScreen {
 
     public static int ScreenWith = 0;
     public static int ScreenHeight = 0;

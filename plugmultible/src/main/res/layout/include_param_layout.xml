@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#c8c8c8">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:text="控件布局" />
+    </RelativeLayout>
+
+    <include
+        android:id="@+id/left"
+        layout="@layout/include_item_view_layout_property" />
+
+    <include
+        android:id="@+id/top"
+        layout="@layout/include_item_view_layout_property" />
+
+    <include
+        android:id="@+id/width"
+        layout="@layout/include_item_view_layout_property" />
+
+    <include
+        android:id="@+id/height"
+        layout="@layout/include_item_view_layout_property" />
+
+</LinearLayout>

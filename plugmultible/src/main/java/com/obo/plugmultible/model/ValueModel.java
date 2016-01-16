@@ -1,7 +1,5 @@
 package com.obo.plugmultible.model;
 
-import com.obo.plugmultible.utils.ScreenUtil;
-
 import java.io.Serializable;
 
 /**
@@ -15,6 +13,11 @@ public class ValueModel implements Serializable {
     private double percentValue;
     // 实际的值
     private double absoluteValue;
+
+    // 最大的取值，用于计算百分比
+    private double maxAbsoluteValue = 1;
+
+
 
     public ValueModel(double value,boolean isPercent) {
         this.isPercent = isPercent;
@@ -41,6 +44,7 @@ public class ValueModel implements Serializable {
 
     public void setPercentValue(double percentValue) {
         this.percentValue = percentValue;
+        this.absoluteValue = percentValue * this.maxAbsoluteValue / 100;
     }
 
     public double getAbsoluteValue() {
@@ -49,5 +53,15 @@ public class ValueModel implements Serializable {
 
     public void setAbsoluteValue(double absoluteValue) {
         this.absoluteValue = absoluteValue;
+        this.percentValue = absoluteValue * 100/ this.maxAbsoluteValue;
+    }
+
+    //获取最大的值
+    public double getMaxAbsoluteValue() {
+        return maxAbsoluteValue;
+    }
+    //设置最大的值
+    public void setMaxAbsoluteValue(double maxAbsoluteValue) {
+        this.maxAbsoluteValue = maxAbsoluteValue;
     }
 }

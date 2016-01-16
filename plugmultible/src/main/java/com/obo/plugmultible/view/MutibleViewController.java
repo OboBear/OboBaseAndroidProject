@@ -8,18 +8,17 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.RelativeLayout;
 
-import com.obo.plugmultible.model.ValueModel;
 import com.obo.plugmultible.model.ViewModel;
 import com.obo.plugmultible.utils.UtilColor;
 
 /**
  * Created by obo on 16/1/10.
  */
-public class DragScaleController implements View.OnTouchListener, View.OnLongClickListener {
+public class MutibleViewController implements View.OnTouchListener, View.OnLongClickListener {
 
     public final static String TAG = DragScaleRelativeLayout.class.getCanonicalName();
     // 界面类型
-    int viewType;
+//    int viewType;
 
     protected int lastX;
     protected int lastY;
@@ -48,28 +47,26 @@ public class DragScaleController implements View.OnTouchListener, View.OnLongCli
     boolean canMove = false;
 
     //拖动代理
-    public DragScaleDelegate dragScaleDelegate = null;
+    public MutibleViewDelegate dragScaleDelegate = null;
 
     //数据模型
-    public ViewModel viewModel = new ViewModel();
+    private ViewModel viewModel = new ViewModel();
 
-    DragScaleViewDelegate dragScaleViewDelegate;
+    private DragScaleViewDelegate dragScaleViewDelegate;
 
-    public DragScaleController(DragScaleViewDelegate dragScaleViewDelegate) {
-        this.viewType = dragScaleViewDelegate.getViewType();
-        this.dragScaleViewDelegate = dragScaleViewDelegate;
-        dragScaleViewDelegate.setDragScale(this);
-        updateViewModel();
-    }
+    public MutibleViewController() {}
 
-    private void updateViewModel() {
+    /**
+     * 根据view的实际尺寸等更新viewModel状态
+     */
+    public void updateViewModel() {
         RelativeLayout.LayoutParams layoutParams = (RelativeLayout.LayoutParams) dragScaleViewDelegate.getLayoutParams();
-        this.viewModel.setViewType(viewType);
+        this.viewModel.setViewType(dragScaleViewDelegate.getViewType());
         this.viewModel.setViewId(dragScaleViewDelegate.getId());
-        this.viewModel.setLeft(new ValueModel(layoutParams.leftMargin, false));
-        this.viewModel.setTop(new ValueModel(layoutParams.topMargin, false));
-        this.viewModel.setWidth(new ValueModel(layoutParams.width, false));
-        this.viewModel.setHeight(new ValueModel(layoutParams.height, false));
+        this.viewModel.getLeft().setAbsoluteValue(layoutParams.leftMargin);
+        this.viewModel.getTop().setAbsoluteValue(layoutParams.topMargin);
+        this.viewModel.getWidth().setAbsoluteValue(layoutParams.width);
+        this.viewModel.getHeight().setAbsoluteValue(layoutParams.height);
     }
 
     public void draw(View view, Canvas canvas) {
@@ -287,32 +284,47 @@ public class DragScaleController implements View.OnTouchListener, View.OnLongCli
     public void setViewModel(ViewModel viewModel) {
 
         this.viewModel = viewModel;
-        RelativeLayout.LayoutParams layoutParams = (RelativeLayout.LayoutParams) dragScaleViewDelegate.getLayoutParams();
-        layoutParams.leftMargin = (int) viewModel.getLeft().getAbsoluteValue();
-        layoutParams.topMargin = (int) viewModel.getTop().getAbsoluteValue();
-        layoutParams.width = (int) viewModel.getWidth().getAbsoluteValue();
-        layoutParams.height = (int) viewModel.getHeight().getAbsoluteValue();
 
-        dragScaleViewDelegate.setLayoutParams(layoutParams);
+        if (dragScaleViewDelegate != null) {
 
+            RelativeLayout.LayoutParams layoutParams = (RelativeLayout.LayoutParams) dragScaleViewDelegate.getLayoutParams();
+            layoutParams.leftMargin = (int) viewModel.getLeft().getAbsoluteValue();
+            layoutParams.topMargin = (int) viewModel.getTop().getAbsoluteValue();
+            layoutParams.width = (int) viewModel.getWidth().getAbsoluteValue();
+            layoutParams.height = (int) viewModel.getHeight().getAbsoluteValue();
+
+            dragScaleViewDelegate.setLayoutParams(layoutParams);
+        }
+    }
+
+    public ViewModel getViewModel() {
+        Log.i(TAG,"MOdel.isPercent"+viewModel.getLeft().isPercent());
+        Log.i(TAG, "MOdel.isPercent" + viewModel.getTop().isPercent());
+        return this.viewModel;
+    }
+
+    public void setDragScaleViewDelegate(DragScaleViewDelegate dragScaleViewDelegate) {
+        this.dragScaleViewDelegate = dragScaleViewDelegate;
+        this.dragScaleViewDelegate.setDragScale(this);
+//        updateViewModel(this.dragScaleViewDelegate);
     }
 
     //////////////////
     //interface
 
     //对外部使用
-    public interface DragScaleDelegate {
+    public interface MutibleViewDelegate {
 
         public void longPress(View v);
         public void upPress(View v);
-        public void doubleClick(View v,DragScaleController dragScaleController);
+        public void doubleClick(View v,MutibleViewController mutibleViewController);
     }
 
     //对DragScalView使用
     public interface DragScaleViewDelegate {
         public int getViewType();
-        public void setDragScale(DragScaleController dragScale);
-        public DragScaleController getDragScaleImpl();
+        public void setDragScale(MutibleViewController dragScale);
+        public MutibleViewController getDragScaleImpl();
         public ViewGroup.LayoutParams getLayoutParams();
         public void setLayoutParams(ViewGroup.LayoutParams layoutParams);
         public int getId();

@@ -7,20 +7,20 @@ import android.view.View;
 import android.widget.RelativeLayout;
 
 import com.obo.plugmultible.model.ViewModel;
-import com.obo.plugmultible.view.DragScaleController;
+import com.obo.plugmultible.view.MutibleViewController;
 import com.obo.plugmultible.view.DragScaleRelativeLayout;
 import com.obo.plugmultible.R;
-import com.obo.plugmultible.utils.ScreenUtil;
+import com.obo.plugmultible.utils.UtilScreen;
 import com.obo.plugmultible.utils.UtilColor;
 
 import java.util.ArrayList;
 
-public class MutibleActivity extends BaseActivity implements View.OnClickListener , DragScaleController.DragScaleDelegate {
+public class MutibleActivity extends BaseActivity implements View.OnClickListener , MutibleViewController.MutibleViewDelegate {
     public final String TAG = MutibleActivity.class.getSimpleName();
     RelativeLayout root_layout;
     View coverView;
 
-    ArrayList<DragScaleController.DragScaleViewDelegate>viewArray = new ArrayList<>();
+    ArrayList<MutibleViewController.DragScaleViewDelegate>viewArray = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,10 +31,10 @@ public class MutibleActivity extends BaseActivity implements View.OnClickListene
         coverView.setBackgroundColor(UtilColor.COLOR_VIEW_COVER);
         coverView.setVisibility(View.INVISIBLE);
 
-        ScreenUtil.initScreenSize(this);
+        UtilScreen.initScreenSize(this);
     }
 
-    int buttonId = 1;
+    int mutibleViewId = 1;
 
     @Override
     public void onClick(View v) {
@@ -42,28 +42,41 @@ public class MutibleActivity extends BaseActivity implements View.OnClickListene
             case R.id.add_button:
 
                 // 创建view
-                DragScaleRelativeLayout button = new DragScaleRelativeLayout(this);
-                button.setId(buttonId++);
-                button.setBackgroundColor(UtilColor.COLOR_VIEW_TOUCH_UP);
+                DragScaleRelativeLayout mutibleView = new DragScaleRelativeLayout(this);
+                mutibleView.setId(mutibleViewId++);
+                mutibleView.setBackgroundColor(UtilColor.COLOR_VIEW_TOUCH_UP);
 
                 // 创建布局
                 RelativeLayout.LayoutParams layoutParams = new RelativeLayout.LayoutParams(200, 200);
-                layoutParams.setMargins(ScreenUtil.ScreenWith / 2 - 100, ScreenUtil.ScreenHeight / 2 - 100, 10000, 10000);
-                button.setLayoutParams(layoutParams);
-                button.setClickable(true);
+                layoutParams.setMargins(UtilScreen.ScreenWith / 2 - 100, UtilScreen.ScreenHeight / 2 - 100, 10000, 10000);
+                mutibleView.setLayoutParams(layoutParams);
+                mutibleView.setClickable(true);
 
-                viewArray.add(button);
-                root_layout.addView(button);
+                viewArray.add(mutibleView);
+                root_layout.addView(mutibleView);
 
                 // 创建布局改变控制器
-                DragScaleController dragScale = new DragScaleController(button);
+                MutibleViewController dragScale = new MutibleViewController();
+                dragScale.setDragScaleViewDelegate(mutibleView);
+
+                ViewModel viewModel = new ViewModel();
+                viewModel.getLeft().setMaxAbsoluteValue(UtilScreen.ScreenWith);
+                viewModel.getLeft().setAbsoluteValue(UtilScreen.ScreenWith / 2 - 100);
+                viewModel.getWidth().setMaxAbsoluteValue(UtilScreen.ScreenWith);
+                viewModel.getWidth().setAbsoluteValue(200);
+                viewModel.getTop().setMaxAbsoluteValue(UtilScreen.ScreenHeight);
+                viewModel.getTop().setAbsoluteValue(UtilScreen.ScreenHeight / 2 - 100);
+                viewModel.getHeight().setMaxAbsoluteValue(UtilScreen.ScreenHeight);
+                viewModel.getHeight().setAbsoluteValue(200);
+                dragScale.setViewModel(viewModel);
+                dragScale.updateViewModel();
                 dragScale.dragScaleDelegate = this;
 
                 break;
         }
     }
     ////////////
-    //DragScaleController
+    //MutibleViewController
     @Override
     public void longPress(View v) {
         Log.i(TAG, "longPress");
@@ -79,11 +92,9 @@ public class MutibleActivity extends BaseActivity implements View.OnClickListene
     }
 
     @Override
-    public void doubleClick(View v,DragScaleController dragScaleController) {
+    public void doubleClick(View v,MutibleViewController mutibleViewController) {
 
-        ViewModel viewModel = dragScaleController.viewModel;
-
-        Log.i(TAG,"doubleClick:"+viewModel.getLeft().getAbsoluteValue());
+        ViewModel viewModel = mutibleViewController.getViewModel();
 
         Intent intent = new Intent(this,SetViewParamsActivity.class);
         Bundle bundle = new Bundle();
@@ -108,7 +119,5 @@ public class MutibleActivity extends BaseActivity implements View.OnClickListene
                 break;
             }
         }
-
-        Log.i(TAG,"onActivityResult"+viewModel.getLeft().getAbsoluteValue());
     }
 }

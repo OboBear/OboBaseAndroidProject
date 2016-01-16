@@ -11,7 +11,7 @@ import android.widget.TextView;
 import com.obo.plugmultible.R;
 import com.obo.plugmultible.model.ViewModel;
 import com.obo.plugmultible.thirdlib.ColorPicker.ColorPickerDialog;
-import com.obo.plugmultible.utils.ScreenUtil;
+import com.obo.plugmultible.utils.UtilScreen;
 import com.obo.plugmultible.widget.SwitchTextButton;
 
 public class SetViewParamsActivity extends BaseActivity implements View.OnClickListener {
@@ -56,21 +56,19 @@ public class SetViewParamsActivity extends BaseActivity implements View.OnClickL
             ((TextView) view.findViewById(R.id.switch_text)).setText(titleStringArray[i]);
             switchTextButton[i] = (SwitchTextButton) view.findViewById(R.id.switch_text_button);
         }
-        switchTextButton[0].setIntMaxValue(ScreenUtil.ScreenWith);
+        switchTextButton[0].setIntMaxValue(UtilScreen.ScreenWith);
         switchTextButton[0].setValueModel(viewModel.getLeft());
-        switchTextButton[1].setIntMaxValue(ScreenUtil.ScreenHeight);
+        switchTextButton[1].setIntMaxValue(UtilScreen.ScreenHeight);
         switchTextButton[1].setValueModel(viewModel.getTop());
-        switchTextButton[2].setIntMaxValue(ScreenUtil.ScreenWith);
+        switchTextButton[2].setIntMaxValue(UtilScreen.ScreenWith);
         switchTextButton[2].setValueModel(viewModel.getWidth());
-        switchTextButton[3].setIntMaxValue(ScreenUtil.ScreenHeight);
+        switchTextButton[3].setIntMaxValue(UtilScreen.ScreenHeight);
         switchTextButton[3].setValueModel(viewModel.getHeight());
 
         //控件内容
         btnPickColor = (Button) findViewById(R.id.button_pick_color);
         btnPickColor.setBackgroundColor(viewModel.getBackGroundColor());
     }
-
-
 
     @Override
     public void onClick(final View v) {
@@ -97,6 +95,12 @@ public class SetViewParamsActivity extends BaseActivity implements View.OnClickL
         }
     }
 
+
+    private ViewModel getResetModel() {
+
+        return viewModel;
+    }
+
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
 
@@ -113,7 +117,7 @@ public class SetViewParamsActivity extends BaseActivity implements View.OnClickL
     private void backAction() {
         Intent intent = new Intent();
         Bundle bundle = new Bundle();
-        bundle.putSerializable("viewModel", viewModel);
+        bundle.putSerializable("viewModel", getResetModel());
         intent.putExtra("data", bundle);
         setResult(0, intent);
         finish();

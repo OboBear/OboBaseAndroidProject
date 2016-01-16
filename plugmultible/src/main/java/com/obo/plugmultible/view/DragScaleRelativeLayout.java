@@ -12,13 +12,13 @@ import com.obo.plugmultible.utils.UtilDefines;
 /**
  * Created by obo on 16/1/10.
  */
-public class DragScaleRelativeLayout extends RelativeLayout implements DragScaleController.DragScaleViewDelegate {
+public class DragScaleRelativeLayout extends RelativeLayout implements MutibleViewController.DragScaleViewDelegate {
 
     public static final String TAG = DragScaleRelativeLayout.class.getCanonicalName();
 
     public static final int viewType = UtilDefines.TYPE_RELATIVELAYOUT;
     //
-    DragScaleController dragScale = null;
+    MutibleViewController dragScale = null;
     //viewModel
     private ViewModel viewModel;
 
@@ -34,7 +34,6 @@ public class DragScaleRelativeLayout extends RelativeLayout implements DragScale
         super(context);
     }
 
-
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
@@ -46,14 +45,7 @@ public class DragScaleRelativeLayout extends RelativeLayout implements DragScale
     @Override
     public void setLayoutParams(ViewGroup.LayoutParams params) {
         super.setLayoutParams(params);
-
-//        RelativeLayout.LayoutParams relativeLayoutParams = (LayoutParams) params;
-//        viewModel.getLeft().setAbsoluteValue(relativeLayoutParams.leftMargin);
-//        viewModel.getTop().setAbsoluteValue(relativeLayoutParams.topMargin);
-//        viewModel.getWidth().setAbsoluteValue(relativeLayoutParams.width);
-//        viewModel.getHeight().setAbsoluteValue(relativeLayoutParams.height);
     }
-
 
     /////////////////
     //DragScaleViewDelegate
@@ -64,12 +56,12 @@ public class DragScaleRelativeLayout extends RelativeLayout implements DragScale
     }
 
     @Override
-    public DragScaleController getDragScaleImpl() {
+    public MutibleViewController getDragScaleImpl() {
         return dragScale;
     }
 
     @Override
-    public void setDragScale(DragScaleController dragScale) {
+    public void setDragScale(MutibleViewController dragScale) {
         this.dragScale = dragScale;
         setOnTouchListener(dragScale);
         setOnLongClickListener(dragScale);
@@ -82,19 +74,5 @@ public class DragScaleRelativeLayout extends RelativeLayout implements DragScale
     public void setViewModel(ViewModel viewModel) {
         this.viewModel = viewModel;
     }
-
-    ////////////
-    //TODO 必须调用的方法
-    /**
-     *
-     */
-//    public ViewModel init() {
-//        viewModel = new ViewModel();
-//        viewModel.setViewType(viewType);
-//        viewModel.setViewId(getId());
-//
-//        return viewModel;
-//    }
-
 
 }

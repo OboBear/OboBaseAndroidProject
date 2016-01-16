@@ -20,13 +20,13 @@ import com.obo.plugmultible.utils.Utils;
 import org.w3c.dom.Text;
 
 /**
+ * 按钮切换编辑
  * Created by obo on 16/1/10.
  */
 public class SwitchTextButton extends RelativeLayout implements View.OnClickListener {
 
     public static final String TAG = SwitchTextButton.class.getCanonicalName();
-    public Button button;
-    public TextView textView;
+    public Button btnSwitch;
     private ValueModel valueModel = null;
 
     private int intMaxValue = 0;
@@ -43,44 +43,52 @@ public class SwitchTextButton extends RelativeLayout implements View.OnClickList
         super(context, attrs);
 
         LayoutInflater layoutInflater = LayoutInflater.from(context);
-
         View view = layoutInflater.inflate(R.layout.widget_switch_text_button, null);
+        //绑定到widget_switch_text_button
         this.addView(view);
 
-        findViewById(R.id.button_switch).setOnClickListener(this);
+        btnSwitch = (Button) findViewById(R.id.button_switch);
+        btnSwitch.setOnClickListener(this);
+        //绑定字
         edit_absolute_value = (EditText) findViewById(R.id.edit_absolute_value);
-        absoluteEditTextListener = new EditTextListener();
-        absoluteEditTextListener.setEditText(edit_absolute_value);
+        absoluteEditTextListener = new EditTextListener(edit_absolute_value);
         edit_percent_value = (EditText) findViewById(R.id.edit_percent_value);
-        percentEditTextListener = new EditTextListener();
-        percentEditTextListener.setEditText(edit_percent_value);
+        percentEditTextListener = new EditTextListener(edit_percent_value);
     }
 
+    /**
+     * 点击切换按钮
+     */
     @Override
     public void onClick(View v) {
 
         switch (v.getId()) {
             case R.id.button_switch: {
-                RelativeLayout.LayoutParams layoutParams = (LayoutParams) v.getLayoutParams();
-
-                if (layoutParams.leftMargin == 0) {
-                    layoutParams.leftMargin = v.getWidth() - 1;
-                    ((Button) v).setText("数值");
-                    valueModel.setIsPercent(false);
-
-                    double percentValue = this.valueModel.getPercentValue();
-                    edit_absolute_value.setText("" + (int)(percentValue*intMaxValue/100));
-                } else {
-                    layoutParams.leftMargin = 0;
-                    ((Button) v).setText("百分比");
-                    valueModel.setIsPercent(true);
-//                    Log.i(TAG, "setPercentValue:" + valueModel.getPercentValue());
-                    edit_percent_value.setText("" +  valueModel.getPercentValue());
-                }
-                v.setLayoutParams(layoutParams);
+                valueModel.setIsPercent(!valueModel.isPercent());
+                resetCurrentButtonStatus();
             }
             break;
         }
+    }
+
+    /**
+     * 重置按钮状态
+     */
+    private void resetCurrentButtonStatus() {
+
+        RelativeLayout.LayoutParams layoutParams = (LayoutParams) btnSwitch.getLayoutParams();
+        if (!valueModel.isPercent() && layoutParams.leftMargin == 0) {
+            layoutParams.leftMargin = btnSwitch.getWidth() - 1;
+            btnSwitch.setText("数值");
+            double percentValue = this.valueModel.getPercentValue();
+            edit_absolute_value.setText("" + (int) Utils.getApproximateValue(percentValue * intMaxValue / 100, 0));
+        } else if (valueModel.isPercent()) {
+            layoutParams.leftMargin = 0;
+            btnSwitch.setText("百分比");
+            edit_percent_value.setText("" + Utils.getApproximateValue(valueModel.getPercentValue(), -3));
+        }
+
+        btnSwitch.setLayoutParams(layoutParams);
     }
 
     public ValueModel getValueModel() {
@@ -88,13 +96,13 @@ public class SwitchTextButton extends RelativeLayout implements View.OnClickList
     }
 
     public void setValueModel(ValueModel valueModel) {
+
         this.valueModel = valueModel;
         valueModel.setPercentValue(valueModel.getAbsoluteValue() * 100.0 / intMaxValue);
+        edit_percent_value.setText("" + ((int) (valueModel.getPercentValue() * 100)) / 100.0);
+        edit_absolute_value.setText("" + (int) valueModel.getAbsoluteValue());
 
-//        Log.i(TAG, "setPercentValue:" + valueModel.getPercentValue());
-        edit_percent_value.setText("" + ((int) (valueModel.getPercentValue() * 100 ))/100.0);
-        edit_absolute_value.setText("" + (int)valueModel.getAbsoluteValue());
-
+        resetCurrentButtonStatus();
     }
 
     public int getIntMaxValue() {
@@ -105,11 +113,16 @@ public class SwitchTextButton extends RelativeLayout implements View.OnClickList
         this.intMaxValue = intMaxValue;
     }
 
+    //编辑事件
     class EditTextListener implements TextWatcher {
 
         private EditText editText;
 
-        /////////////
+        //        public EditTextListener() {}
+        public EditTextListener(EditText editText) {
+            this.editText = editText;
+        }
+
         @Override
         public void beforeTextChanged(CharSequence s, int start, int count, int after) {
         }
@@ -124,14 +137,12 @@ public class SwitchTextButton extends RelativeLayout implements View.OnClickList
             String valueString = s.toString();
             switch (editText.getId()) {
 
-                case R.id.edit_absolute_value:
-                {
+                case R.id.edit_absolute_value: {
                     if (valueString.length() == 0) {
                         editText.setText("0");
                         editText.setSelection(editText.getText().toString().length());
                         return;
-                    }
-                    else if (valueString.length() >= 2 && valueString.charAt(0) == '0') {
+                    } else if (valueString.length() >= 2 && valueString.charAt(0) == '0') {
                         editText.setText(valueString.substring(1, valueString.length()));
                         editText.setSelection(editText.getText().toString().length());
                         return;
@@ -142,21 +153,18 @@ public class SwitchTextButton extends RelativeLayout implements View.OnClickList
                     }
                     valueModel.setAbsoluteValue(Double.parseDouble(valueString));
                 }
-                    break;
+                break;
 
-                case R.id.edit_percent_value:
-                {
+                case R.id.edit_percent_value: {
                     if (valueString.length() == 0) {
                         editText.setText("0");
                         editText.setSelection(editText.getText().toString().length());
                         return;
-                    }
-                    else if (valueString.length() >= 2 && valueString.charAt(0) == '0' && valueString.charAt(1) != '.') {
+                    } else if (valueString.length() >= 2 && valueString.charAt(0) == '0' && valueString.charAt(1) != '.') {
                         editText.setText(valueString.substring(1, valueString.length()));
                         editText.setSelection(editText.getText().toString().length());
                         return;
-                    }
-                    else if (Double.parseDouble(valueString) > 100) {
+                    } else if (Double.parseDouble(valueString) > 100) {
                         editText.setText("" + 100);
                         editText.setSelection(editText.getText().toString().length());
                         return;
@@ -166,18 +174,14 @@ public class SwitchTextButton extends RelativeLayout implements View.OnClickList
                     }
                     isFirst = false;
                 }
-                    break;
+                break;
             }
-        }
-
-        public EditText getEditText() {
-            return editText;
         }
 
         public void setEditText(EditText editText) {
             this.editText = editText;
             if (editText != null)
-            editText.addTextChangedListener(this);
+                editText.addTextChangedListener(this);
         }
     }
 }
