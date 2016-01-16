@@ -56,6 +56,7 @@ public class SetViewParamsActivity extends BaseActivity implements View.OnClickL
             ((TextView) view.findViewById(R.id.switch_text)).setText(titleStringArray[i]);
             switchTextButton[i] = (SwitchTextButton) view.findViewById(R.id.switch_text_button);
         }
+
         switchTextButton[0].setIntMaxValue(UtilScreen.ScreenWith);
         switchTextButton[0].setValueModel(viewModel.getLeft());
         switchTextButton[1].setIntMaxValue(UtilScreen.ScreenHeight);
@@ -78,7 +79,6 @@ public class SetViewParamsActivity extends BaseActivity implements View.OnClickL
                 ColorPickerDialog dialog = new ColorPickerDialog(this, viewModel.getBackGroundColor(),
                         getResources().getString(R.string.set_params_pick_color),
                         new ColorPickerDialog.OnColorChangedListener() {
-
                             @Override
                             public void colorChanged(int color) {
                                 v.setBackgroundColor(color);

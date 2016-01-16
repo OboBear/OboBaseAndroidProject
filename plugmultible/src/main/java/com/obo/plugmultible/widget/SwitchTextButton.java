@@ -5,19 +5,15 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.AttributeSet;
 import android.util.Log;
-import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RelativeLayout;
-import android.widget.TextView;
 
 import com.obo.plugmultible.R;
 import com.obo.plugmultible.model.ValueModel;
 import com.obo.plugmultible.utils.Utils;
-
-import org.w3c.dom.Text;
 
 /**
  * 按钮切换编辑
@@ -51,9 +47,9 @@ public class SwitchTextButton extends RelativeLayout implements View.OnClickList
         btnSwitch.setOnClickListener(this);
         //绑定字
         edit_absolute_value = (EditText) findViewById(R.id.edit_absolute_value);
-        absoluteEditTextListener = new EditTextListener(edit_absolute_value);
+
         edit_percent_value = (EditText) findViewById(R.id.edit_percent_value);
-        percentEditTextListener = new EditTextListener(edit_percent_value);
+
     }
 
     /**
@@ -80,12 +76,12 @@ public class SwitchTextButton extends RelativeLayout implements View.OnClickList
         if (!valueModel.isPercent() && layoutParams.leftMargin == 0) {
             layoutParams.leftMargin = btnSwitch.getWidth() - 1;
             btnSwitch.setText("数值");
-            double percentValue = this.valueModel.getPercentValue();
-            edit_absolute_value.setText("" + (int) Utils.getApproximateValue(percentValue * intMaxValue / 100, 0));
+            double absoluteValue = this.valueModel.getAbsoluteValue();
+            edit_absolute_value.setText("" + (int) Utils.getApproximateValue(absoluteValue, 0));
         } else if (valueModel.isPercent()) {
             layoutParams.leftMargin = 0;
             btnSwitch.setText("百分比");
-            edit_percent_value.setText("" + Utils.getApproximateValue(valueModel.getPercentValue(), -3));
+            edit_percent_value.setText("" + Utils.getApproximateValue(valueModel.getPercentValue() * 100, -3));
         }
 
         btnSwitch.setLayoutParams(layoutParams);
@@ -97,12 +93,15 @@ public class SwitchTextButton extends RelativeLayout implements View.OnClickList
 
     public void setValueModel(ValueModel valueModel) {
 
+        Log.i(TAG, "width:" + valueModel.getAbsoluteValue() + "   :" + valueModel.getPercentValue());
+
         this.valueModel = valueModel;
-        valueModel.setPercentValue(valueModel.getAbsoluteValue() * 100.0 / intMaxValue);
         edit_percent_value.setText("" + ((int) (valueModel.getPercentValue() * 100)) / 100.0);
         edit_absolute_value.setText("" + (int) valueModel.getAbsoluteValue());
-
         resetCurrentButtonStatus();
+
+        absoluteEditTextListener = new EditTextListener(edit_absolute_value);
+        percentEditTextListener = new EditTextListener(edit_percent_value);
     }
 
     public int getIntMaxValue() {
@@ -111,6 +110,9 @@ public class SwitchTextButton extends RelativeLayout implements View.OnClickList
 
     public void setIntMaxValue(int intMaxValue) {
         this.intMaxValue = intMaxValue;
+
+
+
     }
 
     //编辑事件
@@ -118,9 +120,9 @@ public class SwitchTextButton extends RelativeLayout implements View.OnClickList
 
         private EditText editText;
 
-        //        public EditTextListener() {}
         public EditTextListener(EditText editText) {
             this.editText = editText;
+            this.editText.addTextChangedListener(this);
         }
 
         @Override
@@ -135,46 +137,44 @@ public class SwitchTextButton extends RelativeLayout implements View.OnClickList
         @Override
         public void afterTextChanged(Editable s) {
             String valueString = s.toString();
+            boolean isModify = true;
             switch (editText.getId()) {
 
                 case R.id.edit_absolute_value: {
                     if (valueString.length() == 0) {
-                        editText.setText("0");
-                        editText.setSelection(editText.getText().toString().length());
-                        return;
+                        valueString = "0";
                     } else if (valueString.length() >= 2 && valueString.charAt(0) == '0') {
-                        editText.setText(valueString.substring(1, valueString.length()));
-                        editText.setSelection(editText.getText().toString().length());
-                        return;
+                        valueString = valueString.substring(1, valueString.length());
                     } else if (Double.parseDouble(valueString) > intMaxValue) {
-                        editText.setText("" + intMaxValue);
-                        editText.setSelection(editText.getText().toString().length());
-                        return;
+                        valueString = "" + intMaxValue;
+                    } else {
+                        isModify = false;
                     }
+
                     valueModel.setAbsoluteValue(Double.parseDouble(valueString));
                 }
                 break;
 
                 case R.id.edit_percent_value: {
                     if (valueString.length() == 0) {
-                        editText.setText("0");
-                        editText.setSelection(editText.getText().toString().length());
-                        return;
+                        valueString = "0";
                     } else if (valueString.length() >= 2 && valueString.charAt(0) == '0' && valueString.charAt(1) != '.') {
-                        editText.setText(valueString.substring(1, valueString.length()));
-                        editText.setSelection(editText.getText().toString().length());
-                        return;
+                        valueString = valueString.substring(1, valueString.length());
                     } else if (Double.parseDouble(valueString) > 100) {
-                        editText.setText("" + 100);
-                        editText.setSelection(editText.getText().toString().length());
-                        return;
+                        valueString = ""+100;
+                    } else {
+                        isModify = false;
                     }
-                    if (!isFirst) {
-                        valueModel.setPercentValue(Double.parseDouble(valueString));
-                    }
+//                    if (!isFirst) {
+                        valueModel.setPercentValue(Double.parseDouble(valueString)/100);
+//                    }
                     isFirst = false;
                 }
                 break;
+            }
+            if (isModify) {
+                editText.setText(valueString);
+                editText.setSelection(editText.getText().toString().length());
             }
         }
 

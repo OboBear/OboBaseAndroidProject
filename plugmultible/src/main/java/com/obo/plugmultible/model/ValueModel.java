@@ -44,7 +44,7 @@ public class ValueModel implements Serializable {
 
     public void setPercentValue(double percentValue) {
         this.percentValue = percentValue;
-        this.absoluteValue = percentValue * this.maxAbsoluteValue / 100;
+        this.absoluteValue = percentValue * this.maxAbsoluteValue;
     }
 
     public double getAbsoluteValue() {
@@ -53,7 +53,7 @@ public class ValueModel implements Serializable {
 
     public void setAbsoluteValue(double absoluteValue) {
         this.absoluteValue = absoluteValue;
-        this.percentValue = absoluteValue * 100/ this.maxAbsoluteValue;
+        this.percentValue = absoluteValue / this.maxAbsoluteValue;
     }
 
     //获取最大的值

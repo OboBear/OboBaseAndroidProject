@@ -72,6 +72,7 @@ public class MutibleActivity extends BaseActivity implements View.OnClickListene
                 dragScale.updateViewModel();
                 dragScale.dragScaleDelegate = this;
 
+
                 break;
         }
     }
@@ -100,6 +101,7 @@ public class MutibleActivity extends BaseActivity implements View.OnClickListene
         Bundle bundle = new Bundle();
         bundle.putSerializable("viewModel", viewModel);
         intent.putExtra("data", bundle);
+
 
         startActivityForResult(intent,0);
     }
