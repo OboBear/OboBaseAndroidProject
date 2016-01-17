@@ -12,6 +12,7 @@ import com.obo.plugmultible.view.DragScaleRelativeLayout;
 import com.obo.plugmultible.R;
 import com.obo.plugmultible.utils.UtilScreen;
 import com.obo.plugmultible.utils.UtilColor;
+import com.obo.plugmultible.view.MutibleViewControllerBase;
 
 import java.util.ArrayList;
 
@@ -68,15 +69,15 @@ public class MutibleActivity extends BaseActivity implements View.OnClickListene
                 viewModel.getTop().setAbsoluteValue(UtilScreen.ScreenHeight / 2 - 100);
                 viewModel.getHeight().setMaxAbsoluteValue(UtilScreen.ScreenHeight);
                 viewModel.getHeight().setAbsoluteValue(200);
+                viewModel.getAlpha().setPercentValue(1);
                 dragScale.setViewModel(viewModel);
                 dragScale.updateViewModel();
                 dragScale.dragScaleDelegate = this;
 
-
                 break;
         }
     }
-    ////////////
+    /////////////////
     //MutibleViewController
     @Override
     public void longPress(View v) {
@@ -104,6 +105,16 @@ public class MutibleActivity extends BaseActivity implements View.OnClickListene
 
 
         startActivityForResult(intent,0);
+    }
+
+    @Override
+    public void flushViewWithId(int id) {
+        for(MutibleViewController.DragScaleViewDelegate view :viewArray) {
+            if (view.getId() == id) {
+                view.invalidate();
+                break;
+            }
+        }
     }
 
     @Override

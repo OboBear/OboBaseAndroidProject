@@ -5,26 +5,53 @@ import android.support.v4.graphics.ColorUtils;
 import com.obo.plugmultible.utils.UtilColor;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 
 /**
+ * 界面属性数据model
  * Created by obo on 16/1/10.
  */
 public class ViewModel implements Serializable{
 
+    /**
+     * view标示属性
+     */
+    //view的类型
+    private int viewType;
+    //view的id
+    private int viewId;
+    //父view的id
+    private int parentId;
+    //view名称
     private String name;
+    /**
+     * view布局属性
+     */
+    //左边距
+    private ValueModel left = new ValueModel(0,false);
+    //上边距
+    private ValueModel top = new ValueModel(0,false) ;
+    //宽
+    private ValueModel width = new ValueModel(0,false);
+    //高
+    private ValueModel height = new ValueModel(0,false);
+
+    /**
+     * view内容属性
+     */
+    //view背景色
+    private int backGroundColor = UtilColor.COLOR_VIEW_TOUCH_UP;
+    //透明度
+    private ValueModel alpha = new ValueModel(1,true);
+    //view包含文字内容
     private String contentString;
+    //view背景图片链接
     private String backImageUrl;
 
-    private int backGroundColor = UtilColor.COLOR_VIEW_TOUCH_UP;
-    private int viewType;
-    private int viewId;
 
-    private int parentId;
 
-    private ValueModel left = new ValueModel(0,false);
-    private ValueModel top = new ValueModel(0,false) ;
-    private ValueModel width = new ValueModel(0,false);
-    private ValueModel height = new ValueModel(0,false);
+    //子view
+    private ArrayList<ViewModel>subViewModels;
 
     public int getViewId() {
         return viewId;
@@ -112,5 +139,21 @@ public class ViewModel implements Serializable{
 
     public void setParentId(int parentId) {
         this.parentId = parentId;
+    }
+
+    public ArrayList<ViewModel> getSubViewModels() {
+        return subViewModels;
+    }
+
+    public void setSubViewModels(ArrayList<ViewModel> subViewModels) {
+        this.subViewModels = subViewModels;
+    }
+
+    public ValueModel getAlpha() {
+        return alpha;
+    }
+
+    public void setAlpha(ValueModel alpha) {
+        this.alpha = alpha;
     }
 }

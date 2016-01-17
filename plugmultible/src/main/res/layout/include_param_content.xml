@@ -6,7 +6,7 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="40dp"
+        android:layout_height="30dp"
         android:background="#c8c8c8">
 
         <TextView
@@ -70,6 +70,37 @@
         android:layout_height="60dp">
 
         <TextView
+            android:id="@+id/text_edit_alpha"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:text="透明度" />
+
+        <SeekBar
+            android:id="@+id/seekBar"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp" />
+
+        <TextView
+            android:id="@+id/text_alpath_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@+id/seekBar"
+            android:layout_centerVertical="true"
+            android:text="1"
+            android:textSize="10sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+
+        <TextView
             android:id="@+id/text_edit_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -77,9 +108,21 @@
             android:layout_marginLeft="5dp"
             android:text="文字" />
 
-
     </RelativeLayout>
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+
+        <TextView
+            android:id="@+id/text_edit_backimage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:text="图片" />
+
+    </RelativeLayout>
 
 
 </LinearLayout>

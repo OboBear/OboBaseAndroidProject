@@ -6,6 +6,7 @@ import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
+import android.widget.SeekBar;
 import android.widget.TextView;
 
 import com.obo.plugmultible.R;
@@ -25,6 +26,9 @@ public class SetViewParamsActivity extends BaseActivity implements View.OnClickL
     SwitchTextButton switchTextButton[] = new SwitchTextButton[4];
 
     Button btnPickColor;
+
+
+    SeekBar seekBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -69,6 +73,9 @@ public class SetViewParamsActivity extends BaseActivity implements View.OnClickL
         //控件内容
         btnPickColor = (Button) findViewById(R.id.button_pick_color);
         btnPickColor.setBackgroundColor(viewModel.getBackGroundColor());
+
+        seekBar = (SeekBar) findViewById(R.id.seekBar);
+
     }
 
     @Override
