@@ -13,6 +13,7 @@ import com.obo.plugmultible.R;
 import com.obo.plugmultible.model.ViewModel;
 import com.obo.plugmultible.thirdlib.ColorPicker.ColorPickerDialog;
 import com.obo.plugmultible.utils.UtilScreen;
+import com.obo.plugmultible.widget.SeekBarForValue;
 import com.obo.plugmultible.widget.SwitchTextButton;
 
 public class SetViewParamsActivity extends BaseActivity implements View.OnClickListener {
@@ -28,7 +29,7 @@ public class SetViewParamsActivity extends BaseActivity implements View.OnClickL
     Button btnPickColor;
 
 
-    SeekBar seekBar;
+    SeekBarForValue seekBarForValue;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,7 +47,6 @@ public class SetViewParamsActivity extends BaseActivity implements View.OnClickL
     }
 
     private void initViews() {
-
         textTitle = (TextView) findViewById(R.id.text_title);
         textTitle.setText("修改控件属性");
         initItems();
@@ -74,8 +74,9 @@ public class SetViewParamsActivity extends BaseActivity implements View.OnClickL
         btnPickColor = (Button) findViewById(R.id.button_pick_color);
         btnPickColor.setBackgroundColor(viewModel.getBackGroundColor());
 
-        seekBar = (SeekBar) findViewById(R.id.seekBar);
-
+        seekBarForValue = (SeekBarForValue) findViewById(R.id.seekBarForValue);
+        seekBarForValue.bindViews();
+        seekBarForValue.setValueModel(viewModel.getAlpha());
     }
 
     @Override
@@ -101,7 +102,6 @@ public class SetViewParamsActivity extends BaseActivity implements View.OnClickL
                 break;
         }
     }
-
 
     private ViewModel getResetModel() {
 

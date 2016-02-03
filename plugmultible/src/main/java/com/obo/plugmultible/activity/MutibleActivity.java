@@ -7,12 +7,11 @@ import android.view.View;
 import android.widget.RelativeLayout;
 
 import com.obo.plugmultible.model.ViewModel;
-import com.obo.plugmultible.view.MutibleViewController;
+import com.obo.plugmultible.view.controller.MutibleViewController;
 import com.obo.plugmultible.view.DragScaleRelativeLayout;
 import com.obo.plugmultible.R;
 import com.obo.plugmultible.utils.UtilScreen;
 import com.obo.plugmultible.utils.UtilColor;
-import com.obo.plugmultible.view.MutibleViewControllerBase;
 
 import java.util.ArrayList;
 

@@ -6,6 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/app2/app2.iml" filepath="$PROJECT_DIR$/app2/app2.iml" />
       <module fileurl="file://$PROJECT_DIR$/arrtest/arrtest.iml" filepath="$PROJECT_DIR$/arrtest/arrtest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/eventbustest/eventbustest.iml" filepath="$PROJECT_DIR$/eventbustest/eventbustest.iml" />
       <module fileurl="file://$PROJECT_DIR$/javaexel/javaexel.iml" filepath="$PROJECT_DIR$/javaexel/javaexel.iml" />
       <module fileurl="file://$PROJECT_DIR$/javatest/javatest.iml" filepath="$PROJECT_DIR$/javatest/javatest.iml" />
       <module fileurl="file://$PROJECT_DIR$/jsloader/jsloader.iml" filepath="$PROJECT_DIR$/jsloader/jsloader.iml" />
@@ -13,6 +14,7 @@
       <module fileurl="file://$PROJECT_DIR$/plugEventBus/plugEventBus.iml" filepath="$PROJECT_DIR$/plugEventBus/plugEventBus.iml" />
       <module fileurl="file://$PROJECT_DIR$/plugReverseView/plugReverseView.iml" filepath="$PROJECT_DIR$/plugReverseView/plugReverseView.iml" />
       <module fileurl="file://$PROJECT_DIR$/pluganimation/pluganimation.iml" filepath="$PROJECT_DIR$/pluganimation/pluganimation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/plugchat/plugchat.iml" filepath="$PROJECT_DIR$/plugchat/plugchat.iml" />
       <module fileurl="file://$PROJECT_DIR$/plugmarkdown/plugmarkdown.iml" filepath="$PROJECT_DIR$/plugmarkdown/plugmarkdown.iml" />
       <module fileurl="file://$PROJECT_DIR$/plugmultible/plugmultible.iml" filepath="$PROJECT_DIR$/plugmultible/plugmultible.iml" />
       <module fileurl="file://$PROJECT_DIR$/plugretrofit/plugretrofit.iml" filepath="$PROJECT_DIR$/plugretrofit/plugretrofit.iml" />

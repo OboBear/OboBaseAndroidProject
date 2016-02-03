@@ -13,6 +13,7 @@
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/app2" />
             <option value="$PROJECT_DIR$/arrtest" />
+            <option value="$PROJECT_DIR$/eventbustest" />
             <option value="$PROJECT_DIR$/javaexel" />
             <option value="$PROJECT_DIR$/javatest" />
             <option value="$PROJECT_DIR$/jsloader" />
@@ -21,6 +22,7 @@
             <option value="$PROJECT_DIR$/plugReverseView" />
             <option value="$PROJECT_DIR$/plugStatusListener" />
             <option value="$PROJECT_DIR$/pluganimation" />
+            <option value="$PROJECT_DIR$/plugchat" />
             <option value="$PROJECT_DIR$/plugmarkdown" />
             <option value="$PROJECT_DIR$/plugmultible" />
             <option value="$PROJECT_DIR$/plugretrofit" />

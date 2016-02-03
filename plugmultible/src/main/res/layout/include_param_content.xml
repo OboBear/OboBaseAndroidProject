@@ -65,8 +65,9 @@
             android:background="#eeeeee" />
     </RelativeLayout>
 
-    <RelativeLayout
+    <com.obo.plugmultible.widget.SeekBarForValue
         android:layout_width="match_parent"
+        android:id="@+id/seekBarForValue"
         android:layout_height="60dp">
 
         <TextView
@@ -91,10 +92,10 @@
             android:layout_height="wrap_content"
             android:layout_toStartOf="@+id/seekBar"
             android:layout_centerVertical="true"
-            android:text="1"
+            android:text="0"
             android:textSize="10sp" />
 
-    </RelativeLayout>
+    </com.obo.plugmultible.widget.SeekBarForValue>
 
     <RelativeLayout
         android:layout_width="match_parent"

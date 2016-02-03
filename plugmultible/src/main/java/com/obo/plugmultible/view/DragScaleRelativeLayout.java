@@ -8,6 +8,7 @@ import android.widget.RelativeLayout;
 
 import com.obo.plugmultible.model.ViewModel;
 import com.obo.plugmultible.utils.UtilDefines;
+import com.obo.plugmultible.view.controller.MutibleViewController;
 
 /**
  * Created by obo on 16/1/10.
