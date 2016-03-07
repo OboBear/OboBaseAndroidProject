@@ -1,0 +1,1010 @@
+[
+    {
+        "outputFile": "/Users/obo/Desktop/Workspace/android/demos/OboBaseAndroidProject/speechDemo/build/intermediates/res/merged/debug/values/values.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endLine": 6,
+                    "endColumn": 19,
+                    "endOffset": 185
+                },
+                "from": {
+                    "file": "/Users/obo/Desktop/Workspace/android/demos/OboBaseAndroidProject/speechDemo/src/main/res/values/strings.xml",
+                    "position": {
+                        "startLine": 115,
+                        "startColumn": 4,
+                        "startOffset": 4717,
+                        "endLine": 119,
+                        "endColumn": 19,
+                        "endOffset": 4851
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 7,
+                    "startColumn": 4,
+                    "startOffset": 190,
+                    "endLine": 11,
+                    "endColumn": 19,
+                    "endOffset": 348
+                },
+                "from": {
+                    "file": "/Users/obo/Desktop/Workspace/android/demos/OboBaseAndroidProject/speechDemo/src/main/res/values/strings.xml",
+                    "position": {
+                        "startLine": 120,
+                        "startColumn": 4,
+                        "startOffset": 4857,
+                        "endLine": 124,
+                        "endColumn": 19,
+                        "endOffset": 5019
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 12,
+                    "startColumn": 4,
+                    "startOffset": 353,
+                    "endLine": 15,
+                    "endColumn": 19,
+                    "endOffset": 454
+                },
+                "from": {
+                    "file": "/Users/obo/Desktop/Workspace/android/demos/OboBaseAndroidProject/speechDemo/src/main/res/values/strings.xml",
+                    "position": {
+                        "startLine": 138,
+                        "startColumn": 4,
+                        "startOffset": 5393,
+                        "endLine": 141,
+                        "endColumn": 19,
+                        "endOffset": 5497
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 16,
+                    "startColumn": 4,
+                    "startOffset": 459,
+                    "endLine": 19,
+                    "endColumn": 19,
+                    "endOffset": 567
+                },
+                "from": {
+                    "file": "/Users/obo/Desktop/Workspace/android/demos/OboBaseAndroidProject/speechDemo/src/main/res/values/strings.xml",
+                    "position": {
+                        "startLine": 23,
+                        "startColumn": 4,
+                        "startOffset": 1857,
+                        "endLine": 26,
+                        "endColumn": 19,
+                        "endOffset": 1968
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 20,
+                    "startColumn": 4,
+                    "startOffset": 572,
+                    "endLine": 23,
+                    "endColumn": 19,
+                    "endOffset": 681
+                },
+                "from": {
+                    "file": "/Users/obo/Desktop/Workspace/android/demos/OboBaseAndroidProject/speechDemo/src/main/res/values/strings.xml",
+                    "position": {
+                        "startLine": 27,
+                        "startColumn": 4,
+                        "startOffset": 1974,
+                        "endLine": 30,
+                        "endColumn": 19,
+                        "endOffset": 2086
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 24,
+                    "startColumn": 4,
+                    "startOffset": 686,
+                    "endLine": 27,
+                    "endColumn": 19,
+                    "endOffset": 796
+                },
+                "from": {
+                    "file": "/Users/obo/Desktop/Workspace/android/demos/OboBaseAndroidProject/speechDemo/src/main/res/values/strings.xml",
+                    "position": {
+                        "startLine": 107,
+                        "startColumn": 4,
+                        "startOffset": 4474,
+                        "endLine": 110,
+                        "endColumn": 19,
+                        "endOffset": 4587
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 28,
+                    "startColumn": 4,
+                    "startOffset": 801,
+                    "endLine": 31,
+                    "endColumn": 19,
+                    "endOffset": 916
+                },
+                "from": {
+                    "file": "/Users/obo/Desktop/Workspace/android/demos/OboBaseAndroidProject/speechDemo/src/main/res/values/strings.xml",
+                    "position": {
+                        "startLine": 111,
+                        "startColumn": 4,
+                        "startOffset": 4593,
+                        "endLine": 114,
+                        "endColumn": 19,
+                        "endOffset": 4711
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 32,
+                    "startColumn": 4,
+                    "startOffset": 921,
+                    "endLine": 37,
+                    "endColumn": 19,
+                    "endOffset": 1077
+                },
+                "from": {
+                    "file": "/Users/obo/Desktop/Workspace/android/demos/OboBaseAndroidProject/speechDemo/src/main/res/values/strings.xml",
+                    "position": {
+                        "startLine": 89,
+                        "startColumn": 4,
+                        "startOffset": 3732,
+                        "endLine": 94,
+                        "endColumn": 19,
+                        "endOffset": 3893
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 38,
+                    "startColumn": 4,
+                    "startOffset": 1082,
+                    "endLine": 43,
+                    "endColumn": 19,
+                    "endOffset": 1257
+                },
+                "from": {
+                    "file": "/Users/obo/Desktop/Workspace/android/demos/OboBaseAndroidProject/speechDemo/src/main/res/values/strings.xml",
+                    "position": {
+                        "startLine": 95,
+                        "startColumn": 4,
+                        "startOffset": 3899,
+                        "endLine": 100,
+                        "endColumn": 19,
+                        "endOffset": 4079
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 44,
+                    "startColumn": 4,
+                    "startOffset": 1262,
+                    "endLine": 47,
+                    "endColumn": 19,
+                    "endOffset": 1366
+                },
+                "from": {
+                    "file": "/Users/obo/Desktop/Workspace/android/demos/OboBaseAndroidProject/speechDemo/src/main/res/values/strings.xml",
+                    "position": {
+                        "startLine": 130,
+                        "startColumn": 4,
+                        "startOffset": 5172,
+                        "endLine": 133,
+                        "endColumn": 19,
+                        "endOffset": 5279
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 48,
+                    "startColumn": 4,
+                    "startOffset": 1371,
+                    "endLine": 51,
+                    "endColumn": 19,
+                    "endOffset": 1470
+                },
+                "from": {
+                    "file": "/Users/obo/Desktop/Workspace/android/demos/OboBaseAndroidProject/speechDemo/src/main/res/values/strings.xml",
+                    "position": {
+                        "startLine": 134,
+                        "startColumn": 4,
+                        "startOffset": 5285,
+                        "endLine": 137,
+                        "endColumn": 19,
+                        "endOffset": 5387
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 52,
+                    "startColumn": 4,
+                    "startOffset": 1475,
+                    "endLine": 55,
+                    "endColumn": 19,
+                    "endOffset": 1594
+                },
+                "from": {
+                    "file": "/Users/obo/Desktop/Workspace/android/demos/OboBaseAndroidProject/speechDemo/src/main/res/values/strings.xml",
+                    "position": {
+                        "startLine": 125,
+                        "startColumn": 4,
+                        "startOffset": 5025,
+                        "endLine": 128,
+                        "endColumn": 19,
+                        "endOffset": 5147
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 56,
+                    "startColumn": 4,
+                    "startOffset": 1599,
+                    "endLine": 63,
+                    "endColumn": 19,
+                    "endOffset": 1799
+                },
+                "from": {
+                    "file": "/Users/obo/Desktop/Workspace/android/demos/OboBaseAndroidProject/speechDemo/src/main/res/values/strings.xml",
+                    "position": {
+                        "startLine": 71,
+                        "startColumn": 4,
+                        "startOffset": 3212,
+                        "endLine": 78,
+                        "endColumn": 19,
+                        "endOffset": 3419
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 64,
+                    "startColumn": 4,
+                    "startOffset": 1804,
+                    "endLine": 71,
+                    "endColumn": 19,
+                    "endOffset": 1997
+                },
+                "from": {
+                    "file": "/Users/obo/Desktop/Workspace/android/demos/OboBaseAndroidProject/speechDemo/src/main/res/values/strings.xml",
+                    "position": {
+                        "startLine": 79,
+                        "startColumn": 4,
+                        "startOffset": 3425,
+                        "endLine": 86,
+                        "endColumn": 19,
+                        "endOffset": 3625
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 72,
+                    "startColumn": 4,
+                    "startOffset": 2002,
+                    "endLine": 91,
+                    "endColumn": 19,
+                    "endOffset": 2498
+                },
+                "from": {
+                    "file": "/Users/obo/Desktop/Workspace/android/demos/OboBaseAndroidProject/speechDemo/src/main/res/values/strings.xml",
+                    "position": {
+                        "startLine": 31,
+                        "startColumn": 4,
+                        "startOffset": 2092,
+                        "endLine": 50,
+                        "endColumn": 19,
+                        "endOffset": 2607
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 92,
+                    "startColumn": 4,
+                    "startOffset": 2503,
+                    "endLine": 111,
+                    "endColumn": 19,
+                    "endOffset": 3077
+                },
+                "from": {
+                    "file": "/Users/obo/Desktop/Workspace/android/demos/OboBaseAndroidProject/speechDemo/src/main/res/values/strings.xml",
+                    "position": {
+                        "startLine": 51,
+                        "startColumn": 4,
+                        "startOffset": 2613,
+                        "endLine": 70,
+                        "endColumn": 19,
+                        "endOffset": 3206
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 112,
+                    "startColumn": 4,
+                    "startOffset": 3082,
+                    "endColumn": 47,
+                    "endOffset": 3125
+                },
+                "from": {
+                    "file": "/Users/obo/Desktop/Workspace/android/demos/OboBaseAndroidProject/speechDemo/src/main/res/values/colors.xml",
+                    "position": {
+                        "startLine": 14,
+                        "startColumn": 4,
+                        "startOffset": 384,
+                        "endColumn": 47,
+                        "endOffset": 427
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 113,
+                    "startColumn": 4,
+                    "startOffset": 3130,
+                    "endColumn": 54,
+                    "endOffset": 3180
+                },
+                "from": {
+                    "file": "/Users/obo/Desktop/Workspace/android/demos/OboBaseAndroidProject/speechDemo/src/main/res/values/colors.xml",
+                    "position": {
+                        "startLine": 12,
+                        "startColumn": 4,
+                        "startOffset": 283,
+                        "endColumn": 54,
+                        "endOffset": 333
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 114,
+                    "startColumn": 4,
+                    "startOffset": 3185,
+                    "endColumn": 45,
+                    "endOffset": 3226
+                },
+                "from": {
+                    "file": "/Users/obo/Desktop/Workspace/android/demos/OboBaseAndroidProject/speechDemo/src/main/res/values/colors.xml",
+                    "position": {
+                        "startLine": 13,
+                        "startColumn": 4,
+                        "startOffset": 338,
+                        "endColumn": 45,
+                        "endOffset": 379
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 115,
+                    "startColumn": 4,
+                    "startOffset": 3231,
+                    "endColumn": 39,
+                    "endOffset": 3266
+                },
+                "from": {
+                    "file": "/Users/obo/Desktop/Workspace/android/demos/OboBaseAndroidProject/speechDemo/src/main/res/values/colors.xml",
+                    "position": {
+                        "startLine": 9,
+                        "startColumn": 4,
+                        "startOffset": 214,
+                        "endColumn": 39,
+                        "endOffset": 249
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 116,
+                    "startColumn": 4,
+                    "startOffset": 3271,
+                    "endColumn": 39,
+                    "endOffset": 3306
+                },
+                "from": {
+                    "file": "/Users/obo/Desktop/Workspace/android/demos/OboBaseAndroidProject/speechDemo/src/main/res/values/dimen.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 137,
+                        "endColumn": 39,
+                        "endOffset": 172
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 117,
+                    "startColumn": 4,
+                    "startOffset": 3311,
+                    "endColumn": 41,
+                    "endOffset": 3348
+                },
+                "from": {
+                    "file": "/Users/obo/Desktop/Workspace/android/demos/OboBaseAndroidProject/speechDemo/src/main/res/values/dimen.xml",
+                    "position": {
+                        "startLine": 9,
+                        "startColumn": 4,
+                        "startOffset": 241,
+                        "endColumn": 41,
+                        "endOffset": 278
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 118,
+                    "startColumn": 4,
+                    "startOffset": 3353,
+                    "endColumn": 38,
+                    "endOffset": 3387
+                },
+                "from": {
+                    "file": "/Users/obo/Desktop/Workspace/android/demos/OboBaseAndroidProject/speechDemo/src/main/res/values/dimen.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 60,
+                        "endColumn": 38,
+                        "endOffset": 94
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 119,
+                    "startColumn": 4,
+                    "startOffset": 3392,
+                    "endColumn": 37,
+                    "endOffset": 3425
+                },
+                "from": {
+                    "file": "/Users/obo/Desktop/Workspace/android/demos/OboBaseAndroidProject/speechDemo/src/main/res/values/dimen.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 99,
+                        "endColumn": 37,
+                        "endOffset": 132
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 120,
+                    "startColumn": 4,
+                    "startOffset": 3430,
+                    "endColumn": 39,
+                    "endOffset": 3465
+                },
+                "from": {
+                    "file": "/Users/obo/Desktop/Workspace/android/demos/OboBaseAndroidProject/speechDemo/src/main/res/values/dimen.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 4,
+                        "startOffset": 177,
+                        "endColumn": 39,
+                        "endOffset": 212
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 121,
+                    "startColumn": 4,
+                    "startOffset": 3470,
+                    "endColumn": 56,
+                    "endOffset": 3522
+                },
+                "from": {
+                    "file": "/Users/obo/Desktop/Workspace/android/demos/OboBaseAndroidProject/speechDemo/src/main/res/values/colors.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 75,
+                        "endColumn": 56,
+                        "endOffset": 127
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 122,
+                    "startColumn": 4,
+                    "startOffset": 3527,
+                    "endColumn": 55,
+                    "endOffset": 3578
+                },
+                "from": {
+                    "file": "/Users/obo/Desktop/Workspace/android/demos/OboBaseAndroidProject/speechDemo/src/main/res/values/colors.xml",
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 4,
+                        "startOffset": 157,
+                        "endColumn": 55,
+                        "endOffset": 208
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 123,
+                    "startColumn": 4,
+                    "startOffset": 3583,
+                    "endColumn": 43,
+                    "endOffset": 3622
+                },
+                "from": {
+                    "file": "/Users/obo/Desktop/Workspace/android/demos/OboBaseAndroidProject/speechDemo/src/main/res/values/strings.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 135,
+                        "endColumn": 43,
+                        "endOffset": 174
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 124,
+                    "startColumn": 4,
+                    "startOffset": 3627,
+                    "endColumn": 43,
+                    "endOffset": 3666
+                },
+                "from": {
+                    "file": "/Users/obo/Desktop/Workspace/android/demos/OboBaseAndroidProject/speechDemo/src/main/res/values/strings.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 57,
+                        "endColumn": 43,
+                        "endOffset": 96
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 125,
+                    "startColumn": 4,
+                    "startOffset": 3671,
+                    "endColumn": 120,
+                    "endOffset": 3787
+                },
+                "from": {
+                    "file": "/Users/obo/Desktop/Workspace/android/demos/OboBaseAndroidProject/speechDemo/src/main/res/values/strings.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 180,
+                        "endColumn": 120,
+                        "endOffset": 296
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 126,
+                    "startColumn": 4,
+                    "startOffset": 3792,
+                    "endColumn": 54,
+                    "endOffset": 3842
+                },
+                "from": {
+                    "file": "/Users/obo/Desktop/Workspace/android/demos/OboBaseAndroidProject/speechDemo/src/main/res/values/strings.xml",
+                    "position": {
+                        "startLine": 18,
+                        "startColumn": 4,
+                        "startOffset": 1667,
+                        "endColumn": 54,
+                        "endOffset": 1717
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 127,
+                    "startColumn": 4,
+                    "startOffset": 3847,
+                    "endColumn": 53,
+                    "endOffset": 3896
+                },
+                "from": {
+                    "file": "/Users/obo/Desktop/Workspace/android/demos/OboBaseAndroidProject/speechDemo/src/main/res/values/strings.xml",
+                    "position": {
+                        "startLine": 20,
+                        "startColumn": 4,
+                        "startOffset": 1779,
+                        "endColumn": 53,
+                        "endOffset": 1828
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 128,
+                    "startColumn": 4,
+                    "startOffset": 3901,
+                    "endColumn": 54,
+                    "endOffset": 3951
+                },
+                "from": {
+                    "file": "/Users/obo/Desktop/Workspace/android/demos/OboBaseAndroidProject/speechDemo/src/main/res/values/strings.xml",
+                    "position": {
+                        "startLine": 19,
+                        "startColumn": 4,
+                        "startOffset": 1723,
+                        "endColumn": 54,
+                        "endOffset": 1773
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 129,
+                    "startColumn": 4,
+                    "startOffset": 3956,
+                    "endColumn": 45,
+                    "endOffset": 3997
+                },
+                "from": {
+                    "file": "/Users/obo/Desktop/Workspace/android/demos/OboBaseAndroidProject/speechDemo/src/main/res/values/strings.xml",
+                    "position": {
+                        "startLine": 11,
+                        "startColumn": 4,
+                        "startOffset": 1276,
+                        "endColumn": 45,
+                        "endOffset": 1317
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 130,
+                    "startColumn": 4,
+                    "startOffset": 4002,
+                    "endColumn": 57,
+                    "endOffset": 4055
+                },
+                "from": {
+                    "file": "/Users/obo/Desktop/Workspace/android/demos/OboBaseAndroidProject/speechDemo/src/main/res/values/strings.xml",
+                    "position": {
+                        "startLine": 12,
+                        "startColumn": 4,
+                        "startOffset": 1323,
+                        "endColumn": 57,
+                        "endOffset": 1376
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 131,
+                    "startColumn": 4,
+                    "startOffset": 4060,
+                    "endColumn": 88,
+                    "endOffset": 4144
+                },
+                "from": {
+                    "file": "/Users/obo/Desktop/Workspace/android/demos/OboBaseAndroidProject/speechDemo/src/main/res/values/strings.xml",
+                    "position": {
+                        "startLine": 106,
+                        "startColumn": 4,
+                        "startOffset": 4384,
+                        "endColumn": 88,
+                        "endOffset": 4468
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 132,
+                    "startColumn": 4,
+                    "startOffset": 4149,
+                    "endColumn": 52,
+                    "endOffset": 4197
+                },
+                "from": {
+                    "file": "/Users/obo/Desktop/Workspace/android/demos/OboBaseAndroidProject/speechDemo/src/main/res/values/strings.xml",
+                    "position": {
+                        "startLine": 104,
+                        "startColumn": 4,
+                        "startOffset": 4271,
+                        "endColumn": 52,
+                        "endOffset": 4319
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 133,
+                    "startColumn": 4,
+                    "startOffset": 4202,
+                    "endColumn": 57,
+                    "endOffset": 4255
+                },
+                "from": {
+                    "file": "/Users/obo/Desktop/Workspace/android/demos/OboBaseAndroidProject/speechDemo/src/main/res/values/strings.xml",
+                    "position": {
+                        "startLine": 105,
+                        "startColumn": 4,
+                        "startOffset": 4325,
+                        "endColumn": 57,
+                        "endOffset": 4378
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 134,
+                    "startColumn": 4,
+                    "startOffset": 4260,
+                    "endColumn": 54,
+                    "endOffset": 4310
+                },
+                "from": {
+                    "file": "/Users/obo/Desktop/Workspace/android/demos/OboBaseAndroidProject/speechDemo/src/main/res/values/strings.xml",
+                    "position": {
+                        "startLine": 17,
+                        "startColumn": 4,
+                        "startOffset": 1611,
+                        "endColumn": 54,
+                        "endOffset": 1661
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 135,
+                    "startColumn": 4,
+                    "startOffset": 4315,
+                    "endColumn": 91,
+                    "endOffset": 4402
+                },
+                "from": {
+                    "file": "/Users/obo/Desktop/Workspace/android/demos/OboBaseAndroidProject/speechDemo/src/main/res/values/strings.xml",
+                    "position": {
+                        "startLine": 103,
+                        "startColumn": 4,
+                        "startOffset": 4178,
+                        "endColumn": 91,
+                        "endOffset": 4265
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 136,
+                    "startColumn": 4,
+                    "startOffset": 4407,
+                    "endColumn": 72,
+                    "endOffset": 4475
+                },
+                "from": {
+                    "file": "/Users/obo/Desktop/Workspace/android/demos/OboBaseAndroidProject/speechDemo/src/main/res/values/strings.xml",
+                    "position": {
+                        "startLine": 102,
+                        "startColumn": 4,
+                        "startOffset": 4104,
+                        "endColumn": 72,
+                        "endOffset": 4172
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 137,
+                    "startColumn": 4,
+                    "startOffset": 4480,
+                    "endColumn": 214,
+                    "endOffset": 4690
+                },
+                "from": {
+                    "file": "/Users/obo/Desktop/Workspace/android/demos/OboBaseAndroidProject/speechDemo/src/main/res/values/strings.xml",
+                    "position": {
+                        "startLine": 8,
+                        "startColumn": 4,
+                        "startOffset": 876,
+                        "endColumn": 214,
+                        "endOffset": 1086
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 138,
+                    "startColumn": 4,
+                    "startOffset": 4695,
+                    "endColumn": 156,
+                    "endOffset": 4847
+                },
+                "from": {
+                    "file": "/Users/obo/Desktop/Workspace/android/demos/OboBaseAndroidProject/speechDemo/src/main/res/values/strings.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 4,
+                        "startOffset": 302,
+                        "endColumn": 156,
+                        "endOffset": 454
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 139,
+                    "startColumn": 4,
+                    "startOffset": 4852,
+                    "endColumn": 414,
+                    "endOffset": 5262
+                },
+                "from": {
+                    "file": "/Users/obo/Desktop/Workspace/android/demos/OboBaseAndroidProject/speechDemo/src/main/res/values/strings.xml",
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 4,
+                        "startOffset": 460,
+                        "endColumn": 414,
+                        "endOffset": 870
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 140,
+                    "startColumn": 4,
+                    "startOffset": 5267,
+                    "endColumn": 165,
+                    "endOffset": 5428
+                },
+                "from": {
+                    "file": "/Users/obo/Desktop/Workspace/android/demos/OboBaseAndroidProject/speechDemo/src/main/res/values/strings.xml",
+                    "position": {
+                        "startLine": 9,
+                        "startColumn": 4,
+                        "startOffset": 1092,
+                        "endColumn": 165,
+                        "endOffset": 1253
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 141,
+                    "startColumn": 4,
+                    "startOffset": 5433,
+                    "endColumn": 54,
+                    "endOffset": 5483
+                },
+                "from": {
+                    "file": "/Users/obo/Desktop/Workspace/android/demos/OboBaseAndroidProject/speechDemo/src/main/res/values/strings.xml",
+                    "position": {
+                        "startLine": 13,
+                        "startColumn": 4,
+                        "startOffset": 1382,
+                        "endColumn": 54,
+                        "endOffset": 1432
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 142,
+                    "startColumn": 4,
+                    "startOffset": 5488,
+                    "endColumn": 52,
+                    "endOffset": 5536
+                },
+                "from": {
+                    "file": "/Users/obo/Desktop/Workspace/android/demos/OboBaseAndroidProject/speechDemo/src/main/res/values/strings.xml",
+                    "position": {
+                        "startLine": 15,
+                        "startColumn": 4,
+                        "startOffset": 1496,
+                        "endColumn": 52,
+                        "endOffset": 1544
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 143,
+                    "startColumn": 4,
+                    "startOffset": 5541,
+                    "endColumn": 56,
+                    "endOffset": 5593
+                },
+                "from": {
+                    "file": "/Users/obo/Desktop/Workspace/android/demos/OboBaseAndroidProject/speechDemo/src/main/res/values/strings.xml",
+                    "position": {
+                        "startLine": 14,
+                        "startColumn": 4,
+                        "startOffset": 1438,
+                        "endColumn": 56,
+                        "endOffset": 1490
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 144,
+                    "startColumn": 4,
+                    "startOffset": 5598,
+                    "endColumn": 59,
+                    "endOffset": 5653
+                },
+                "from": {
+                    "file": "/Users/obo/Desktop/Workspace/android/demos/OboBaseAndroidProject/speechDemo/src/main/res/values/strings.xml",
+                    "position": {
+                        "startLine": 16,
+                        "startColumn": 4,
+                        "startOffset": 1550,
+                        "endColumn": 59,
+                        "endOffset": 1605
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 145,
+                    "startColumn": 4,
+                    "startOffset": 5658,
+                    "endColumn": 82,
+                    "endOffset": 5736
+                },
+                "from": {
+                    "file": "/Users/obo/Desktop/Workspace/android/demos/OboBaseAndroidProject/speechDemo/src/main/res/values/strings.xml",
+                    "position": {
+                        "startLine": 87,
+                        "startColumn": 4,
+                        "startOffset": 3631,
+                        "endColumn": 82,
+                        "endOffset": 3709
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 146,
+                    "startColumn": 4,
+                    "startOffset": 5741,
+                    "endLine": 155,
+                    "endColumn": 9,
+                    "endOffset": 6265
+                },
+                "from": {
+                    "file": "/Users/obo/Desktop/Workspace/android/demos/OboBaseAndroidProject/speechDemo/src/main/res/values/styles.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 6,
+                        "startOffset": 59,
+                        "endLine": 11,
+                        "endColumn": 9,
+                        "endOffset": 592
+                    }
+                }
+            }
+        ]
+    }
+]
