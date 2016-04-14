@@ -28,7 +28,7 @@ android {
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile fileTree(include: ['*.jar'], dir: 'libs')
     compile 'com.android.support:appcompat-v7:23.0.1'
     compile 'com.google.code.gson:gson:2.4'
     compile 'com.facebook.fresco:fresco:0.8.1'
@@ -39,7 +39,6 @@ dependencies {
     compile 'com.obo:maventest:1.0'
     compile(name: 'arr-1.0', ext: 'aar')
     compile project(':plugEventBus')
-    compile project(':plugReverseView')
 }
 
 repositories {

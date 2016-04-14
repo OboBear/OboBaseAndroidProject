@@ -48,6 +48,7 @@ public class AnimateReverseActivity extends AppCompatActivity implements View.On
             } else {
                 layout.clearAnimation();
             }
+
             isReverse = !isReverse;
 
         }

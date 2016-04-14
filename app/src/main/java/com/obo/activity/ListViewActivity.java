@@ -60,10 +60,8 @@ public class ListViewActivity extends BaseActivity implements AdapterView.OnItem
             "FrescoActivity",
             "SQLActivity",
             "ReverseActivity",
-//            "SurfaceView",
             "EventBus",
             "ReverseView",
-
     };
 
     String[] IntentActions = {

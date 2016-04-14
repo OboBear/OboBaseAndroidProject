@@ -22,13 +22,6 @@ public class SecondActivity extends AppCompatActivity implements View.OnClickLis
 
     @Override
     public void onClick(View v) {
-
-//        switch (v.getId()) {
-//            case R.id.button:
-//                EventBus.getDefault().post(editText.getText().toString());
-//                break;
-//        }
-
         EventBus.getDefault().post(editText.getText().toString());
 
     }

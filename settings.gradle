@@ -1,2 +1,9 @@
-include ':app', ':app2', ':arrtest', ':maventest', ':voicelibrary', ':plugReverseView', ':plugEventBus', ':plugretrofit', ':plugwebviewswith', ':plugstatuslistener', ':utilproject', ':plugseekbar', ':pluganimation', ':jsloader', ':plugrxjava', ':plugrotateview', ':plugmarkdown', ':plugmultible', ':plugchat', ':eventbustest'
-include ':speechDemo'
+//include ':app'
+//include ':app2', ':a
+// rtest', ':maventest', ':voicelibrary', ':plugReverseView', ':plugEventBus', ':plugretrofit', ':plugwebviewswith', ':plugstatuslistener', ':utilproject', ':plugseekbar', ':pluganimation', ':jsloader', ':plugrxjava', ':plugrotateview', ':plugmarkdown', ':plugmultible', ':plugchat'
+//include ':speechDemo'
+//include ':plugReverseView', ':javaeval', ':gapdemaptest', ':plugchat', ':backsensermodule', ':dashboard', 'javatest'
+include ':dashboard', ':animationloading', ':horizontalandroid'
+include ':plugchat'
+include ':plugrxjava'
+

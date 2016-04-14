@@ -3,27 +3,11 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/OboBaseAndroidProject.iml" filepath="$PROJECT_DIR$/OboBaseAndroidProject.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app2/app2.iml" filepath="$PROJECT_DIR$/app2/app2.iml" />
-      <module fileurl="file://$PROJECT_DIR$/arrtest/arrtest.iml" filepath="$PROJECT_DIR$/arrtest/arrtest.iml" />
-      <module fileurl="file://$PROJECT_DIR$/eventbustest/eventbustest.iml" filepath="$PROJECT_DIR$/eventbustest/eventbustest.iml" />
-      <module fileurl="file://$PROJECT_DIR$/jsloader/jsloader.iml" filepath="$PROJECT_DIR$/jsloader/jsloader.iml" />
-      <module fileurl="file://$PROJECT_DIR$/maventest/maventest.iml" filepath="$PROJECT_DIR$/maventest/maventest.iml" />
-      <module fileurl="file://$PROJECT_DIR$/plugEventBus/plugEventBus.iml" filepath="$PROJECT_DIR$/plugEventBus/plugEventBus.iml" />
-      <module fileurl="file://$PROJECT_DIR$/plugReverseView/plugReverseView.iml" filepath="$PROJECT_DIR$/plugReverseView/plugReverseView.iml" />
-      <module fileurl="file://$PROJECT_DIR$/pluganimation/pluganimation.iml" filepath="$PROJECT_DIR$/pluganimation/pluganimation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/animationloading/animationloading.iml" filepath="$PROJECT_DIR$/animationloading/animationloading.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dashboard/dashboard.iml" filepath="$PROJECT_DIR$/dashboard/dashboard.iml" />
+      <module fileurl="file://$PROJECT_DIR$/horizontalandroid/horizontalandroid.iml" filepath="$PROJECT_DIR$/horizontalandroid/horizontalandroid.iml" />
       <module fileurl="file://$PROJECT_DIR$/plugchat/plugchat.iml" filepath="$PROJECT_DIR$/plugchat/plugchat.iml" />
-      <module fileurl="file://$PROJECT_DIR$/plugmarkdown/plugmarkdown.iml" filepath="$PROJECT_DIR$/plugmarkdown/plugmarkdown.iml" />
-      <module fileurl="file://$PROJECT_DIR$/plugmultible/plugmultible.iml" filepath="$PROJECT_DIR$/plugmultible/plugmultible.iml" />
-      <module fileurl="file://$PROJECT_DIR$/plugretrofit/plugretrofit.iml" filepath="$PROJECT_DIR$/plugretrofit/plugretrofit.iml" />
-      <module fileurl="file://$PROJECT_DIR$/plugrotateview/plugrotateview.iml" filepath="$PROJECT_DIR$/plugrotateview/plugrotateview.iml" />
       <module fileurl="file://$PROJECT_DIR$/plugrxjava/plugrxjava.iml" filepath="$PROJECT_DIR$/plugrxjava/plugrxjava.iml" />
-      <module fileurl="file://$PROJECT_DIR$/plugseekbar/plugseekbar.iml" filepath="$PROJECT_DIR$/plugseekbar/plugseekbar.iml" />
-      <module fileurl="file://$PROJECT_DIR$/plugStatusListener/plugstatuslistener.iml" filepath="$PROJECT_DIR$/plugStatusListener/plugstatuslistener.iml" />
-      <module fileurl="file://$PROJECT_DIR$/plugwebviewswith/plugwebviewswith.iml" filepath="$PROJECT_DIR$/plugwebviewswith/plugwebviewswith.iml" />
-      <module fileurl="file://$PROJECT_DIR$/speechDemo/speechDemo.iml" filepath="$PROJECT_DIR$/speechDemo/speechDemo.iml" />
-      <module fileurl="file://$PROJECT_DIR$/utilproject/utilproject.iml" filepath="$PROJECT_DIR$/utilproject/utilproject.iml" />
-      <module fileurl="file://$PROJECT_DIR$/voicelibrary/voicelibrary.iml" filepath="$PROJECT_DIR$/voicelibrary/voicelibrary.iml" />
     </modules>
   </component>
 </project>

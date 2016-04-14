@@ -6,7 +6,6 @@ import android.widget.TextView;
 
 import com.obo.activity.base.BaseActivity;
 
-
 public class MainActivity extends BaseActivity {
 
     @Override

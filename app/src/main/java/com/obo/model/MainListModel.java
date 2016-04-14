@@ -5,5 +5,4 @@ package com.obo.model;
  */
 public class MainListModel {
     public String text;
-
 }

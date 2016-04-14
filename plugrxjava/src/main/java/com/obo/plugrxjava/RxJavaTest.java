@@ -12,10 +12,11 @@ import rx.functions.Action1;
 public class RxJavaTest {
     public static void main(String []args) {
 //        basic();
-        simple1();
+//        simple1();
+        System.out.println(012);
+
     }
-
-
+    
     static void basic() {
         Observable<String> myObservable = Observable.create(
                 new Observable.OnSubscribe<String>() {

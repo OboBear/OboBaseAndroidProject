@@ -3,33 +3,28 @@
   <component name="GradleSettings">
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
-        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="distributionType" value="LOCAL" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="gradleHome" value="$APPLICATION_HOME_DIR$/gradle/gradle-2.10" />
         <option name="gradleJvm" value="1.8" />
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
-            <option value="$PROJECT_DIR$/app" />
-            <option value="$PROJECT_DIR$/app2" />
-            <option value="$PROJECT_DIR$/arrtest" />
-            <option value="$PROJECT_DIR$/eventbustest" />
-            <option value="$PROJECT_DIR$/jsloader" />
-            <option value="$PROJECT_DIR$/maventest" />
-            <option value="$PROJECT_DIR$/plugEventBus" />
-            <option value="$PROJECT_DIR$/plugReverseView" />
-            <option value="$PROJECT_DIR$/plugStatusListener" />
-            <option value="$PROJECT_DIR$/pluganimation" />
+            <option value="$PROJECT_DIR$/animationloading" />
+            <option value="$PROJECT_DIR$/dashboard" />
+            <option value="$PROJECT_DIR$/horizontalandroid" />
             <option value="$PROJECT_DIR$/plugchat" />
-            <option value="$PROJECT_DIR$/plugmarkdown" />
-            <option value="$PROJECT_DIR$/plugmultible" />
-            <option value="$PROJECT_DIR$/plugretrofit" />
-            <option value="$PROJECT_DIR$/plugrotateview" />
             <option value="$PROJECT_DIR$/plugrxjava" />
-            <option value="$PROJECT_DIR$/plugseekbar" />
-            <option value="$PROJECT_DIR$/plugwebviewswith" />
-            <option value="$PROJECT_DIR$/speechDemo" />
-            <option value="$PROJECT_DIR$/utilproject" />
-            <option value="$PROJECT_DIR$/voicelibrary" />
+          </set>
+        </option>
+        <option name="myModules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/animationloading" />
+            <option value="$PROJECT_DIR$/dashboard" />
+            <option value="$PROJECT_DIR$/horizontalandroid" />
+            <option value="$PROJECT_DIR$/plugchat" />
+            <option value="$PROJECT_DIR$/plugrxjava" />
           </set>
         </option>
       </GradleProjectSettings>

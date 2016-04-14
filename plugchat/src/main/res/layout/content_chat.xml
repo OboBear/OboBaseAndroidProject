@@ -3,34 +3,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ffffff"
     tools:context=".activity.ChatActivity">
-
-    <RelativeLayout
-        android:id="@+id/layout_top"
-        android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:background="#0088ff">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:text="聊天"
-            android:textColor="@android:color/white"
-            android:textSize="20sp" />
-    </RelativeLayout>
 
     <RelativeLayout
         android:id="@+id/layout_button_input"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true">
-
-        <include
-            layout="@layout/include_separate_line"
-            android:layout_width="match_parent"
-            android:layout_height="1dp" />
+        android:layout_alignParentBottom="true"
+        android:background="#333333">
 
         <Button
             android:id="@+id/btn_send"
@@ -38,15 +18,31 @@
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
+            android:layout_marginTop="1dp"
+            android:background="#666666"
             android:onClick="onClick"
-            android:text="发送" />
+            android:text="发送"
+            android:textColor="#eeeeee"
+            android:textSize="16sp" />
 
         <EditText
             android:id="@+id/edit_send"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:layout_toLeftOf="@+id/btn_send" />
+            android:layout_marginTop="1dp"
+            android:layout_toLeftOf="@+id/btn_send"
+            android:background="#333333"
+            android:hint="请输入"
+            android:paddingLeft="10dp"
+            android:textColor="#eeeeee"
+            android:textColorHint="#bbbbbb"
+            android:textSize="16sp"/>
+
+        <include
+            layout="@layout/include_separate_line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp" />
 
     </RelativeLayout>
 
@@ -55,11 +51,10 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_above="@+id/layout_button_input"
-        android:layout_below="@+id/layout_top"
-        android:background="#ffffff"
-        android:divider="#ffffff"
-        android:listSelector="#00000000"
+        android:background="#111111"
+        android:divider="#111111"
         android:dividerHeight="10dp"
-        android:footerDividersEnabled="false" />
+        android:footerDividersEnabled="false"
+        android:listSelector="#00000000" />
 
 </RelativeLayout>

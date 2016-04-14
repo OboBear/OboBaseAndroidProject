@@ -1,9 +1,11 @@
 package com.obo.plugchat.model;
 
+import java.io.Serializable;
+
 /**
  * Created by obo on 16/1/29.
  */
-public class ChatModel {
+public class ChatModel implements Serializable{
     private int type;
     private String name;
     private String content;

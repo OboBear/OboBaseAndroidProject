@@ -39,6 +39,16 @@
             android:onClick="onClick"
             android:layout_below="@+id/button2"
             android:layout_centerHorizontal="true" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="GLSurfaceView翻转"
+            android:id="@+id/button_glsurface"
+            android:layout_below="@+id/button3"
+            android:layout_centerHorizontal="true"
+            android:onClick="onClick"/>
+
     </RelativeLayout>
 
 </android.support.design.widget.CoordinatorLayout>
