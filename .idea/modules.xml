@@ -3,10 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/OboBaseAndroidProject.iml" filepath="$PROJECT_DIR$/OboBaseAndroidProject.iml" />
-      <module fileurl="file://$PROJECT_DIR$/animationloading/animationloading.iml" filepath="$PROJECT_DIR$/animationloading/animationloading.iml" />
-      <module fileurl="file://$PROJECT_DIR$/dashboard/dashboard.iml" filepath="$PROJECT_DIR$/dashboard/dashboard.iml" />
-      <module fileurl="file://$PROJECT_DIR$/horizontalandroid/horizontalandroid.iml" filepath="$PROJECT_DIR$/horizontalandroid/horizontalandroid.iml" />
-      <module fileurl="file://$PROJECT_DIR$/plugchat/plugchat.iml" filepath="$PROJECT_DIR$/plugchat/plugchat.iml" />
+      <module fileurl="file://$PROJECT_DIR$/androidcontact/androidcontact.iml" filepath="$PROJECT_DIR$/androidcontact/androidcontact.iml" />
       <module fileurl="file://$PROJECT_DIR$/plugrxjava/plugrxjava.iml" filepath="$PROJECT_DIR$/plugrxjava/plugrxjava.iml" />
     </modules>
   </component>

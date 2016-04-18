@@ -10,20 +10,14 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
-            <option value="$PROJECT_DIR$/animationloading" />
-            <option value="$PROJECT_DIR$/dashboard" />
-            <option value="$PROJECT_DIR$/horizontalandroid" />
-            <option value="$PROJECT_DIR$/plugchat" />
+            <option value="$PROJECT_DIR$/androidcontact" />
             <option value="$PROJECT_DIR$/plugrxjava" />
           </set>
         </option>
         <option name="myModules">
           <set>
             <option value="$PROJECT_DIR$" />
-            <option value="$PROJECT_DIR$/animationloading" />
-            <option value="$PROJECT_DIR$/dashboard" />
-            <option value="$PROJECT_DIR$/horizontalandroid" />
-            <option value="$PROJECT_DIR$/plugchat" />
+            <option value="$PROJECT_DIR$/androidcontact" />
             <option value="$PROJECT_DIR$/plugrxjava" />
           </set>
         </option>

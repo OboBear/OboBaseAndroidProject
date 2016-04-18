@@ -3,7 +3,8 @@
 // rtest', ':maventest', ':voicelibrary', ':plugReverseView', ':plugEventBus', ':plugretrofit', ':plugwebviewswith', ':plugstatuslistener', ':utilproject', ':plugseekbar', ':pluganimation', ':jsloader', ':plugrxjava', ':plugrotateview', ':plugmarkdown', ':plugmultible', ':plugchat'
 //include ':speechDemo'
 //include ':plugReverseView', ':javaeval', ':gapdemaptest', ':plugchat', ':backsensermodule', ':dashboard', 'javatest'
-include ':dashboard', ':animationloading', ':horizontalandroid'
-include ':plugchat'
-include ':plugrxjava'
+//include ':dashboard', ':animationloading', ':horizontalandroid', ':circleseekbar'
+//include ':plugchat'
+include ':plugrxjava', ':androidcontact'
+
 

@@ -1,8 +1,10 @@
 package com.obo.plugrxjava;
 
 import android.os.Bundle;
+import android.os.Looper;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 
 import rx.Observable;
 
@@ -16,10 +18,15 @@ public class RxJavaActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         Observable.just("hello")
-                .map(s -> s+"123")
+                .map(s -> printSSS(s+"123"))
                 .map(s -> s+"sss")
-                .subscribe(s -> System.out.print(s));
+                .subscribe(s -> Log.i("thisis",s));
+    }
 
+    public String printSSS(String s) {
+        Log.i("thisis",""+s+(Looper.myLooper() == Looper.getMainLooper()));
+
+        return "9888";
     }
 
 }
