@@ -4,7 +4,10 @@
 //include ':speechDemo'
 //include ':plugReverseView', ':javaeval', ':gapdemaptest', ':plugchat', ':backsensermodule', ':dashboard', 'javatest'
 //include ':dashboard', ':animationloading', ':horizontalandroid', ':circleseekbar'
-//include ':plugchat'
-include ':plugrxjava', ':androidcontact'
+include ':plugchat'
+include ':windowmanagertest'
+include ':plugrxjava'
+include ':androidcontact'
+
 
 

@@ -1,10 +1,13 @@
 package com.obo.plugchat.activity;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
+import android.os.HandlerThread;
+import android.os.Looper;
 import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -23,6 +26,7 @@ import com.obo.plugchat.network.ChatResult;
 import java.io.File;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
+import java.lang.ref.WeakReference;
 import java.util.ArrayList;
 
 import retrofit2.Call;
@@ -45,7 +49,6 @@ public class ChatActivity extends AppCompatActivity implements View.OnClickListe
     RelativeLayout layout_button_input;
 
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -56,20 +59,19 @@ public class ChatActivity extends AppCompatActivity implements View.OnClickListe
         listChat = (ListView) findViewById(R.id.list_chat_content);
 
         layout_button_input = (RelativeLayout) findViewById(R.id.layout_button_input);
-        listChat.addOnLayoutChangeListener(new View.OnLayoutChangeListener() {
-            @Override
-            public void onLayoutChange(View v, int left, int top, int right, int bottom, int oldLeft, int oldTop, int oldRight, int oldBottom) {
-                if (chatModels.size() > 0 && oldBottom>bottom)
+        listChat.addOnLayoutChangeListener((v, left, top, right, bottom, oldLeft, oldTop, oldRight, oldBottom) -> {
+            if (chatModels.size() > 0 && oldBottom > bottom)
                 listChat.smoothScrollToPosition(chatModels.size() - 1);
-            }
         });
+
         chatAdapter = new ChatAdapter(this, chatModels);
         listChat.setAdapter(chatAdapter);
 
         initDatas();
+
     }
 
-    String []firstChat = new String[]{
+    String[] firstChat = new String[]{
             "主人,我是您的私人机器人小喵,请问您需要我做点什么?",
             "总算是等到你了,人家一个喵好无聊的",
     };
@@ -77,7 +79,7 @@ public class ChatActivity extends AppCompatActivity implements View.OnClickListe
 
     void initDatas() {
 //        chatModels.add(new ChatModel(0,"你好！"));
-        chatModels.add(new ChatModel(1,firstChat[(int)(Math.random() * 10)% 2] ));
+        chatModels.add(new ChatModel(1, firstChat[(int) (Math.random() * 10) % 2]));
 //        chatModels.add(new ChatModel(0,"猜猜我是谁？"));
 //        chatModels.add(new ChatModel(1, "你呀，我认识呀，不就是那个隔壁家小明嘛，23333"));
 //        chatModels.add(new ChatModel(0,"我晕，你不是机器人呀？"));
@@ -101,13 +103,13 @@ public class ChatActivity extends AppCompatActivity implements View.OnClickListe
 
                 sendChat(sendText);
 
-                switch (sendText){
+                switch (sendText) {
                     case "相机": {
                         Intent intent = new Intent();
                         intent.setAction(MediaStore.ACTION_IMAGE_CAPTURE);
                         startActivityForResult(intent, 0);
                     }
-                        break;
+                    break;
                     case "音乐":
 //                        Intent it = new Intent(Intent.ACTION_MAIN);
 //                        it.addCategory(Intent.CATEGORY_APP_MUSIC);
@@ -132,8 +134,8 @@ public class ChatActivity extends AppCompatActivity implements View.OnClickListe
 
                         break;
                     case "设置":
-                        Intent settingIntent = new Intent(this,SettingActivity.class);
-                        startActivityForResult(settingIntent,1);
+                        Intent settingIntent = new Intent(this, SettingActivity.class);
+                        startActivityForResult(settingIntent, 1);
                         break;
 
                     case "清空":
@@ -157,7 +159,7 @@ public class ChatActivity extends AppCompatActivity implements View.OnClickListe
 
     private void sendChat(String sendString) {
 
-        Log.i("","result "+"sendChat");
+        Log.i("", "result " + "sendChat");
 
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl(Config.URL)
@@ -167,34 +169,30 @@ public class ChatActivity extends AppCompatActivity implements View.OnClickListe
         ChatInterfaceClass.ChatInterface chatInterface = retrofit.create(ChatInterfaceClass.ChatInterface.class);
 
         try {
-            sendString= new String(sendString.getBytes(),"gbk");
+            sendString = new String(sendString.getBytes(), "gbk");
         } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
         }
 
-        final Call<ChatResult>chatResultCall = chatInterface.getChatResult("1", sendString, "exampleusage_1231232", "json");
+        final Call<ChatResult> chatResultCall = chatInterface.getChatResult("1", sendString, "exampleusage_1231232", "json");
 
-        new Thread(){
 
+        WeakReference<ChatActivity>weakActivity = new WeakReference<>(this);
+        HandlerThread handlerThread = new HandlerThread("");
+        new Thread() {
             @Override
             public void run() {
-                Log.i("","result "+"Thread");
+
                 try {
-                    retrofit2.Response<ChatResult> result =  chatResultCall.execute();
-
+                    retrofit2.Response<ChatResult> result = chatResultCall.execute();
                     final ChatResult chatResult = result.body();
-
-                    Log.i("","result "+chatResult);
-
                     if (chatResult != null) {
-
-                        handler.post(new Runnable() {
-                            @Override
-                            public void run() {
-
+                        ChatActivity currentActivity = weakActivity.get();
+                        if (currentActivity != null) {
+                            currentActivity.runOnUiThread(()->{
                                 String resultString = null;
                                 try {
-                                    resultString = new String(chatResult.getBotsay().getBytes(),"utf-8");
+                                    resultString = new String(chatResult.getBotsay().getBytes(), "utf-8");
                                 } catch (UnsupportedEncodingException e) {
                                     e.printStackTrace();
                                 }
@@ -204,15 +202,14 @@ public class ChatActivity extends AppCompatActivity implements View.OnClickListe
                                 if (resultString != null && resultString.length() > 0) {
                                     chatModel.setContent(resultString);
 
-                                }
-                                else  {
+                                } else {
                                     chatModel.setContent("对不起,我正在学习中");
                                 }
-                                chatModels.add(chatModel);
-                                chatAdapter.notifyDataSetChanged();
-                                listChat.smoothScrollToPosition(chatModels.size());
-                            }
-                        });
+                                currentActivity.chatModels.add(chatModel);
+                                currentActivity.chatAdapter.notifyDataSetChanged();
+                                currentActivity.listChat.smoothScrollToPosition(chatModels.size());
+                            });
+                        }
                     }
                 } catch (IOException e) {
                     e.printStackTrace();
@@ -224,8 +221,6 @@ public class ChatActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-
-
 
 
     }

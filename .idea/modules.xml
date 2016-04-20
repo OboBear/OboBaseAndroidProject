@@ -4,7 +4,9 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/OboBaseAndroidProject.iml" filepath="$PROJECT_DIR$/OboBaseAndroidProject.iml" />
       <module fileurl="file://$PROJECT_DIR$/androidcontact/androidcontact.iml" filepath="$PROJECT_DIR$/androidcontact/androidcontact.iml" />
+      <module fileurl="file://$PROJECT_DIR$/plugchat/plugchat.iml" filepath="$PROJECT_DIR$/plugchat/plugchat.iml" />
       <module fileurl="file://$PROJECT_DIR$/plugrxjava/plugrxjava.iml" filepath="$PROJECT_DIR$/plugrxjava/plugrxjava.iml" />
+      <module fileurl="file://$PROJECT_DIR$/windowmanagertest/windowmanagertest.iml" filepath="$PROJECT_DIR$/windowmanagertest/windowmanagertest.iml" />
     </modules>
   </component>
 </project>
