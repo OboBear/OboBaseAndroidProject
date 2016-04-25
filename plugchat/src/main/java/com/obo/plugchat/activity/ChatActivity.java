@@ -48,34 +48,26 @@ public class ChatActivity extends AppCompatActivity implements View.OnClickListe
 
     RelativeLayout layout_button_input;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.content_chat);
-
         edit_send = (EditText) findViewById(R.id.edit_send);
-
         listChat = (ListView) findViewById(R.id.list_chat_content);
-
         layout_button_input = (RelativeLayout) findViewById(R.id.layout_button_input);
         listChat.addOnLayoutChangeListener((v, left, top, right, bottom, oldLeft, oldTop, oldRight, oldBottom) -> {
             if (chatModels.size() > 0 && oldBottom > bottom)
                 listChat.smoothScrollToPosition(chatModels.size() - 1);
         });
-
         chatAdapter = new ChatAdapter(this, chatModels);
         listChat.setAdapter(chatAdapter);
-
         initDatas();
-
     }
 
     String[] firstChat = new String[]{
             "主人,我是您的私人机器人小喵,请问您需要我做点什么?",
             "总算是等到你了,人家一个喵好无聊的",
     };
-
 
     void initDatas() {
 //        chatModels.add(new ChatModel(0,"你好！"));
