@@ -3,12 +3,17 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/OboBaseAndroidProject.iml" filepath="$PROJECT_DIR$/OboBaseAndroidProject.iml" />
+      <module fileurl="file://$PROJECT_DIR$/aidltest/aidltest.iml" filepath="$PROJECT_DIR$/aidltest/aidltest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/androidbitmap/androidbitmap.iml" filepath="$PROJECT_DIR$/androidbitmap/androidbitmap.iml" />
       <module fileurl="file://$PROJECT_DIR$/androidcontact/androidcontact.iml" filepath="$PROJECT_DIR$/androidcontact/androidcontact.iml" />
       <module fileurl="file://$PROJECT_DIR$/androiddexclassloader/androiddexclassloader.iml" filepath="$PROJECT_DIR$/androiddexclassloader/androiddexclassloader.iml" />
       <module fileurl="file://$PROJECT_DIR$/androiddexclassloadermakedex/androiddexclassloadermakedex.iml" filepath="$PROJECT_DIR$/androiddexclassloadermakedex/androiddexclassloadermakedex.iml" />
+      <module fileurl="file://$PROJECT_DIR$/foreveralive/foreveralive.iml" filepath="$PROJECT_DIR$/foreveralive/foreveralive.iml" />
+      <module fileurl="file://$PROJECT_DIR$/leftslidebar/leftslidebar.iml" filepath="$PROJECT_DIR$/leftslidebar/leftslidebar.iml" />
       <module fileurl="file://$PROJECT_DIR$/mutipartpack/mutipartpack.iml" filepath="$PROJECT_DIR$/mutipartpack/mutipartpack.iml" />
       <module fileurl="file://$PROJECT_DIR$/plugchat/plugchat.iml" filepath="$PROJECT_DIR$/plugchat/plugchat.iml" />
       <module fileurl="file://$PROJECT_DIR$/plugrxjava/plugrxjava.iml" filepath="$PROJECT_DIR$/plugrxjava/plugrxjava.iml" />
+      <module fileurl="file://$PROJECT_DIR$/servicedemo/servicedemo.iml" filepath="$PROJECT_DIR$/servicedemo/servicedemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/windowmanagertest/windowmanagertest.iml" filepath="$PROJECT_DIR$/windowmanagertest/windowmanagertest.iml" />
     </modules>
   </component>

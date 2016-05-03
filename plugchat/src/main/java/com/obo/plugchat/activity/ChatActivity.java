@@ -1,13 +1,9 @@
 package com.obo.plugchat.activity;
 
-import android.app.Activity;
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
-import android.os.Environment;
 import android.os.Handler;
 import android.os.HandlerThread;
-import android.os.Looper;
 import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -23,7 +19,6 @@ import com.obo.plugchat.model.ChatModel;
 import com.obo.plugchat.network.ChatInterfaceClass;
 import com.obo.plugchat.network.ChatResult;
 
-import java.io.File;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.lang.ref.WeakReference;
@@ -36,7 +31,6 @@ import retrofit2.Retrofit;
 public class ChatActivity extends AppCompatActivity implements View.OnClickListener {
 
     public final static String ACTION = "com.obo.plugcha.action.LoginActivity";
-
 
     ListView listChat;
 

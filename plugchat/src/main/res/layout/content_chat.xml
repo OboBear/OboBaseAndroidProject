@@ -37,7 +37,7 @@
             android:paddingLeft="10dp"
             android:textColor="#eeeeee"
             android:textColorHint="#bbbbbb"
-            android:textSize="16sp"/>
+            android:textSize="16sp" />
 
         <include
             layout="@layout/include_separate_line"

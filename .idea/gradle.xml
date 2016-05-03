@@ -5,28 +5,38 @@
       <GradleProjectSettings>
         <option name="distributionType" value="LOCAL" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="gradleHome" value="$APPLICATION_HOME_DIR$/gradle/gradle-2.12" />
+        <option name="gradleHome" value="$APPLICATION_HOME_DIR$/gradle/gradle-2.10" />
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/aidltest" />
+            <option value="$PROJECT_DIR$/androidbitmap" />
             <option value="$PROJECT_DIR$/androidcontact" />
             <option value="$PROJECT_DIR$/androiddexclassloader" />
             <option value="$PROJECT_DIR$/androiddexclassloadermakedex" />
+            <option value="$PROJECT_DIR$/foreveralive" />
+            <option value="$PROJECT_DIR$/leftslidebar" />
             <option value="$PROJECT_DIR$/mutipartpack" />
             <option value="$PROJECT_DIR$/plugchat" />
             <option value="$PROJECT_DIR$/plugrxjava" />
+            <option value="$PROJECT_DIR$/servicedemo" />
             <option value="$PROJECT_DIR$/windowmanagertest" />
           </set>
         </option>
         <option name="myModules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/aidltest" />
+            <option value="$PROJECT_DIR$/androidbitmap" />
             <option value="$PROJECT_DIR$/androidcontact" />
             <option value="$PROJECT_DIR$/androiddexclassloader" />
             <option value="$PROJECT_DIR$/androiddexclassloadermakedex" />
+            <option value="$PROJECT_DIR$/foreveralive" />
+            <option value="$PROJECT_DIR$/leftslidebar" />
             <option value="$PROJECT_DIR$/mutipartpack" />
             <option value="$PROJECT_DIR$/plugchat" />
             <option value="$PROJECT_DIR$/plugrxjava" />
+            <option value="$PROJECT_DIR$/servicedemo" />
             <option value="$PROJECT_DIR$/windowmanagertest" />
           </set>
         </option>

@@ -4,7 +4,7 @@
 //include ':speechDemo'
 //include ':plugReverseView', ':javaeval', ':gapdemaptest', ':plugchat', ':backsensermodule', ':dashboard', 'javatest'
 //include ':dashboard', ':animationloading', ':horizontalandroid', ':circleseekbar'
-include ':plugchat', ':mutipartpack', ':androiddexclassloader', ':androiddexclassloadermakedex'
+include ':plugchat', ':mutipartpack', ':androiddexclassloader', ':androiddexclassloadermakedex', ':leftslidebar', ':androidbitmap', ':foreveralive', ':aidltest', ':servicedemo'
 include ':windowmanagertest'
 include ':plugrxjava'
 include ':androidcontact'
