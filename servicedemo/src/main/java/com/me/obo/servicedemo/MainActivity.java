@@ -15,7 +15,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        bindService(new Intent(this, MyService.class), serviceConnection, Context.BIND_AUTO_CREATE);
+        startService(new Intent("com.me.obo.servicedemo.action.MyService"));
+//        bindService(new Intent(this, MyService.class), serviceConnection, Context.BIND_AUTO_CREATE);
     }
 
     ServiceConnection serviceConnection = new ServiceConnection() {

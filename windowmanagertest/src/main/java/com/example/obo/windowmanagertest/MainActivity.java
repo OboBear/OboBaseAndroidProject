@@ -17,6 +17,5 @@ public class MainActivity extends AppCompatActivity {
         WindowManager windowManager = getWindowManager();
         SurfaceView ss;
         UsbManager usbManager = (UsbManager) getSystemService(Context.USB_SERVICE);
-
     }
 }
