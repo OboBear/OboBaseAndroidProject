@@ -2,12 +2,10 @@ package com.me.obo.hocktest;
 
 import android.content.Context;
 import android.content.Intent;
-import android.net.Uri;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-
-import java.lang.reflect.Field;
+import android.widget.LinearLayout;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -15,6 +13,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        LinearLayout s;
 
         findViewById(R.id.btn_text).setOnClickListener(new View.OnClickListener() {
             @Override
@@ -37,20 +37,6 @@ public class MainActivity extends AppCompatActivity {
             e.printStackTrace();
         }
 
-
-        HHH h = new HHH();
-        Class c = HHH.class;
-        try {
-            Field mInstrumentationField = c.getDeclaredField("a");
-            mInstrumentationField.setAccessible(true);
-            mInstrumentationField.set(h, 3);
-            h.prints();
-
-        } catch (NoSuchFieldException e) {
-            e.printStackTrace();
-        } catch (IllegalAccessException e) {
-            e.printStackTrace();
-        }
 
     }
 }

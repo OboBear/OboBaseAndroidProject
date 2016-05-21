@@ -34,7 +34,7 @@ public class Eval {
     }
 
     public static void main(String[] args) throws Exception {
-        Object rval = eval("System.out.println(\"Hello World\");");
+        Object rval = eval("System.out.println(\"Hello s World\");");
         System.out.println(rval);
     }
 }
