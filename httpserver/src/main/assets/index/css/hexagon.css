@@ -1,0 +1,116 @@
+.clear {
+	clear: both;
+}
+
+.box {
+	position: relative;
+	width: 720px;
+	margin: 0px auto;
+	background: #FF0000;
+}
+
+.lineF,
+.lineS,
+.lineX {
+	position: absolute;
+}
+
+.lineF {
+	left: 89px;
+}
+
+.lineS {
+	top: 155px;
+	margin: 0px;
+}
+
+.lineX {
+	left: 89px;
+	top: 310px;
+}
+
+.boxF,
+.boxS,
+.boxT,
+.overlay {
+	width: 160px;
+	height: 200px;
+	overflow: hidden;
+}
+
+.boxF,
+.boxS,
+{
+	visibility: hidden;
+}
+
+.boxG {
+	transform: rotate(120deg);
+	float: left;
+	margin-left: 20px;
+	-ms-transform: rotate(120deg);
+	-moz-transform: rotate(120deg);
+	-webkit-transform: rotate(120deg);
+}
+
+.boxF {
+	transform: rotate(120deg);
+	float: left;
+	margin-left: 20px;
+	-ms-transform: rotate(120deg);
+	-moz-transform: rotate(120deg);
+	-webkit-transform: rotate(120deg);
+}
+
+.first {
+	margin-left: 0px;
+}
+
+.boxS {
+	transform: rotate(-60deg);
+	-ms-transform: rotate(-60deg);
+	-moz-transform: rotate(-60deg);
+	-webkit-transform: rotate(-60deg);
+}
+
+.boxT {
+	transform: rotate(-60deg);
+	background: no-repeat 50% center;
+	background-size: 125% auto;
+	-ms-transform: rotate(-60deg);
+	-moz-transform: rotate(-60deg);
+	-webkit-transform: rotate(-60deg);
+	visibility: visible;
+}
+
+.overlay {
+	transition: all 250ms ease-in-out 0s;
+	display: none;
+	position: relative;
+}
+
+.overlay:hover {
+	background-color: rgba(0, 0, 0, 0.6);
+}
+
+.boxT:hover .overlay {
+	display: block;
+}
+
+.overlay a {
+	display: inline-block;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin: -16px 0 0 -16px;
+	border-radius: 3px;
+	background-color: #d3b850;
+	text-align: center;
+	line-height: 32px;
+	width: 32px;
+	height: 32px;
+	text-decoration: none;
+	color: White;
+	font-size: 18px;
+	font-weight: bolder;
+}

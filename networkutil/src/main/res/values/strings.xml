@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">NetworkUtil</string>
+    <string name="title_activity_data_control">DataControlActivity</string>
+</resources>

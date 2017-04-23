@@ -1,0 +1,90 @@
+.content_head {
+	background-color: #121212;
+}
+
+.btn_link {
+	color: #F1EAEA;
+}
+
+
+.content_detail {
+	text-align: center;
+}
+
+.div_board_back {
+	height: 540px;
+	color: white;
+	background-image: url(../../img/page2/page2_product_show.png);
+	background-size: 100% 100%;
+	text-align: center;
+}
+
+.content_detail {
+}
+
+.div_board_discription {
+	color: white;
+	font-size: 22.5px;
+}
+
+.li-button {
+	list-style-type: none;
+}
+
+.div_qrcode_area {
+	width: 100%;
+}
+
+.div_qrcode_position {
+	position: absolute;
+	margin-top: 250px;
+}
+
+.div_qrcode_detail {
+	float: left;
+	/*width: 50%;*/
+	height: 400px;
+	text-align: left;
+}
+
+#id_div_qrcode_detail_right {
+	width: 66%;
+}
+#id_div_qrcode_detail_left {
+	width: 33%;
+}
+
+.img_qrcode {
+	/*float: left;*/
+}
+.div_qrcode_description {
+	/*float: left;*/
+	margin-top: 43px;
+}
+
+/*foot*/
+
+.div_foot {
+	margin-top: 0px;
+}
+
+#id_about_tab {
+	float: left;
+	width: 20%;
+	max-width: 200px;
+}
+
+#div_about_text {
+	float: left;
+	width: 80%;
+	font-size: 14px;
+	line-height: 21px;
+}
+
+.choosed_line {
+	background: red;
+}
+
+.choosed {
+	color: red;
+}

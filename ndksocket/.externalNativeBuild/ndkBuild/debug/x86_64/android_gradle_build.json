@@ -1,0 +1,40 @@
+{
+  "buildFiles": [
+    "/Users/obo/Desktop/Workspace/android/demos/OboBaseAndroidProject/ndksocket/src/main/jni/Android.mk",
+    "/Users/obo/Desktop/Workspace/android/demos/OboBaseAndroidProject/ndksocket/src/main/jni/Application.mk"
+  ],
+  "cleanCommands": [
+    "/Users/obo/Desktop/Workspace/android/NDK/android-ndk-r11c/ndk-build NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003d/Users/obo/Desktop/Workspace/android/demos/OboBaseAndroidProject/ndksocket/src/main/jni/Android.mk NDK_APPLICATION_MK\u003d/Users/obo/Desktop/Workspace/android/demos/OboBaseAndroidProject/ndksocket/src/main/jni/Application.mk APP_ABI\u003dx86_64 NDK_ALL_ABIS\u003dx86_64 NDK_DEBUG\u003d1 APP_PLATFORM\u003dandroid-21 NDK_OUT\u003d/Users/obo/Desktop/Workspace/android/demos/OboBaseAndroidProject/ndksocket/build/intermediates/ndkBuild/debug/obj NDK_LIBS_OUT\u003d/Users/obo/Desktop/Workspace/android/demos/OboBaseAndroidProject/ndksocket/build/intermediates/ndkBuild/debug/lib clean"
+  ],
+  "libraries": {
+    "hello-debug-x86_64": {
+      "buildCommand": "/Users/obo/Desktop/Workspace/android/NDK/android-ndk-r11c/ndk-build NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003d/Users/obo/Desktop/Workspace/android/demos/OboBaseAndroidProject/ndksocket/src/main/jni/Android.mk NDK_APPLICATION_MK\u003d/Users/obo/Desktop/Workspace/android/demos/OboBaseAndroidProject/ndksocket/src/main/jni/Application.mk APP_ABI\u003dx86_64 NDK_ALL_ABIS\u003dx86_64 NDK_DEBUG\u003d1 APP_PLATFORM\u003dandroid-21 NDK_OUT\u003d/Users/obo/Desktop/Workspace/android/demos/OboBaseAndroidProject/ndksocket/build/intermediates/ndkBuild/debug/obj NDK_LIBS_OUT\u003d/Users/obo/Desktop/Workspace/android/demos/OboBaseAndroidProject/ndksocket/build/intermediates/ndkBuild/debug/lib /Users/obo/Desktop/Workspace/android/demos/OboBaseAndroidProject/ndksocket/build/intermediates/ndkBuild/debug/obj/local/x86_64/libhello.so",
+      "toolchain": "toolchain-x86_64",
+      "abi": "x86_64",
+      "artifactName": "hello",
+      "files": [
+        {
+          "src": "/Users/obo/Desktop/Workspace/android/demos/OboBaseAndroidProject/ndksocket/src/main/jni/Test.cpp",
+          "flags": "\"-ffunction-sections\" \"-funwind-tables\" \"-fstack-protector-strong\" \"-no-canonical-prefixes\" \"-fno-exceptions\" \"-fno-rtti\" \"-O2\" \"-g\" \"-DNDEBUG\" \"-fomit-frame-pointer\" \"-fstrict-aliasing\" \"-funswitch-loops\" \"-finline-limit\u003d300\" \"-O0\" \"-UNDEBUG\" \"-fno-omit-frame-pointer\" \"-fno-strict-aliasing\" \"-I/Users/obo/Desktop/Workspace/android/NDK/android-ndk-r11c/sources/cxx-stl/system/include\" \"-I/Users/obo/Desktop/Workspace/android/demos/OboBaseAndroidProject/ndksocket/src/main/jni\" \"-DANDROID\" \"-Wa,--noexecstack\" \"-Wformat\" \"-Werror\u003dformat-security\" \"-isystem\" \"/Users/obo/Desktop/Workspace/android/NDK/android-ndk-r11c/platforms/android-21/arch-x86_64/usr/include\""
+        },
+        {
+          "src": "/Users/obo/Desktop/Workspace/android/demos/OboBaseAndroidProject/ndksocket/src/main/jni/mainactivity.c",
+          "flags": "\"-ffunction-sections\" \"-funwind-tables\" \"-fstack-protector-strong\" \"-no-canonical-prefixes\" \"-O2\" \"-g\" \"-DNDEBUG\" \"-fomit-frame-pointer\" \"-fstrict-aliasing\" \"-funswitch-loops\" \"-finline-limit\u003d300\" \"-O0\" \"-UNDEBUG\" \"-fno-omit-frame-pointer\" \"-fno-strict-aliasing\" \"-I/Users/obo/Desktop/Workspace/android/NDK/android-ndk-r11c/sources/cxx-stl/system/include\" \"-I/Users/obo/Desktop/Workspace/android/demos/OboBaseAndroidProject/ndksocket/src/main/jni\" \"-DANDROID\" \"-Wa,--noexecstack\" \"-Wformat\" \"-Werror\u003dformat-security\" \"-isystem\" \"/Users/obo/Desktop/Workspace/android/NDK/android-ndk-r11c/platforms/android-21/arch-x86_64/usr/include\""
+        }
+      ],
+      "output": "/Users/obo/Desktop/Workspace/android/demos/OboBaseAndroidProject/ndksocket/build/intermediates/ndkBuild/debug/obj/local/x86_64/libhello.so"
+    }
+  },
+  "toolchains": {
+    "toolchain-x86_64": {
+      "cCompilerExecutable": "/Users/obo/Desktop/Workspace/android/NDK/android-ndk-r11c/toolchains/x86_64-4.9/prebuilt/darwin-x86_64/bin/x86_64-linux-android-gcc",
+      "cppCompilerExecutable": "/Users/obo/Desktop/Workspace/android/NDK/android-ndk-r11c/toolchains/x86_64-4.9/prebuilt/darwin-x86_64/bin/x86_64-linux-android-g++"
+    }
+  },
+  "cFileExtensions": [
+    "c"
+  ],
+  "cppFileExtensions": [
+    "cpp"
+  ]
+}

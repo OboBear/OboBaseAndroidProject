@@ -1,0 +1,70 @@
+
+
+
+
+body, html {
+  height: 100%;
+  -webkit-tap-highlight-color: transparent; background:#000
+}
+.weui_list{ background:#000}
+.demos-title {
+  text-align: center;
+  font-size: 34px;
+  color: #3cc51f;
+  font-weight: 400;
+  margin: 0 15%;
+}
+
+.demos-sub-title {
+  text-align: center;
+  color: #888;
+  font-size: 14px;
+}
+
+.demos-header {
+  padding: 35px 0;
+}
+
+.demos-content-padded {
+  padding: 15px;
+}
+
+.demos-second-title {
+  text-align: center;
+  font-size: 24px;
+  color: #3cc51f;
+  font-weight: 400;
+  margin: 0 15%;
+}
+.pai_list{ font-size:30px;padding-right:18px; color:#fff; width:30px; text-align:center }
+.weui_panel_bd .weui_media_appmsg:first-child .pai_list,.weui_panel_bd .weui_media_appmsg:nth-child(2) .pai_list,.weui_panel_bd .weui_media_appmsg:nth-child(3) .pai_list{ height:31px; width:30px; padding-right:18px; font-size:20px; color:#fff; text-align:center; padding-top:18px; background:url(../images/jp_1.png) no-repeat;}
+.weui_panel_bd .weui_media_appmsg:nth-child(2) .pai_list{background:url(../images/jp_2.png) no-repeat;}
+.weui_panel_bd .weui_media_appmsg:nth-child(3) .pai_list{background:url(../images/jp_3.png) no-repeat;}
+.weui_media_box.weui_media_appmsg{ background:url(../images/bg_list.jpg) no-repeat left top #000}
+.weui_media_box:before{ height:2px; background:url(../images/bg_list_f.jpg) repeat-x}
+.weui_panel_bd a:first-child{padding-top:32px;}
+.weui_list{ padding-bottom:130px;}
+
+
+.weui_tabbar .weui_media_box.weui_media_appmsg{ background-image:none; background-color:transparent}
+.weui_tabbar .weui_media_box.weui_media_appmsg .weui_media_hd{ width:94px; height:94px; padding-left:12px}
+.weui_tabbar .weui_media_box .weui_media_title{ font-size:24px;}
+.weui_tabbar .weui_media_box{ padding-top:18px;}
+.weui_tabbar .weui_cell_ft { color:#fff; background:url(../images/btn.png) no-repeat; font-size:30px; width:171px; height:56px; text-align:center; line-height:56px; margin-right:26px;}.wiui_time{ font-size:20px; color:#34343B; text-align:center; padding:19px 0px; background:url(../images/time.jpg) repeat-y #000 top center;}
+.wiui_title{ font-size:36px; color:#ff5353; font-weight:bold; text-align:center}
+.wiui_name{ font-size:24px; color:#4b4c56; text-align:center;    padding-bottom: 19px;}
+.weui_header{ background:url(../images/bg.jpg) no-repeat top center #000; height:388px;}
+.weui_header .weui_media_box.weui_media_appmsg .weui_media_hd{ width:174px; height:174px; border:3px solid #fff; border-radius:50%}
+.weui_header .weui_media_box .weui_media_title em{ font-size:90px; line-height:90px;  }
+.weui_header .weui_media_box .weui_media_title{ font-size:45px; font-weight:bold; background:url(../images/blue_x.png) no-repeat left bottom;line-height: 74px; font-style:italic; margin-bottom:12px; margin-left:30px;}
+.weui_header .weui_media_box .weui_media_desc{ color:#fff; font-size:40px; font-style:italic;}
+.weui_header .weui_media_box.weui_media_appmsg{    margin: 0px auto;
+    width: 453px;
+ 
+    background: none;
+ padding:0px; padding-top:61px;    padding-bottom: 25px;}
+ .weui_top{ font-size:34px; text-align:center; color:#fff; width:200px; margin:0px auto; position:absolute;left:50%; margin-left:-100px; top:17px}
+ #dv_android{ display:none}
+.weui_tabbar .weui_cell_ft:active{ background:url(../images/btn_hover.png) no-repeat;}
+@media screen and (max-width: 320px) {.weui_top {
+    font-size:14px;}}

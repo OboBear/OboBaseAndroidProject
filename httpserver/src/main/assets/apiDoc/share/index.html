@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>里程排行榜</title>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<meta name="description" content="">
+<link rel="stylesheet" href="css/min.css">
+<link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery-2.1.4.js"></script>
+
+ <script type="text/javascript"> 
+
+
+
+ jQuery(function($){
+      
+        var $js_iphone=$("#dv_iphone");
+        var $js_android=$("#dv_android");
+        if((navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPod/i))) {
+            if (document.cookie.indexOf("iphone_redirect=false") == -1)
+            {
+            
+                $js_iphone.css("display","inline-block");
+                $js_android.css("display","none");
+            }
+        }
+        var ua = navigator.userAgent.toLowerCase();
+        var isAndroid = ua.indexOf("android") > -1; //&& ua.indexOf("mobile");
+        if(isAndroid) {
+       
+            $js_android.css("display","inline-block");
+            $js_iphone.css("display","none");
+        }
+    })
+
+   
+        
+   
+
+</script>
+
+  </head>
+
+  <body ontouchstart>
+
+    <div class="weui_panel weui_panel_access">
+        <div class="weui_cell">
+          <div class="weui_cell_bd weui_cell_primary">
+            <p></p>
+          </div>
+          <div><a ><img src="images/right.png" ></a></div>
+        </div>
+        
+        
+       <div class="weui_top">里程排行榜</div>
+       <div class="weui_header">
+    
+       <div class="weui_media_box weui_media_appmsg">
+        
+    
+        
+          <div class="weui_media_hd">
+            <img class="weui_media_appmsg_thumb" src="images/header.jpg" alt="">
+          </div>
+          <div class="weui_media_bd">
+            <h4 class="weui_media_title"><em>90</em>km</h4>
+            <p class="weui_media_desc">排名32</p>
+          </div>
+      
+        </div>
+    
+    
+       <div class="wiui_name">小明</div>
+       <div class="wiui_title">击败了20%的车主</div>
+       
+       </div>
+       <div class="wiui_time">2016－05－07</div>
+       <div class="weui_panel_bd weui_list" >
+        <a href="javascript:void(0);" class="weui_media_box weui_media_appmsg">
+        
+        <div class="weui_cell_hd pai_list">1</div>
+        
+          <div class="weui_media_hd">
+            <img class="weui_media_appmsg_thumb" src="images/header.jpg" alt="">
+          </div>
+          <div class="weui_media_bd">
+            <h4 class="weui_media_title">小黑</h4>
+           
+          </div>
+          
+          <div class="weui_cell_ft">260km</div>
+        </a>
+        <a href="javascript:void(0);" class="weui_media_box weui_media_appmsg">
+        
+        <div class="weui_cell_hd pai_list">2</div>
+        
+          <div class="weui_media_hd">
+            <img class="weui_media_appmsg_thumb" src="images/header_1.jpg" alt="">
+          </div>
+          <div class="weui_media_bd">
+            <h4 class="weui_media_title">小白</h4>
+           
+          </div>
+          
+          <div class="weui_cell_ft">240km</div>
+        </a>
+        
+             <a href="javascript:void(0);" class="weui_media_box weui_media_appmsg">
+        
+        <div class="weui_cell_hd pai_list">3</div>
+        
+          <div class="weui_media_hd">
+            <img class="weui_media_appmsg_thumb" src="images/header_2.jpg" alt="">
+          </div>
+          <div class="weui_media_bd">
+            <h4 class="weui_media_title">130xxxx3013</h4>
+           
+          </div>
+          
+          <div class="weui_cell_ft">220km</div>
+        </a>
+        
+        <a href="javascript:void(0);" class="weui_media_box weui_media_appmsg">
+        
+        <div class="weui_cell_hd pai_list">4</div>
+        
+          <div class="weui_media_hd">
+            <img class="weui_media_appmsg_thumb" src="images/header_3.jpg" alt="">
+          </div>
+          <div class="weui_media_bd">
+            <h4 class="weui_media_title">小黄</h4>
+           
+          </div>
+          
+          <div class="weui_cell_ft">200km</div>
+        </a>
+        
+        <a href="javascript:void(0);" class="weui_media_box weui_media_appmsg">
+        
+        <div class="weui_cell_hd pai_list">5</div>
+        
+          <div class="weui_media_hd">
+            <img class="weui_media_appmsg_thumb" src="images/header_4.jpg" alt="">
+          </div>
+          <div class="weui_media_bd">
+            <h4 class="weui_media_title">小绿</h4>
+           
+          </div>
+          
+          <div class="weui_cell_ft">185km</div>
+        </a>
+        <a href="javascript:void(0);" class="weui_media_box weui_media_appmsg">
+        
+        <div class="weui_cell_hd pai_list">6</div>
+        
+          <div class="weui_media_hd">
+            <img class="weui_media_appmsg_thumb" src="images/header_5.jpg" alt="">
+          </div>
+          <div class="weui_media_bd">
+            <h4 class="weui_media_title">159xxxx2571</h4>
+           
+          </div>
+          
+          <div class="weui_cell_ft">180km</div>
+        </a>
+        <a href="javascript:void(0);" class="weui_media_box weui_media_appmsg">
+        
+        <div class="weui_cell_hd pai_list">7</div>
+        
+          <div class="weui_media_hd">
+            <img class="weui_media_appmsg_thumb" src="images/header_6.jpg" alt="">
+          </div>
+          <div class="weui_media_bd">
+            <h4 class="weui_media_title">小橙</h4>
+           
+          </div>
+          
+          <div class="weui_cell_ft">170km</div>
+        </a>
+        <a href="javascript:void(0);" class="weui_media_box weui_media_appmsg">
+        
+        <div class="weui_cell_hd pai_list">8</div>
+        
+          <div class="weui_media_hd">
+            <img class="weui_media_appmsg_thumb" src="images/header.jpg" alt="">
+          </div>
+          <div class="weui_media_bd">
+            <h4 class="weui_media_title">小王</h4>
+           
+          </div>
+          
+          <div class="weui_cell_ft">160km</div>
+        </a>
+        <a href="javascript:void(0);" class="weui_media_box weui_media_appmsg">
+        
+        <div class="weui_cell_hd pai_list">9</div>
+        
+          <div class="weui_media_hd">
+            <img class="weui_media_appmsg_thumb" src="images/header_5.jpg" alt="">
+          </div>
+          <div class="weui_media_bd">
+            <h4 class="weui_media_title">小刘</h4>
+           
+          </div>
+          
+          <div class="weui_cell_ft">155km</div>
+        </a>
+        <a href="javascript:void(0);" class="weui_media_box weui_media_appmsg">
+        
+        <div class="weui_cell_hd pai_list">10</div>
+        
+          <div class="weui_media_hd">
+            <img class="weui_media_appmsg_thumb" src="images/header_4.jpg" alt="">
+          </div>
+          <div class="weui_media_bd">
+            <h4 class="weui_media_title">小白</h4>
+           
+          </div>
+          
+          <div class="weui_cell_ft">150km</div>
+        </a>
+       
+      </div>
+
+    </div>
+    
+    
+    <div class="weui_tabbar">
+        <div class="weui_media_box weui_media_appmsg">
+        
+
+        
+          <div class="weui_media_hd">
+            <img class="" src="images/logo.png" alt="">
+          </div>
+          <div class="weui_media_bd">
+            <h4 class="weui_media_title">“小黑侠HUD”App</h4>
+           <p class="weui_media_desc">导航仪表天气</p>
+          </div>
+          
+          <a href="https://itunes.apple.com/cn/app/xiao-hei-xiahud-yi-biao-dao/id1080590776?mt=8" id="dv_iphone"> <div class="weui_cell_ft">立即下载</div></a>
+          <a href="http://www.fervcloud.com:10086/static/apks/version/YeeHud.apk" id="dv_android"> <div class="weui_cell_ft">立即下载</div></a>
+        </div>
+      </div>
+
+    
+    
+    
+   
+
+
+  </body>
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="css/base/base.css" />
+		<link rel="stylesheet" href="css/page2/page2_2.css" />
+		<script type="text/javascript" src="js/base/base.js"></script>
+		<script type="text/javascript" src="js/index2/page2_2.js"></script>
+		<title>炽云科技－关于我们</title>
+	</head>
+
+	<body onresize="resize()">
+		<div class="content content_head" id="id_content_head">
+			<div id="id_div_topbar" class="div_topbar">
+				<div id="img_icon" class="div_img_icon">
+					<img class="img_log" src="img/favicon.ico" />
+					<div class="logo_description">F e r v c l o u d</div>
+				</div>
+				<div class="div_link">
+					<a href="page1.html">
+						<button class="btn_link btn_translate" onmouseenter="mouse_enter(this)" onmouseleave="mouse_leave(this)">首页</button>
+					</a>
+					<div class="div_bottom_line">
+					</div>
+				</div>
+				<div class="div_link">
+					<div id="id_div_product_choose" style="width: 100px; height: 200px; position: absolute;" hidden="true" onmouseleave="mouse_leave_product(this)">
+						<div class="div_product_btn_set" style="width: 100px;">
+							<button class="btn_product btn_translate" style="margin-top: 10px; margin-bottom: 10px; width: 100%;" onclick="product1Action()">小黑侠</button>
+							<div style="width: 100%; height: 0.5px; background: white;"></div>
+							<button class="btn_product btn_translate" style="margin-top: 10px; margin-bottom: 10px; width: 100%;" onclick="product2Action()">App下载</button>
+						</div>
+					</div>
+					<button class="choosed btn_link btn_translate" onclick="mouse_enter_product(this)" onmouseenter="mouse_enter_product(this)">产品</button>
+					<div class="choosed_line div_bottom_line"></div>
+				</div>
+				<div class="div_link">
+					<button class="btn_link btn_translate" onmouseenter="mouse_enter(this)" onmouseleave="mouse_leave(this)">新闻</button>
+					<div class="div_bottom_line "></div>
+				</div>
+				<div class="div_link ">
+					<a href="page4.html">
+						<button class="btn_link btn_translate" onmouseenter="mouse_enter(this)" onmouseleave="mouse_leave(this)">关于我们</button>
+					</a>
+					<div class="div_bottom_line "></div>
+				</div>
+				<div class="div_shop_link" id="id_div_shop_link">
+					<img class="img_shop btn_translate" id="id_image_shop " src="img/topbar/icon_shop.png " />
+					<div class="div_text_shop ">商城</div>
+				</div>
+			</div>
+			<div id="div_language">
+				<button class="btn_translate" id="id_btn_language">中文／EN</button>
+			</div>
+		</div>
+
+		<div class="content content_detail " id="id_content_detail">
+			<div style="width: 100%; background: #121212;">
+				<div class="div_board_back " style=" width: 802px; height: 484px; margin: 0 auto;"></div>
+			</div>
+			<div style="background: #121212;">
+				<div class="div_qrcode_area">
+					<div style="position: absolute;width: 100%; margin-top: 150px; color: white; font-size: 20px;">小黑侠HUD app扫码下载 </div>
+					<div class="div_qrcode_position" style="width: 100%;">
+						<div class="div_qrcode_content" style="width: 666px; margin: 0 auto;">
+							<div class="div_qrcode_detail" id="id_div_qrcode_detail_right">
+								<img class="img_qrcode" src="img/page2/qrcode_ios.jpg" style="width: 220px; height: 220px;" />
+								<div class="div_qrcode_description">
+									<img src="img/page2/icon_ios_app_store.png" style="float: left;" />
+									<div style="color: white; font-size: 18px; padding-left: 30px;">
+										<p>IOS应用下载
+											<br /> 版本1.0.2
+										</p>
+									</div>
+								</div>
+								<a href="https://itunes.apple.com/cn/app/xiao-hei-xiahud/id1080590776?mt=8">下载IOS</a>
+							</div>
+							<div class="div_qrcode_detail" id="id_div_qrcode_detail_left">
+								<img class="img_qrcode" src="img/page2/qrcode_android.png" style="width: 220px; height: 220px;" />
+								<div class="div_qrcode_description">
+									<img src="img/page2/icon_android_app_store2.png" style="float: left;" />
+									<div style="color: white; font-size: 18px; padding-top: 5px; padding-left: 30px;">
+										<p>安卓应用下载
+											<br /> 版本1.0.0
+										</p>
+									</div>
+									<a href="http://www.fervcloud.com/static/apks/version1.0.1/K7mqvIewqJXJudAKA78b.apk">下载安卓</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<img src="img/page2/page2_qrcode_back.png" style="width: 100%;" />
+				</div>
+			</div>
+		</div>
+
+		<div class="div_foot">
+			<div class="div_foot_list">
+				<ul class="ul_foot_list">
+					<li class="li-button">
+						<button class="btn_translate foot_li_title">关于炽云</button>
+					</li>
+					<li class="li-button">
+						<button class="btn_translate foot_li_content">关于我们</button>
+					</li>
+					<li class="li-button">
+						<button class="btn_translate foot_li_content">精彩活动</button>
+					</li>
+					<li class="li-button">
+						<button class="btn_translate foot_li_content">招募精英</button>
+					</li>
+					<li class="li-button">
+						<button class="btn_translate foot_li_content">炽云传媒</button>
+					</li>
+					<li class="li-button">
+						<button class="btn_translate foot_li_content">联系我们</button>
+					</li>
+				</ul>
+			</div>
+			<div class="div_foot_list">
+				<ul class="ul_foot_list">
+					<li class="li-button">
+						<button class="btn_translate foot_li_title">新闻中心</button>
+					</li>
+					<li class="li-button">
+						<button class="btn_translate foot_li_content">新闻</button>
+					</li>
+					<li class="li-button">
+						<button class="btn_translate foot_li_content">媒体</button>
+					</li>
+					<li class="li-button">
+						<button class="btn_translate foot_li_content">HUD的故事</button>
+					</li>
+				</ul>
+			</div>
+			<div class="div_foot_list">
+				<ul class="ul_foot_list">
+					<li class="li-button">
+						<button class="btn_translate foot_li_title">购买渠道</button>
+					</li>
+					<li class="li-button">
+						<button class="btn_translate foot_li_content">炽云淘宝商城</button>
+					</li>
+				</ul>
+			</div>
+			<div class="div_foot_list">
+				<ul class="ul_foot_list">
+					<li class="li-button">
+						<button class="btn_translate foot_li_title">社区</button>
+					</li>
+					<li class="li-button">
+						<button class="btn_translate foot_li_content">玩家论坛</button>
+					</li>
+				</ul>
+			</div>
+			<div class="div_foot_list">
+				<ul class="ul_foot_list">
+					<li class="li-button">
+						<button class="btn_translate foot_li_title">教育</button>
+					</li>
+					<li class="li-button">
+						<button class="btn_translate foot_li_content">使用引导</button>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div style="bottom:5px;width:100%;text-align:center;color:#666;line-height:30px; margin-top: 10px;">
+			备案/许可证编号为：浙ICP备15042458号
+		</div>
+	</body>
+
+</html>

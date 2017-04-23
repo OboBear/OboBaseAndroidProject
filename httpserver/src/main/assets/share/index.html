@@ -1,0 +1,360 @@
+$def with (params)
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>里程排行榜</title>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<meta name="description" content="">
+<link rel="stylesheet" href="/static/share/css/min.css">
+<link rel="stylesheet" href="/static/share/css/style.css">
+ <script type="text/javascript">
+
+var xmlHttpRequest;
+
+//XmlHttpRequest对象
+function createXmlHttpRequest(){
+    if(window.ActiveXObject){ //如果是IE浏览器
+        return new ActiveXObject("Microsoft.XMLHTTP");
+    }else if(window.XMLHttpRequest){ //非IE浏览器
+        return new XMLHttpRequest();
+    }
+}
+
+var rankStyle;
+var userId;
+var type;
+
+function onLogin(){
+    param="$params"
+    li = param.split(" ")
+    rankStyle = li[0];
+    userId = li[1];
+    type = li[2];
+
+    if (type == "mileage") {
+        title_string.innerText="里程排行榜"
+    } else if(type == "jam") {
+        title_string.innerText="堵车排行榜"
+    } else {
+        title_string.innerText="速度排行榜"
+    }
+
+    var url = "/drive/rank?rankStyle="+rankStyle+"&userId="+userId;
+
+    //1.创建XMLHttpRequest组建
+    xmlHttpRequest = createXmlHttpRequest();
+
+    //2.设置回调函数
+    xmlHttpRequest.onreadystatechange = zswFun;
+
+    //3.初始化XMLHttpRequest组建
+    xmlHttpRequest.open("GET",url,true);
+
+    //4.发送请求
+    xmlHttpRequest.send(null);
+}
+
+//回调函数
+function zswFun(){
+    if(xmlHttpRequest.readyState == 4 && xmlHttpRequest.status == 200){
+        var b = xmlHttpRequest.responseText;
+        backJson = eval("(" + b + ")");
+        if (backJson.errorCode == 0){
+
+            myModel = backJson.result.mileageList.myRank;
+            myValue = 0
+            if (type == "mileage") {
+                myValue = parseInt(myModel.mileage);
+            } else if(type == "jam") {
+                myModel = backJson.result.jamList.myRank;
+                myValue = parseInt(myModel.jam);
+            } else {
+                myModel = backJson.result.velocityList.myRank;
+                myValue = parseInt(myModel.velocity);
+            }
+            if (myValue < 0)
+                    myValue = 0;
+            my_value.innerText = myValue +" " +myModel.unit;
+            head_image.src = myModel.userModel.headPath;
+            my_rank.innerText = "排名"+myModel.rank;
+
+
+            if (myModel.userModel.name == null || myModel.userModel.name.length == 0)
+                    my_name.innerHTML = myModel.userModel.phone
+            else
+                    my_name.innerHTML = myModel.userModel.name
+
+
+
+
+
+            listItem = null;
+
+            if (type == "mileage") {
+                listItem = backJson.result.mileageList.list;
+            } else if(type == "jam") {
+                listItem = backJson.result.jamList.list;
+            } else {
+                listItem = backJson.result.velocityList.list;
+            }
+
+
+            if (listItem.length == 0)
+                    attack_rank.innerText = "击败了0%的车主"
+            else {
+                attack_rank.innerText = "击败了"+myModel.rank * 100 / listItem.length+"%的车主";
+            }
+
+            for (i=0; i< listItem.length;i++) {
+                rank =0
+                headPath=""
+                name = ""
+                value = ""
+                valueNum = 0;
+
+                itemJson = listItem[i]
+
+                rank = itemJson.rank;
+                headPath = itemJson.userModel.headPath
+
+                if(itemJson.userModel.name == null || itemJson.userModel.name.length == 0)
+                        name = itemJson.userModel.phone;
+                else
+                        name = itemJson.userModel.name;
+                 if (type == "mileage") {
+                     valueNum = parseInt(itemJson.mileage);
+                 } else if(type == "jam") {
+                     valueNum = parseInt(itemJson.jam);
+                 } else {
+                     valueNum = parseInt(itemJson.velocity);
+
+                 }
+                if(valueNum < 0)
+                        valueNum = 0;
+                value = valueNum+" "+itemJson.unit;
+
+                item = "<a href=\"javascript:void(0);\" class=\"weui_media_box weui_media_appmsg\">"
+                +"<div class=\"weui_cell_hd pai_list\">"+rank+"</div>"
+                +"<div class=\"weui_media_hd\">"
+                +"<img class=\"weui_media_appmsg_thumb\" src=\""+headPath+"\" alt=\"\">"
+                +"</div>"
+                +"<div class=\"weui_media_bd\">";
+
+                item+="<h4 class=\"weui_media_title\">"+name+"</h4>"
+                item= item +"</div>"
+                +"<div class=\"weui_cell_ft\">"+value+"</div>"
+                +"</a>"
+
+                weui_list.innerHTML += item
+            }
+        }
+    }
+}
+window.onload=onLogin;
+
+
+</script>
+
+  </head>
+
+  <body ontouchstart>
+
+    <div class="weui_panel weui_panel_access">
+        <div class="weui_cell">
+          <div class="weui_cell_bd weui_cell_primary">
+            <p></p>
+          </div>
+          <div><a ><img src="/static/share/images/right.png" ></a></div>
+        </div>
+
+       <div class="weui_top" id="title_string">里程排行榜</div>
+       <div class="weui_header">
+    
+       <div class="weui_media_box weui_media_appmsg">
+
+          <div class="weui_media_hd" >
+            <img class="weui_media_appmsg_thumb" id="head_image" src="/static/share/images/header.jpg" alt="">
+          </div>
+          <div class="weui_media_bd">
+            <h4 class="weui_media_title" id="my_value"><em>90</em>km</h4>
+            <p class="weui_media_desc" id="my_rank">排名32</p>
+          </div>
+       </div>
+       <div class="wiui_name" id="my_name">小明</div>
+       <div class="wiui_title" id="attack_rank">击败了20%的车主</div>
+       
+       </div>
+       <div class="wiui_time">2016－05－07</div>
+
+       <div class="weui_panel_bd weui_list" id="weui_list" >
+
+        <!--<a href="javascript:void(0);" class="weui_media_box weui_media_appmsg">-->
+
+        <!--<div class="weui_cell_hd pai_list">1</div>-->
+
+          <!--<div class="weui_media_hd">-->
+            <!--<img class="weui_media_appmsg_thumb" src="images/header.jpg" alt="">-->
+          <!--</div>-->
+          <!--<div class="weui_media_bd">-->
+            <!--<h4 class="weui_media_title">小黑</h4>-->
+          <!--</div>-->
+          <!--<div class="weui_cell_ft">260km</div>-->
+        <!--</a>-->
+        <!--<a href="javascript:void(0);" class="weui_media_box weui_media_appmsg">-->
+
+        <!--<div class="weui_cell_hd pai_list">2</div>-->
+
+          <!--<div class="weui_media_hd">-->
+            <!--<img class="weui_media_appmsg_thumb" src="images/header_1.jpg" alt="">-->
+          <!--</div>-->
+          <!--<div class="weui_media_bd">-->
+            <!--<h4 class="weui_media_title">小白</h4>-->
+
+          <!--</div>-->
+
+          <!--<div class="weui_cell_ft">240km</div>-->
+        <!--</a>-->
+
+             <!--<a href="javascript:void(0);" class="weui_media_box weui_media_appmsg">-->
+
+        <!--<div class="weui_cell_hd pai_list">3</div>-->
+
+          <!--<div class="weui_media_hd">-->
+            <!--<img class="weui_media_appmsg_thumb" src="images/header_2.jpg" alt="">-->
+          <!--</div>-->
+          <!--<div class="weui_media_bd">-->
+            <!--<h4 class="weui_media_title">130xxxx3013</h4>-->
+
+          <!--</div>-->
+
+          <!--<div class="weui_cell_ft">220km</div>-->
+        <!--</a>-->
+
+        <!--<a href="javascript:void(0);" class="weui_media_box weui_media_appmsg">-->
+
+        <!--<div class="weui_cell_hd pai_list">4</div>-->
+
+          <!--<div class="weui_media_hd">-->
+            <!--<img class="weui_media_appmsg_thumb" src="images/header_3.jpg" alt="">-->
+          <!--</div>-->
+          <!--<div class="weui_media_bd">-->
+            <!--<h4 class="weui_media_title">小黄</h4>-->
+
+          <!--</div>-->
+
+          <!--<div class="weui_cell_ft">200km</div>-->
+        <!--</a>-->
+
+        <!--<a href="javascript:void(0);" class="weui_media_box weui_media_appmsg">-->
+
+        <!--<div class="weui_cell_hd pai_list">5</div>-->
+
+          <!--<div class="weui_media_hd">-->
+            <!--<img class="weui_media_appmsg_thumb" src="images/header_4.jpg" alt="">-->
+          <!--</div>-->
+          <!--<div class="weui_media_bd">-->
+            <!--<h4 class="weui_media_title">小绿</h4>-->
+
+          <!--</div>-->
+
+          <!--<div class="weui_cell_ft">185km</div>-->
+        <!--</a>-->
+        <!--<a href="javascript:void(0);" class="weui_media_box weui_media_appmsg">-->
+
+        <!--<div class="weui_cell_hd pai_list">6</div>-->
+
+          <!--<div class="weui_media_hd">-->
+            <!--<img class="weui_media_appmsg_thumb" src="images/header_5.jpg" alt="">-->
+          <!--</div>-->
+          <!--<div class="weui_media_bd">-->
+            <!--<h4 class="weui_media_title">159xxxx2571</h4>-->
+
+          <!--</div>-->
+
+          <!--<div class="weui_cell_ft">180km</div>-->
+        <!--</a>-->
+        <!--<a href="javascript:void(0);" class="weui_media_box weui_media_appmsg">-->
+
+        <!--<div class="weui_cell_hd pai_list">7</div>-->
+
+          <!--<div class="weui_media_hd">-->
+            <!--<img class="weui_media_appmsg_thumb" src="images/header_6.jpg" alt="">-->
+          <!--</div>-->
+          <!--<div class="weui_media_bd">-->
+            <!--<h4 class="weui_media_title">小橙</h4>-->
+
+          <!--</div>-->
+
+          <!--<div class="weui_cell_ft">170km</div>-->
+        <!--</a>-->
+        <!--<a href="javascript:void(0);" class="weui_media_box weui_media_appmsg">-->
+
+        <!--<div class="weui_cell_hd pai_list">8</div>-->
+
+          <!--<div class="weui_media_hd">-->
+            <!--<img class="weui_media_appmsg_thumb" src="images/header.jpg" alt="">-->
+          <!--</div>-->
+          <!--<div class="weui_media_bd">-->
+            <!--<h4 class="weui_media_title">小王</h4>-->
+
+          <!--</div>-->
+
+          <!--<div class="weui_cell_ft">160km</div>-->
+        <!--</a>-->
+        <!--<a href="javascript:void(0);" class="weui_media_box weui_media_appmsg">-->
+
+        <!--<div class="weui_cell_hd pai_list">9</div>-->
+
+          <!--<div class="weui_media_hd">-->
+            <!--<img class="weui_media_appmsg_thumb" src="images/header_5.jpg" alt="">-->
+          <!--</div>-->
+          <!--<div class="weui_media_bd">-->
+            <!--<h4 class="weui_media_title">小刘</h4>-->
+
+          <!--</div>-->
+
+          <!--<div class="weui_cell_ft">155km</div>-->
+        <!--</a>-->
+        <!--<a href="javascript:void(0);" class="weui_media_box weui_media_appmsg">-->
+
+        <!--<div class="weui_cell_hd pai_list">10</div>-->
+
+          <!--<div class="weui_media_hd">-->
+            <!--<img class="weui_media_appmsg_thumb" src="images/header_4.jpg" alt="">-->
+          <!--</div>-->
+          <!--<div class="weui_media_bd">-->
+            <!--<h4 class="weui_media_title">小白</h4>-->
+          <!--</div>-->
+
+          <!--<div class="weui_cell_ft">150km</div>-->
+        <!--</a>-->
+       
+      </div>
+
+    </div>
+
+
+    
+    
+    <div class="weui_tabbar">
+        <div class="weui_media_box weui_media_appmsg">
+
+          <div class="weui_media_hd">
+            <img class="" src="/static/share/images/logo.png" alt="">
+          </div>
+          <div class="weui_media_bd">
+            <h4 class="weui_media_title">“小黑侠HUD”App</h4>
+           <p class="weui_media_desc">导航仪表天气</p>
+          </div>
+          
+          <a href="https://itunes.apple.com/cn/app/xiao-hei-xiahud-yi-biao-dao/id1080590776?mt=8" id="dv_iphone"> <div class="weui_cell_ft">立即下载</div></a>
+          <a href="http://www.fervcloud.com:10086/static/apks/version/YeeHud.apk" id="dv_android"> <div class="weui_cell_ft">立即下载</div></a>
+        </div>
+      </div>
+
+
+  </body>
+</html>

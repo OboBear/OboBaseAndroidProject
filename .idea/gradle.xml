@@ -9,63 +9,22 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
-            <option value="$PROJECT_DIR$/aidltest" />
-            <option value="$PROJECT_DIR$/androidbitmap" />
-            <option value="$PROJECT_DIR$/androidcontact" />
-            <option value="$PROJECT_DIR$/androiddexclassloader" />
-            <option value="$PROJECT_DIR$/androiddexclassloadermakedex" />
             <option value="$PROJECT_DIR$/androidjnitest" />
-            <option value="$PROJECT_DIR$/animationloading" />
-            <option value="$PROJECT_DIR$/backsensermodule" />
-            <option value="$PROJECT_DIR$/circleseekbar" />
-            <option value="$PROJECT_DIR$/dashboard" />
-            <option value="$PROJECT_DIR$/foreveralive" />
-            <option value="$PROJECT_DIR$/gapdemaptest" />
-            <option value="$PROJECT_DIR$/hocktest" />
-            <option value="$PROJECT_DIR$/horizontalandroid" />
-            <option value="$PROJECT_DIR$/javaeval" />
-            <option value="$PROJECT_DIR$/javatest" />
-            <option value="$PROJECT_DIR$/leftslidebar" />
-            <option value="$PROJECT_DIR$/mutipartpack" />
-            <option value="$PROJECT_DIR$/mvptest" />
-            <option value="$PROJECT_DIR$/plugReverseView" />
-            <option value="$PROJECT_DIR$/plugchat" />
-            <option value="$PROJECT_DIR$/plugrxjava" />
-            <option value="$PROJECT_DIR$/servicedemo" />
-            <option value="$PROJECT_DIR$/test" />
-            <option value="$PROJECT_DIR$/windowmanagertest" />
+            <option value="$PROJECT_DIR$/catchexception" />
+            <option value="$PROJECT_DIR$/databindingtest" />
+            <option value="$PROJECT_DIR$/httpserver" />
+            <option value="$PROJECT_DIR$/ndksocket" />
+            <option value="$PROJECT_DIR$/noactivity" />
+            <option value="$PROJECT_DIR$/oimageloader" />
+            <option value="$PROJECT_DIR$/rxjavaandroid" />
+            <option value="$PROJECT_DIR$/scrollrelativelayout" />
+            <option value="$PROJECT_DIR$/servicetest" />
+            <option value="$PROJECT_DIR$/wiloglib" />
+            <option value="$PROJECT_DIR$/wirelessinstallapk" />
+            <option value="$PROJECT_DIR$/wirelessinstalllib" />
           </set>
         </option>
-        <option name="myModules">
-          <set>
-            <option value="$PROJECT_DIR$" />
-            <option value="$PROJECT_DIR$/aidltest" />
-            <option value="$PROJECT_DIR$/androidbitmap" />
-            <option value="$PROJECT_DIR$/androidcontact" />
-            <option value="$PROJECT_DIR$/androiddexclassloader" />
-            <option value="$PROJECT_DIR$/androiddexclassloadermakedex" />
-            <option value="$PROJECT_DIR$/androidjnitest" />
-            <option value="$PROJECT_DIR$/animationloading" />
-            <option value="$PROJECT_DIR$/backsensermodule" />
-            <option value="$PROJECT_DIR$/circleseekbar" />
-            <option value="$PROJECT_DIR$/dashboard" />
-            <option value="$PROJECT_DIR$/foreveralive" />
-            <option value="$PROJECT_DIR$/gapdemaptest" />
-            <option value="$PROJECT_DIR$/hocktest" />
-            <option value="$PROJECT_DIR$/horizontalandroid" />
-            <option value="$PROJECT_DIR$/javaeval" />
-            <option value="$PROJECT_DIR$/javatest" />
-            <option value="$PROJECT_DIR$/leftslidebar" />
-            <option value="$PROJECT_DIR$/mutipartpack" />
-            <option value="$PROJECT_DIR$/mvptest" />
-            <option value="$PROJECT_DIR$/plugReverseView" />
-            <option value="$PROJECT_DIR$/plugchat" />
-            <option value="$PROJECT_DIR$/plugrxjava" />
-            <option value="$PROJECT_DIR$/servicedemo" />
-            <option value="$PROJECT_DIR$/test" />
-            <option value="$PROJECT_DIR$/windowmanagertest" />
-          </set>
-        </option>
+        <option name="resolveModulePerSourceSet" value="false" />
       </GradleProjectSettings>
     </option>
   </component>

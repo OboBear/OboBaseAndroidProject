@@ -1,0 +1,71 @@
+.content_head {
+	background-color: #413c3c;
+}
+
+.btn_link {
+	color: #F1EAEA;
+}
+
+
+
+.content_detail {
+	text-align: center;
+}
+
+.div_board_back {
+	height: 540px;
+	color: white;
+	background-image: url(../../img/page4/page4_board.png);
+	background-size: 100% 100%;
+	text-align: center;
+}
+
+.content_detail {
+	/*background: blue;*/
+}
+
+.div_board_discription {
+	color: white;
+	font-size: 22.5px;
+}
+
+.li-button {
+	list-style-type: none;
+}
+
+.div_about_up {
+	margin-top: 72px;
+	width: 100%;
+	height: 534px;
+	min-width: 600px;
+	text-align: center;
+}
+
+.div_about_content {
+	width: 80%;
+	height: 100%;
+	margin: 0 auto;
+}
+
+#id_about_tab {
+	float: left;
+	width: 20%;
+	max-width: 200px;
+}
+
+#div_about_text {
+	float: left;
+	width: 80%;
+	font-size: 14px;
+	line-height: 21px;
+}
+
+.choosed_line {
+	background: red;
+}
+
+.choosed {
+	color: red;
+}
+
+

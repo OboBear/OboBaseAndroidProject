@@ -3,31 +3,19 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/OboBaseAndroidProject.iml" filepath="$PROJECT_DIR$/OboBaseAndroidProject.iml" />
-      <module fileurl="file://$PROJECT_DIR$/aidltest/aidltest.iml" filepath="$PROJECT_DIR$/aidltest/aidltest.iml" />
-      <module fileurl="file://$PROJECT_DIR$/androidbitmap/androidbitmap.iml" filepath="$PROJECT_DIR$/androidbitmap/androidbitmap.iml" />
-      <module fileurl="file://$PROJECT_DIR$/androidcontact/androidcontact.iml" filepath="$PROJECT_DIR$/androidcontact/androidcontact.iml" />
-      <module fileurl="file://$PROJECT_DIR$/androiddexclassloader/androiddexclassloader.iml" filepath="$PROJECT_DIR$/androiddexclassloader/androiddexclassloader.iml" />
-      <module fileurl="file://$PROJECT_DIR$/androiddexclassloadermakedex/androiddexclassloadermakedex.iml" filepath="$PROJECT_DIR$/androiddexclassloadermakedex/androiddexclassloadermakedex.iml" />
       <module fileurl="file://$PROJECT_DIR$/androidjnitest/androidjnitest.iml" filepath="$PROJECT_DIR$/androidjnitest/androidjnitest.iml" />
-      <module fileurl="file://$PROJECT_DIR$/animationloading/animationloading.iml" filepath="$PROJECT_DIR$/animationloading/animationloading.iml" />
-      <module fileurl="file://$PROJECT_DIR$/backsensermodule/backsensermodule.iml" filepath="$PROJECT_DIR$/backsensermodule/backsensermodule.iml" />
-      <module fileurl="file://$PROJECT_DIR$/circleseekbar/circleseekbar.iml" filepath="$PROJECT_DIR$/circleseekbar/circleseekbar.iml" />
-      <module fileurl="file://$PROJECT_DIR$/dashboard/dashboard.iml" filepath="$PROJECT_DIR$/dashboard/dashboard.iml" />
-      <module fileurl="file://$PROJECT_DIR$/foreveralive/foreveralive.iml" filepath="$PROJECT_DIR$/foreveralive/foreveralive.iml" />
-      <module fileurl="file://$PROJECT_DIR$/gapdemaptest/gapdemaptest.iml" filepath="$PROJECT_DIR$/gapdemaptest/gapdemaptest.iml" />
-      <module fileurl="file://$PROJECT_DIR$/hocktest/hocktest.iml" filepath="$PROJECT_DIR$/hocktest/hocktest.iml" />
-      <module fileurl="file://$PROJECT_DIR$/horizontalandroid/horizontalandroid.iml" filepath="$PROJECT_DIR$/horizontalandroid/horizontalandroid.iml" />
-      <module fileurl="file://$PROJECT_DIR$/javaeval/javaeval.iml" filepath="$PROJECT_DIR$/javaeval/javaeval.iml" />
-      <module fileurl="file://$PROJECT_DIR$/javatest/javatest.iml" filepath="$PROJECT_DIR$/javatest/javatest.iml" />
-      <module fileurl="file://$PROJECT_DIR$/leftslidebar/leftslidebar.iml" filepath="$PROJECT_DIR$/leftslidebar/leftslidebar.iml" />
-      <module fileurl="file://$PROJECT_DIR$/mutipartpack/mutipartpack.iml" filepath="$PROJECT_DIR$/mutipartpack/mutipartpack.iml" />
-      <module fileurl="file://$PROJECT_DIR$/mvptest/mvptest.iml" filepath="$PROJECT_DIR$/mvptest/mvptest.iml" />
-      <module fileurl="file://$PROJECT_DIR$/plugReverseView/plugReverseView.iml" filepath="$PROJECT_DIR$/plugReverseView/plugReverseView.iml" />
-      <module fileurl="file://$PROJECT_DIR$/plugchat/plugchat.iml" filepath="$PROJECT_DIR$/plugchat/plugchat.iml" />
-      <module fileurl="file://$PROJECT_DIR$/plugrxjava/plugrxjava.iml" filepath="$PROJECT_DIR$/plugrxjava/plugrxjava.iml" />
-      <module fileurl="file://$PROJECT_DIR$/servicedemo/servicedemo.iml" filepath="$PROJECT_DIR$/servicedemo/servicedemo.iml" />
-      <module fileurl="file://$PROJECT_DIR$/test/test.iml" filepath="$PROJECT_DIR$/test/test.iml" />
-      <module fileurl="file://$PROJECT_DIR$/windowmanagertest/windowmanagertest.iml" filepath="$PROJECT_DIR$/windowmanagertest/windowmanagertest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/catchexception/catchexception.iml" filepath="$PROJECT_DIR$/catchexception/catchexception.iml" />
+      <module fileurl="file://$PROJECT_DIR$/databindingtest/databindingtest.iml" filepath="$PROJECT_DIR$/databindingtest/databindingtest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/httpserver/httpserver.iml" filepath="$PROJECT_DIR$/httpserver/httpserver.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ndksocket/ndksocket.iml" filepath="$PROJECT_DIR$/ndksocket/ndksocket.iml" />
+      <module fileurl="file://$PROJECT_DIR$/noactivity/noactivity.iml" filepath="$PROJECT_DIR$/noactivity/noactivity.iml" />
+      <module fileurl="file://$PROJECT_DIR$/oimageloader/oimageloader.iml" filepath="$PROJECT_DIR$/oimageloader/oimageloader.iml" />
+      <module fileurl="file://$PROJECT_DIR$/rxjavaandroid/rxjavaandroid.iml" filepath="$PROJECT_DIR$/rxjavaandroid/rxjavaandroid.iml" />
+      <module fileurl="file://$PROJECT_DIR$/scrollrelativelayout/scrollrelativelayout.iml" filepath="$PROJECT_DIR$/scrollrelativelayout/scrollrelativelayout.iml" />
+      <module fileurl="file://$PROJECT_DIR$/servicetest/servicetest.iml" filepath="$PROJECT_DIR$/servicetest/servicetest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/wiloglib/wiloglib.iml" filepath="$PROJECT_DIR$/wiloglib/wiloglib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/wirelessinstallapk/wirelessinstallapk.iml" filepath="$PROJECT_DIR$/wirelessinstallapk/wirelessinstallapk.iml" />
+      <module fileurl="file://$PROJECT_DIR$/wirelessinstalllib/wirelessinstalllib.iml" filepath="$PROJECT_DIR$/wirelessinstalllib/wirelessinstalllib.iml" />
     </modules>
   </component>
 </project>

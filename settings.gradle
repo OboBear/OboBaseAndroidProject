@@ -2,12 +2,13 @@
 //include ':app2', ':a
 // rtest', ':maventest', ':voicelibrary', ':plugReverseView', ':plugEventBus', ':plugretrofit', ':plugwebviewswith', ':plugstatuslistener', ':utilproject', ':plugseekbar', ':pluganimation', ':jsloader', ':plugrxjava', ':plugrotateview', ':plugmarkdown', ':plugmultible', ':plugchat'
 //include ':speechDemo'
-include ':plugReverseView', ':javaeval', ':gapdemaptest', ':plugchat', ':backsensermodule', ':dashboard', 'javatest'
-include ':dashboard', ':animationloading', ':horizontalandroid', ':circleseekbar'
-include ':plugchat', ':mutipartpack', ':androiddexclassloader', ':androiddexclassloadermakedex', ':leftslidebar', ':androidbitmap', ':foreveralive', ':aidltest', ':servicedemo', ':hocktest', ':mvptest', ':test'
-include ':windowmanagertest'
-include ':plugrxjava'
-include ':androidcontact'
-include ':androidjnitest'
+//include ':plugReverseView', ':javaeval', ':gapdemaptest', ':plugchat', ':backsensermodule', ':dashboard', 'javatest'
+//include ':dashboard', ':animationloading', ':horizontalandroid', ':circleseekbar'
+//include ':plugchat', ':mutipartpack', ':androiddexclassloader', ':androiddexclassloadermakedex', ':leftslidebar', ':androidbitmap', ':foreveralive', ':aidltest', ':servicedemo', ':hocktest', ':mvptest', ':test'
+//include ':windowmanagertest'
+//include ':plugrxjava'
+//include ':androidcontact'
+include ':androidjnitest', ':scrollrelativelayout', ':wirelessinstallapk', ':wirelessinstalllib', ':wiloglib', ':catchexception', ':ndksocket', ':rxjavaandroid', ':databindingtest', ':servicetest', ':httpserver', ':oimageloader'
+include ':noactivity'
 
 

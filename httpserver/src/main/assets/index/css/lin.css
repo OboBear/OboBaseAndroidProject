@@ -1,0 +1,16 @@
+div{
+    border: solid 2px #0b97c4;
+    padding: 0;
+}
+.col-lg-6{
+    padding: 0;
+}
+.col-lg-12{
+    padding: 0;
+}
+#content{
+    width: 100%;
+}
+.halfHeight{
+    height: 400px;
+}
